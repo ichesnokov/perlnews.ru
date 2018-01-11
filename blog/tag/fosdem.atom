@@ -2,10 +2,45 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://perlnews.ru/blog/tag/fosdem/</id>
     <title>PerlNews.Ru</title>
-    <updated>2016-02-18T00:00:00Z</updated>
+    <updated>2018-01-10T00:00:00Z</updated>
     <link href="http://perlnews.ru/blog/tag/fosdem.atom" rel="self" />
     <link href="http://perlnews.ru/blog/tag/fosdem/" rel="alternate" />
     <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2018/01/10/fosdem2018-perl-schedule/</id>
+        <title>Опубликовано расписание Perl devroom на FOSDEM</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2018/01/10/fosdem2018-perl-schedule/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Опубликовано
+<a href="https://fosdem.org/2018/schedule/track/perl_programming_languages/">расписание</a>
+Perl devroom на конференции <a href="https://fosdem.org/2018/">FOSDEM 2018</a>.</p>
+
+<p>FOSDEM - это ежегодная конференция для open-source разработчиков, где можно
+услышать множество докладов про свободное ПО &quot;из первых рук&quot; - от создателей
+этого самого ПО, а также насладиться бельгийскими вафлями и пивом.
+<a href="https://fosdem.org/2018/schedule/">Полное расписание</a> конференции также
+доступно на сайте мероприятия.</p>
+
+<p>Конференция традиционно проходит в Брюсселе, Бельгия, в конце января - начале
+февраля. В этом году даты конференции: 3 и 4 февраля.
+В конференции участвует более 5000 человек</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/fosdem/">FOSDEM</a>
+                <a href="http://perlnews.ru/blog/tag/konferentsiia/">конференция</a>
+                <a href="http://perlnews.ru/blog/tag/briussel/">брюссель</a>
+                <a href="http://perlnews.ru/blog/tag/pivo/">пиво</a>
+                <a href="http://perlnews.ru/blog/tag/yapc/">yapc</a>
+            </p>
+        ]]></content>
+        <updated>2018-01-10T00:00:00Z</updated>
+        <category term="FOSDEM" />
+        <category term="конференция" />
+        <category term="брюссель" />
+        <category term="пиво" />
+        <category term="yapc" />
+    </entry>
     <entry>
         <id>http://perlnews.ru/blog/2016/02/18/01-fosdem-2016-perl-video/</id>
         <title>Выложены видеозаписи Perl-докладов на FOSDEM 2016</title>

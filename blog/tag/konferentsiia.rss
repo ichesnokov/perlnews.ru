@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/konferentsiia/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/konferentsiia.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Опубликовано расписание Perl devroom на FOSDEM</title>
+            <link>http://perlnews.ru/blog/2018/01/10/fosdem2018-perl-schedule/</link>
+            <guid>http://perlnews.ru/blog/2018/01/10/fosdem2018-perl-schedule/</guid>
+            <description><![CDATA[
+                <p>Опубликовано
+<a href="https://fosdem.org/2018/schedule/track/perl_programming_languages/">расписание</a>
+Perl devroom на конференции <a href="https://fosdem.org/2018/">FOSDEM 2018</a>.</p>
+
+<p>FOSDEM - это ежегодная конференция для open-source разработчиков, где можно
+услышать множество докладов про свободное ПО &quot;из первых рук&quot; - от создателей
+этого самого ПО, а также насладиться бельгийскими вафлями и пивом.
+<a href="https://fosdem.org/2018/schedule/">Полное расписание</a> конференции также
+доступно на сайте мероприятия.</p>
+
+<p>Конференция традиционно проходит в Брюсселе, Бельгия, в конце января - начале
+февраля. В этом году даты конференции: 3 и 4 февраля.
+В конференции участвует более 5000 человек</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/fosdem/">FOSDEM</a>
+                    <a href="http://perlnews.ru/blog/tag/konferentsiia/">конференция</a>
+                    <a href="http://perlnews.ru/blog/tag/briussel/">брюссель</a>
+                    <a href="http://perlnews.ru/blog/tag/pivo/">пиво</a>
+                    <a href="http://perlnews.ru/blog/tag/yapc/">yapc</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 10 Jan 2018 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

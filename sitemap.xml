@@ -4,7 +4,7 @@
         <loc>http://perlnews.ru/</loc>
         <changefreq>daily</changefreq>
         <priority>0.3</priority>
-        <lastmod>2016-05-23</lastmod>
+        <lastmod>2018-01-10</lastmod>
     </url>
     <url>
         <loc>http://perlnews.ru/about.html</loc>
@@ -703,34 +703,40 @@
         <lastmod>2016-05-23</lastmod>
     </url>
     <url>
+        <loc>http://perlnews.ru/blog/2018/01/10/fosdem2018-perl-schedule/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+        <lastmod>2018-01-10</lastmod>
+    </url>
+    <url>
         <loc>http://perlnews.ru/blog/page/2/</loc>
         <changefreq>daily</changefreq>
         <priority>0.3</priority>
-        <lastmod>2016-05-23</lastmod>
+        <lastmod>2018-01-10</lastmod>
     </url>
     <url>
         <loc>http://perlnews.ru/blog/page/3/</loc>
         <changefreq>daily</changefreq>
         <priority>0.3</priority>
-        <lastmod>2016-05-23</lastmod>
+        <lastmod>2018-01-10</lastmod>
     </url>
     <url>
         <loc>http://perlnews.ru/blog/page/4/</loc>
         <changefreq>daily</changefreq>
         <priority>0.3</priority>
-        <lastmod>2016-05-23</lastmod>
+        <lastmod>2018-01-10</lastmod>
     </url>
     <url>
         <loc>http://perlnews.ru/blog/page/5/</loc>
         <changefreq>daily</changefreq>
         <priority>0.3</priority>
-        <lastmod>2016-05-23</lastmod>
+        <lastmod>2018-01-10</lastmod>
     </url>
     <url>
         <loc>http://perlnews.ru/blog/page/6/</loc>
         <changefreq>daily</changefreq>
         <priority>0.3</priority>
-        <lastmod>2016-05-23</lastmod>
+        <lastmod>2018-01-10</lastmod>
     </url>
     <url>
         <loc>http://perlnews.ru/blog/tag/aprilfd/</loc>
@@ -749,6 +755,12 @@
         <changefreq>daily</changefreq>
         <priority>0.3</priority>
         <lastmod>2015-04-26</lastmod>
+    </url>
+    <url>
+        <loc>http://perlnews.ru/blog/tag/briussel/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.3</priority>
+        <lastmod>2018-01-10</lastmod>
     </url>
     <url>
         <loc>http://perlnews.ru/blog/tag/bug/</loc>
@@ -814,7 +826,7 @@
         <loc>http://perlnews.ru/blog/tag/fosdem/</loc>
         <changefreq>daily</changefreq>
         <priority>0.3</priority>
-        <lastmod>2016-02-18</lastmod>
+        <lastmod>2018-01-10</lastmod>
     </url>
     <url>
         <loc>http://perlnews.ru/blog/tag/funding/</loc>
@@ -839,6 +851,12 @@
         <changefreq>daily</changefreq>
         <priority>0.3</priority>
         <lastmod>2015-09-23</lastmod>
+    </url>
+    <url>
+        <loc>http://perlnews.ru/blog/tag/konferentsiia/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.3</priority>
+        <lastmod>2018-01-10</lastmod>
     </url>
     <url>
         <loc>http://perlnews.ru/blog/tag/mojo/</loc>
@@ -881,6 +899,12 @@
         <changefreq>daily</changefreq>
         <priority>0.3</priority>
         <lastmod>2015-02-02</lastmod>
+    </url>
+    <url>
+        <loc>http://perlnews.ru/blog/tag/pivo/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.3</priority>
+        <lastmod>2018-01-10</lastmod>
     </url>
     <url>
         <loc>http://perlnews.ru/blog/tag/pragmaticperl/</loc>
@@ -940,7 +964,7 @@
         <loc>http://perlnews.ru/blog/tag/yapc/</loc>
         <changefreq>daily</changefreq>
         <priority>0.3</priority>
-        <lastmod>2016-05-23</lastmod>
+        <lastmod>2018-01-10</lastmod>
     </url>
     <url>
         <loc>http://perlnews.ru/resources.html</loc>

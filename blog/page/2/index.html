@@ -72,6 +72,71 @@
 
             <article>
                 <header>
+                    <h1><a href="/blog/2015/12/22/01-perl-5-23-6/">Perl 5.23: эпизод VII «Пробуждение Фузза»</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/starwars/" rel="tag">StarWars</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-12-22">
+                            2015-12-22
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел седьмой релиз Perl 5.23 для разработчиков с необычным эпиграфом:</p>
+
+<pre><code>    Давным-давно в микросекундах в не очень далёкой галактике...
+
+                            5.23 эпизод VII
+                           ПРОБУЖДЕНИЕ ФУЗЗА
+
+                            Период волнений.
+                           Повстанцы угрожают
+                          намерениями форкнуть
+                        ПЕРЛ и вернуть галактике
+                       скорость  и   стабильность.
+                      Канцлер Рик Хулиган борется за
+                    удержание остатков Республики против
+                волны варварства и опустошения нового врага:
+                           НАЛЁТЧИКОВ ФУЗЗА.
+
+          Тем временем, после 15 лет подготовки и продолжительных
+       ожиданий, Верховный Вождь Тим Подхалим готовит для удара новое
+     разрушительное оружие ПЕРЛ ШЕСТЬТОЧКАНОЛЬ, которое навсегда расколет
+    Республику и возвестит о создании новой  Империи частичной типизации...
+</code></pre>
+
+<p>Под фуззом (fuzz) имеется ввиду фаззер <a href="http://lcamtuf.coredump.cx/afl/">AFL</a>,
+на который приходится внушительное число обнаруженных багов в разборе кода за
+последнее время. Имя Рик Хулиган намекает на текущего сопровождающего Perl 5
+Рикардо Сигнеса, ну а Тим Подхалим (Tim Toady) наверно не нуждается в
+пояснении.</p>
+
+<p>А и да, <a href="https://metacpan.org/pod/release/DAGOLDEN/perl-5.23.6/pod/perldelta.pod">список
+изменений</a>
+не особенно внушительный, но стоит обратить внимание на ускорение операций с
+регистром символов для языков, в которых отсутствует разделение на верхний и нижний
+регистр (например, китайский), а также внедрена проверка свойств юникода
+(<code>\p{}</code> и <code>\P{}</code>) в регулярных выражениях на этапе компиляции. Добавлена
+поддержка платформы OpenIndiana (преемник OpenSolaris). Исправлено несколько
+ошибок и регрессий.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/12/22/01-perl-5-23-6/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
                     <h1><a href="/blog/2015/12/21/01-white-camel-2015/">Присуждение награды White Camel 2015</a></h1>
 
                     <p class="tags">Темы:
@@ -913,37 +978,6 @@ perl. Но, к сожалению, выпуск cperl 5.22.1 оказался п
                  
                 </p>
             </article>
-            <article>
-                <header>
-                    <h1><a href="/blog/2015/09/13/01-perl-5-20-3/">Выпущен Perl 5.20.3</a></h1>
-
-                    <p class="tags">Темы:
-                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
-                    </p>
-
-                    <aside>
-                    <p>        
-                        <span class="typcn typcn-time"></span>
-                        <time datetime="2015-09-13">
-                            2015-09-13
-                        </time>
-                            <span class="typcn typcn-user"></span>
-                            perlnews
-                        </p>
-                    </aside>
-
-                </header>
-                <p>После 7 месяцев разработки выпущен третий корректирующий релиз предыдущей
-стабильной версии 20 Perl 5. Полный список изменений доступен в
-<a href="https://metacpan.org/pod/release/SHAY/perl-5.20.3/pod/perldelta.pod">perldelta</a>.</p>
-
-                <p class="tags">
-                    <a href="/blog/2015/09/13/01-perl-5-20-3/#disqus_thread">Комментарии</a>
-                </p><p>
-                    <a href="/blog/2015/09/13/01-perl-5-20-3/#section-2">Дальше →</a>
-                 
-                </p>
-            </article>
         </main>
 
         <ul class="pager">
@@ -999,7 +1033,10 @@ perl. Но, к сожалению, выпуск cperl 5.22.1 оказался п
             <li><a href="/blog/tag/unicode/">unicode</a></li>
             <li><a href="/blog/tag/warnings/">warnings</a></li>
             <li><a href="/blog/tag/windows/">windows</a></li>
-            <li><a href="/blog/tag/yapc/">YAPC</a></li>
+            <li><a href="/blog/tag/yapc/">yapc</a></li>
+            <li><a href="/blog/tag/briussel/">брюссель</a></li>
+            <li><a href="/blog/tag/konferentsiia/">конференция</a></li>
+            <li><a href="/blog/tag/pivo/">пиво</a></li>
         </ul>
         <h1>Лента</h1>
         <ul class="list-inline">
