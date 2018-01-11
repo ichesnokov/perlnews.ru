@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/books/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2015-04-26T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/books.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/books/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/04/26/01-allperlbooks-dot-com.html</id>
+        <title>AllPerlBooks.com — крупнейший каталог книг о Perl</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/04/26/01-allperlbooks-dot-com.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Появился новый сайт <a href="http://allperlbooks.com">AllPerlBooks.com</a>, который
+является крупнейшим каталогом, содержащим информацию обо всех когда-либо
+напечатанных книгах о Perl на различных языках мира. Цель сайта показать как
+много книг о Perl было выпущено, начиная с момента создания языка, и продолжает
+выпускаться по сей день. На данный момент в каталоге есть данные о 354 книгах и
+ежедневно каталог пополняется всё новыми экземплярами. К окончанию
+β-тестирования ожидается около <strong>500</strong> книг. Автором проекта является Андрей
+Шитов.</p>
+
+<p>Сайт позволяет найти нужные книги по имени автора, издательству, году выпуска,
+языку, а также теме, например,
+<a href="http://allperlbooks.com/tag/bioinformatics">биоинформатика</a> или <a href="http://allperlbooks.com/tag/regexes">регулярные
+выражения</a>.</p>
+
+<p>Если у вас есть книга, которая отсутствует в каталоге, вы можете добавить
+информацию о ней на специальной <a href="http://allperlbooks.com/upload">странице</a>,
+указав данные издания и отсканированную обложку.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/books/">books</a>
+            </p>
+        ]]></content>
+        <updated>2015-04-26T00:00:00Z</updated>
+        <category term="books" />
+    </entry>
+</feed>
+

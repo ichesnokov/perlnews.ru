@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/community/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/community.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Sawyer X новый pumpking Perl</title>
+            <link>http://perlnews.ru/blog/2016/04/24/02-sawyer-x-new-pumpking/</link>
+            <guid>http://perlnews.ru/blog/2016/04/24/02-sawyer-x-new-pumpking/</guid>
+            <description><![CDATA[
+                <p>Рикардо Сигнес
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2016/04/msg236010.html">сообщил</a>,
+что новым добровольцем, вызвавшимся быть ответственным за релизы Perl, стал
+<a href="http://pragmaticperl.com/issues/03/pragmaticperl-03-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D1%8C%D1%8E-%D1%81-sawyer-x.html">Sawyer
+X</a>,
+известный в сообществе израильский Perl-программист.</p>
+
+<p>Рикардо заметил, что предыдущий pumpking Джес Винсент сопровождал Perl два
+года, сам Рикардо — четыре (два в квадрате), следовательно Сойеру предстоит по
+меньшей мере 4² = 16 лет увлекательной работы.</p>
+
+<p>В рассылке perl5 porters началось обсуждение новости. Уже предрекают появление
+Dancer в базовом Perl, вместо ушедшего оттуда модуля CGI.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/community/">community</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Sun, 24 Apr 2016 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Рикардо Сигнес получил серебряного верблюда</title>
+            <link>http://perlnews.ru/blog/2016/04/24/01-silver-camel-2016/</link>
+            <guid>http://perlnews.ru/blog/2016/04/24/01-silver-camel-2016/</guid>
+            <description><![CDATA[
+                <div class="left">
+<p><img alt="silver camel" src="http://perlnews.ru/blog/2016/04/24/01-silver-camel-2016/silver_camel_rjbs.jpg"></p>
+</div>
+
+<p>На проходящем <a href="http://act.qa-hackathon.org/qa2016/">Perl QA Хакатоне</a> в
+английском городе Рагби Рикардо Сигнес получил довольно уникальную награду:
+серебряный верблюд. Это первое публичное Perl-мероприятие, которое посетил Рик
+после анонса, что Perl 5.24.0 станет его последним релизом. Награда стала
+данью признания выдающихся заслуг Рикардо Сигнеса в его работе над выпусками
+Perl на протяжении последних пяти лет.</p>
+
+<p>Награда «серебряный верблюд» появилась в 2014 году, когда ею впервые был
+удостоен Марк Китинг за его вклад в развитие Perl-сообщества в Соединённом
+Королевстве. Дело в том, что Марк являлся членом маркетингового комитета фонда
+перл и никогда бы не смог получить награду «Белый верблюд», поскольку именно
+фонд перла выбирает лауреатов награды и по этой причине не может выбирать
+никого из жюри. «Серебряный верблюд» позволил изящно обойти это ограничение.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/community/">community</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Sun, 24 Apr 2016 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Последний релиз Рикардо Сигнеса</title>
+            <link>http://perlnews.ru/blog/2016/04/14/rjbs-slide-on-the-ice/</link>
+            <guid>http://perlnews.ru/blog/2016/04/14/rjbs-slide-on-the-ice/</guid>
+            <description><![CDATA[
+                <p>Рикардо Сигнес, текущий релизер стабильных релизов Perl (pumpking),
+<a href="http://permalink.gmane.org/gmane.comp.lang.perl.perl5.porters/158061">сообщил</a>
+о том, что релиз v5.24.0 и одновременно выходящий релиз v5.25.0 для
+разработчиков, станут его последними релизами Perl.</p>
+
+<p>Рикардо на протяжении последних почти 5 лет выпускал стабильные релизы Perl,
+начиная c 5.16.0. Он обещает по-прежнему активно участвовать в сообществе, но
+уже не в роли pumpking. Тема письма в perl5-porters «...and slide on the ice»
+является окончанием цитаты из эпизода MASH:</p>
+
+<blockquote>
+  <p>Ladies and gentlemen, take my advice. Pull down your pants, and slide on the
+  ice</p>
+  
+  <p><em>Maj. Sidney Freedman</em></p>
+</blockquote>
+
+<p>что можно трактовать как, жизнь коротка, не следует всегда оставаться слишком
+серьёзным.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/community/">community</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Thu, 14 Apr 2016 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Присуждение награды White Camel 2015</title>
+            <link>http://perlnews.ru/blog/2015/12/21/01-white-camel-2015/</link>
+            <guid>http://perlnews.ru/blog/2015/12/21/01-white-camel-2015/</guid>
+            <description><![CDATA[
+                <div class="left">
+<p><img alt="white camel" src="http://perlnews.ru/blog/2015/12/21/01-white-camel-2015/white_camel_2015.png"></p>
+</div>
+
+<p>Награда <a href="http://whitecamel.org/">«Белый верблюд»</a> ежегодно присуждается за
+выдающиеся нетехнические достижения в Perl. Она была учреждена в 1999 году
+перл-монгерами и О&#39;Рейли медиа на Перл-конференции и позднее была принята под
+крыло Фонда Перл. Комитет награды выбирает кандидатов в трёх номинациях:
+Перл-сообщество, пропаганда Перл и группы пользователей Перл.</p>
+
+<p>В 2015 году наградами были
+<a href="http://blogs.perl.org/users/brian_d_foy/2015/12/the-white-camel-awards-2015-edition.html">удостоены</a>
+трое:</p>
+
+<ul>
+<li><p><strong>Группы пользователей Перл</strong> — <strong>Chris Prather (perigrin)</strong>.<br>
+Неутомимый лидер PM-группы Орландо и организатор «Perl Oasis», «YAPC::NA
+2011» в Эшвилле и «YAPC::NA 2014» в Орландо.</p></li>
+<li><p><strong>Пропаганда Перл</strong> — <strong>Sawyer X</strong>.<br>
+Практически ни одна конференция не обходится без докладов Sawyer X об
+удивительном Перл сообществе. Он пишет <a href="http://blogs.perl.org/users/sawyer_x/p5p-summary/">еженедельные
+обзоры</a> тем, обсуждаемых в
+рассылке p5p.</p></li>
+<li><p><strong>Сообщество Перл</strong> — <strong>Steffen Müller (tsee)</strong>.<br>
+Стефан хорошо известен своими техническими достижениями, но не менее
+выдающаяся и его нетехническая помощь сообществу Перл. Он ведёт <a href="http://blog.booking.com/author/steffen-muller.html">технический
+блог</a> Booking.com, в не
+малой степени благодаря ему, Booking.com ежегодно делает крупные
+пожертвования для развития Perl.</p></li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/community/">community</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 21 Dec 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

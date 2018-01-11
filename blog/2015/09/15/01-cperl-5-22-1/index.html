@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="summary" name="twitter:card">
+        <meta content="http://perlnews.ru/blog/2015/09/15/01-cperl-5-22-1/index.html" name="twitter:url">
+        <meta content="Появился ещё один форк Perl: cperl 5.22.1" name="twitter:title">
+        <meta content="Рейни Урбан анонсировал выпуск форка Perl: cperl 5.22.1. Имя cperl означает Perl с классами (просматривается параллель с ранним именем C++ — C с классами), поддержкой компилятора или просто дружел…" name="twitter:description">
+        <meta content="@perlnews_ru" name="twitter:site">
+        <link href="/theme/images/favicon.ico" rel="icon">
+        <link href="/theme/css/style.css" rel="stylesheet">
+        <title>
+            PerlNews.Ru
+            → Появился ещё один форк Perl: cperl 5.22.1
+        </title>
+        <script>
+  if (window.location.hostname === "perlnews.ru") {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59283423-1', 'auto');
+      ga('send', 'pageview');
+  }
+</script>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a class="brand" href="/">
+                        PerlNews.Ru
+                        <span class="brand-img"></span>
+                    </a>
+                    <ul>
+                        <li>
+                        <a href="/index.html">
+                            Новости
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/about.html">
+                            О блоге
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/resources.html">
+                            Ресурсы
+                        </a>
+                        </li>
+                        <li>
+                        <a href="http://irc.pragmaticperl.com">
+                            Чат
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://twitter.com/perlnews_ru">
+                            Twitter
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="main container">
+            <div class="row">
+
+    <div class="nine columns">
+        <main>
+            <header>
+                <h1>Появился ещё один форк Perl: cperl 5.22.1</h1>
+                <p class="tags">Темы:
+                    <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                </p>
+                <aside>
+                    <p><time datetime="2015-09-15">
+                        <span class="typcn typcn-time"><span>
+                        2015-09-15
+                    </span></span></time>
+                        <span class="typcn typcn-user"><span>
+                        perlnews
+                    </span></span></p>
+                </aside>
+            </header>
+            <section id="section-1">
+                <p>Рейни Урбан
+<a href="http://blogs.perl.org/users/rurban/2015/09/cperl-5221-released.html">анонсировал</a>
+выпуск форка Perl: cperl 5.22.1.</p>
+
+<p>Имя cperl означает Perl с классами (просматривается параллель с ранним именем
+C++ — C с классами), поддержкой компилятора или просто дружелюбный к компаниям
+perl. Но, к сожалению, выпуск cperl 5.22.1 оказался пока без поддержки классов,
+но, тем не менее, форк имеет множество других интересных особенностей.</p>
+
+<p>Утверждается, что cperl по крайне мере в 1.5 раза быстрее, чем Perl 5.22, и в 2
+раза быстрее, чем Perl 5.14. Потребление памяти даже ниже, чем в 5.6.2 и 5.10.</p>
+
+<p>cperl по большей части совместим с Perl 5.22, подавляющая часть CPAN модулей
+будет работать с cperl.</p>
+
+            </section>
+            <section id="section-2">
+                <p>Основные возможности, вошедшие в cperl 5.22.1:</p>
+
+<ul>
+<li><p>Базовые типы (Int, UInt, Num, Str)</p>
+
+<pre><code># Массив целых чисел @a.
+# Строгая проверка типа на этапе компиляции
+my Int @a = (0..9);
+</code></pre></li>
+<li><p>Типы в сигнатурах функций</p>
+
+<pre><code>sub (int $i)   # синтаксис Perl 6
+sub ($i: int)  # синтаксис в других типизированных языках
+</code></pre></li>
+<li><p>Декларация возвращаемого функцией типа как атрибут</p></li>
+<li><p>Множество встроенных атрибутов функций (например <code>:const</code>)</p></li>
+<li><p>Фиксированные массивы с проверкой во время компиляции и оптимизациями</p>
+
+<pre><code># Массив размер, которого не может быть изменён
+my @a[20] :int;
+</code></pre></li>
+<li><p>Статические методы конвертируются в вызов подпрограммы на этапе компиляции</p></li>
+<li><p>Модуль <code>Config</code> реализован в XS</p></li>
+<li><p><code>strict</code>, <code>attributes</code>, <code>DynaLoader</code>, <code>XSLoader</code> — встроенные пакеты,
+переписаны на C</p></li>
+<li><p>Хэш-функция по умолчанию FNV1A (также, как и форке
+<a href="http://perlnews.ru/blog/2015/06/08/01-schmorps-stable-perl-fork/">stableperl</a>)</p></li>
+<li><p>Исправлена работа лексической <code>$_</code></p></li>
+<li><p>Улучшена сборочная система </p></li>
+</ul>
+
+<p>Подробное описание новшеств и грядущих изменений в cperl, доступно
+<a href="http://perl11.org/cperl/perlcperl.html">здесь</a>. Загрузить исходный код cperl
+можно из репозитория проекта на
+<a href="https://github.com/perl11/cperl/releases/tag/cperl-5.22.1">github</a>.</p>
+
+            </section>
+        </main>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'perlnewsru';
+            if (window.location.hostname === "perlnews.ru") {
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    <div class="three columns sidebar">
+        
+        <nav id="tags">
+            <h1>Темы</h1>
+            <ul class="list-inline">
+                <li><a href="/blog/tag/aprilfd/">AprilFD</a></li>
+                <li><a href="/blog/tag/benchmark/">benchmark</a></li>
+                <li><a href="/blog/tag/books/">books</a></li>
+                <li><a href="/blog/tag/bug/">bug</a></li>
+                <li><a href="/blog/tag/community/">community</a></li>
+                <li><a href="/blog/tag/coro/">Coro</a></li>
+                <li><a href="/blog/tag/cpan/">CPAN</a></li>
+                <li><a href="/blog/tag/cpanpr/">cpanpr</a></li>
+                <li><a href="/blog/tag/cpantesters/">cpantesters</a></li>
+                <li><a href="/blog/tag/dbic/">DBIC</a></li>
+                <li><a href="/blog/tag/donation/">donation</a></li>
+                <li><a href="/blog/tag/facepalm/">facepalm</a></li>
+                <li><a href="/blog/tag/fork/">fork</a></li>
+                <li><a href="/blog/tag/fosdem/">FOSDEM</a></li>
+                <li><a href="/blog/tag/funding/">funding</a></li>
+                <li><a href="/blog/tag/hackaton/">hackaton</a></li>
+                <li><a href="/blog/tag/ide/">IDE</a></li>
+                <li><a href="/blog/tag/interview/">interview</a></li>
+                <li><a href="/blog/tag/mojo/">mojo</a></li>
+                <li><a href="/blog/tag/moscow-pm/">moscow.pm</a></li>
+                <li><a href="/blog/tag/perl/">Perl</a></li>
+                <li><a href="/blog/tag/perl6/">Perl6</a></li>
+                <li><a href="/blog/tag/perlnews-ru/">PerlNews.Ru</a></li>
+                <li><a href="/blog/tag/pragmaticperl/">PragmaticPerl</a></li>
+                <li><a href="/blog/tag/regexp/">regexp</a></li>
+                <li><a href="/blog/tag/security/">security</a></li>
+                <li><a href="/blog/tag/smartmatch/">smartmatch</a></li>
+                <li><a href="/blog/tag/starwars/">StarWars</a></li>
+                <li><a href="/blog/tag/tips/">tips</a></li>
+                <li><a href="/blog/tag/unicode/">unicode</a></li>
+                <li><a href="/blog/tag/warnings/">warnings</a></li>
+                <li><a href="/blog/tag/windows/">windows</a></li>
+                <li><a href="/blog/tag/yapc/">YAPC</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+        </div>
+        <footer>
+            <div class="container">
+<strong>© perlnews.ru</strong>
+<p>
+Все материалы доступны в соответствии с лицензией
+<a href="http://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0</a>
+<br>
+Работает на
+<a href="http://preaction.me/statocles">Statocles</a>
+и
+<a href="http://www.perl.org">Perl</a>
+</p>
+</div>
+
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/funding/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/funding.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Питер Рэббитсон приостанавливает свою краудсорс-кампанию</title>
+            <link>http://perlnews.ru/blog/2015/12/08/01-suspending-riba2016/</link>
+            <guid>http://perlnews.ru/blog/2015/12/08/01-suspending-riba2016/</guid>
+            <description><![CDATA[
+                <p>Питер «ribasushi» Рэббитсон
+<a href="https://www.reddit.com/r/perl/comments/3vnsiw/suspending_efforts_on_my_riba2016_crowdfunding/">сообщил</a>,
+что объявленная два месяца назад кампания <a href="http://perlnews.ru/blog/2015/10/05/01-year-of-ribasushi/">«год
+ribasushi»</a> несмотря
+на неплохой старт в конце концов провалилась. Формально осталось 17 дней до
+завершения краудсорс-кампании, но собрано оказалось всего $30 000 вместо
+минимально необходимых $120 000. Нашлось только две крупные компании, которые
+смогли внести лишь $8 000, большую часть обеспечили два небольших
+консалтинговых агентства и 40 разработчиков — друзья и знакомые Питера.</p>
+
+<p>Поэтому Питер приостанавливает активное участие в кампании и за оставшиеся дни
+направит свои усилия на завершение текущих задач и выпуск релизов
+<code>DBIx::Class</code>, <code>SQL::Abstract</code> и <code>SQL::Translator</code>.</p>
+
+<p>После 25 декабря Питер <strong>завершит</strong> свою работу над открытыми проектами на CPAN
+и передаст права на выпуск модулей, которые он поддерживал, достойным
+кандидатам.</p>
+
+<p>Питер с сожалением замечает, что за последний год ему стало очевидно, что
+текущий курс, выбранный основными разработчиками языка и тулчейна угрожает всей
+экосистеме Perl. Практически единственное на данный день преимущество Perl в
+его стабильности и вездесущности поставлено под удар. Поэтому вся работа Питера
+для Perl 5 может оказаться бессмысленной тратой времени и ресурсов без
+противостояния разрушительному тренду. К сожалению, без финансирования со
+стороны заинтересованного бизнеса этой проблемы не решить.</p>
+
+<p>P.S. Из комментариев <a href="http://blogs.perl.org/users/peter_rabbitson/2015/12/suspending-efforts-on-my-riba2016-crowdfunding-campaign-looking-forward-to-my-own-xmas.html#comment-1629174">к
+кросс-посту</a>
+на blogs.perl.org выяснилось, что Питер не единственный, кто в этом году
+завершит работу над открытыми проектами, также John Napiorkowski (основной
+контрибьютор Catalyst) решил отойти от разработки.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/funding/">funding</a>
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Tue, 08 Dec 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>2016 — год ribasushi</title>
+            <link>http://perlnews.ru/blog/2015/10/05/01-year-of-ribasushi/</link>
+            <guid>http://perlnews.ru/blog/2015/10/05/01-year-of-ribasushi/</guid>
+            <description><![CDATA[
+                <p>На краудсорсинге tilt.com стартовала кампания <a href="https://www.tilt.com/campaigns/year-of-ribasushi-help-him-focus-on-cpan-for-2016">«Год ribasushi: помогите ему
+сфокусироваться на работе со CPAN в 2016
+году»</a>,
+успешное завершение которой позволило бы Питеру «ribasushi» Рэббитсону в
+течении 2016 года полностью сконцентрироваться на работе с открытыми проектами
+на CPAN и, в первую очередь,
+<a href="https://metacpan.org/pod/DBIx::Class">DBIx::Class</a>. Цель кампании — сбор
+<strong>$150’000</strong>, при этом кампания будет признана успешной при достижении порога в
+$120’000.</p>
+
+<p><img alt="shut up and take my money" src="http://perlnews.ru/blog/2015/10/05/01-year-of-ribasushi/shut-up-and-take-my-money.jpg"></p>
+
+<p>Сумма достаточно большая, поэтому прежде всего это обращение к коммерческим
+компаниям, которые используют DBIx::Class: поддержите дальнейшую разработку
+этого продукта. Чтобы достигнуть заявленной цели, потребуется найти <strong>25</strong>
+компаний, готовых вложить $500 ежемесячно. Или, по крайне мере <strong>20</strong>, чтобы
+кампания оказалась успешной.</p>
+
+<p>В
+<a href="https://www.tilt.com/tilts/year-of-ribasushi-help-him-focus-on-cpan-for-2016/description">описании</a>
+кампании приводится обширный перечень задач, над которыми предстоит работать,
+например, интеграция SQL::Abstract в DBIC, чтобы устранить «бутылочное
+горлышко» генерации SQL, ленивая загрузка схемы для сокращения времени запуска,
+разработка асинхронного интерфейса для DBIC и множество других улучшений.</p>
+
+<p>Что-то похожее произошло 15 лет назад, когда схожая кампания, собравшая около
+$100’000, позволила Дэмиану Конвею в 2001 году полностью сосредоточиться над
+работой с Perl-проектами и выступать на конференциях по всему миру.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/funding/">funding</a>
+                    <a href="http://perlnews.ru/blog/tag/dbic/">DBIC</a>
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 05 Oct 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

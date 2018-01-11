@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/yapc/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/yapc.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Конференция YAPC::Russia 2016 пройдёт 25 июня в Москве</title>
+            <link>http://perlnews.ru/blog/2016/05/23/yapc-russia-2016/</link>
+            <guid>http://perlnews.ru/blog/2016/05/23/yapc-russia-2016/</guid>
+            <description><![CDATA[
+                <p><a href="http://permalink.gmane.org/gmane.comp.lang.perl.perl-mongers.moscow/18846">Анонсирована</a>
+очередная ежегодная конференция YAPC::Russia. В этом году мероприятие пройдёт
+25 июня в Москве в офисе Mail.Ru Group. Участие в конференции бесплатное, но
+необходимо <a href="https://corp.mail.ru/ru/press/events/222/">зарегистрироваться</a>.</p>
+
+<p>Программа конференции находится в процессе формирования, всех желающих
+выступить с докладом просят
+<a href="https://corp.mail.ru/ru/press/events/222/">связаться</a> с Павлом Щербиниными и
+сообщить тему доклада с краткой информацией о докладчике.</p>
+
+<p>Также, как и в прошлом году, организаторы обещают прямую видеотрансляцию
+докладов.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/yapc/">YAPC</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 23 May 2016 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Воркшоп «Saint Perl 2015»</title>
+            <link>http://perlnews.ru/blog/2015/11/26/01-saint-perl-7/</link>
+            <guid>http://perlnews.ru/blog/2015/11/26/01-saint-perl-7/</guid>
+            <description><![CDATA[
+                <p>19 декабря 2015 года в Санкт-Петербурге состоится 7-й воркшоп «Saint Perl
+2015». В этом году он пройдёт в офисе компании
+<a href="http://www.dataart.ru/contacts/saint-petersburg">DataArt</a>. Спешите
+зарегистрироваться на сайте конференции
+<a href="http://event.yapcrussia.org/saintperl7/">event.yapcrussia.org/saintperl7/</a>.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/yapc/">YAPC</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Thu, 26 Nov 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Конференция «Perl Mama» 2015</title>
+            <link>http://perlnews.ru/blog/2015/06/03/01-perl-mama-2015/</link>
+            <guid>http://perlnews.ru/blog/2015/06/03/01-perl-mama-2015/</guid>
+            <description><![CDATA[
+                <p>25-26 июля 2015 года в Одессе впервые пройдет конференция «Perl Mama»,
+посвященная языку Perl. Участие бесплатное.</p>
+
+<p>Сайт конференции: <a href="http://perlmama.od.ua/">perlmama.od.ua</a></p>
+
+<p>Подать заявку на выступление:
+<a href="http://perlmama.od.ua/odessa2015/newtalk">perlmama.od.ua/odessa2015/newtalk</a></p>
+
+<p>Предположительная программа конференции:</p>
+
+<ul>
+<li>24 июля — preparty </li>
+<li>25 июля — конференция: основной день докладов, затем afterparty</li>
+<li>26 июля — конференция, затем afterparty</li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/yapc/">YAPC</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 03 Jun 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Появились видеозаписи докладов YAPC::Russia 2015</title>
+            <link>http://perlnews.ru/blog/2015/05/29/02-may-perl-2015-video.html</link>
+            <guid>http://perlnews.ru/blog/2015/05/29/02-may-perl-2015-video.html</guid>
+            <description><![CDATA[
+                <p>На официальном
+<a href="http://www.youtube.com/channel/UCXG2gjCfXDkvg9TfPmNXPIg/videos">YouTube-канале</a>
+moscow.pm появились записи докладов YAPC::Russia 2015.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/yapc/">YAPC</a>
+                    <a href="http://perlnews.ru/blog/tag/moscow-pm/">moscow.pm</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Fri, 29 May 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Анонсирован Рязанский Perl Workshop 2015</title>
+            <link>http://perlnews.ru/blog/2015/05/29/01-ryazan-workshop-2015.html</link>
+            <guid>http://perlnews.ru/blog/2015/05/29/01-ryazan-workshop-2015.html</guid>
+            <description><![CDATA[
+                <p>15-16 августа 2015 года состоится первый в Рязани Перл воркшоп.</p>
+
+<p>Конференция пройдет в офисе компании EPAM Systems по адресу г. Рязань,
+ул. Гоголя, д. 16.</p>
+
+<p>Регистрация открыта на странице:
+<a href="http://event.yapcrussia.org/ryazan2015/">event.yapcrussia.org/ryazan2015/</a></p>
+
+<p>Подать заявку на выступление:
+<a href="http://event.yapcrussia.org/ryazan2015/newtalk">event.yapcrussia.org/ryazan2015/newtalk</a></p>
+
+<p>Предположительная программа конференции:</p>
+
+<ul>
+<li>15 августа — день докладов</li>
+<li>16 августа — совместный выезд на природу</li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/yapc/">YAPC</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Fri, 29 May 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Онлайн трансляция YAPC::Russia 2015</title>
+            <link>http://perlnews.ru/blog/2015/05/16/01-mayperl-translation.html</link>
+            <guid>http://perlnews.ru/blog/2015/05/16/01-mayperl-translation.html</guid>
+            <description><![CDATA[
+                <p>Началась <a href="https://corp.mail.ru/stream/mayperl/">онлайн-трансляция</a> конференции
+YAPC::Russia 2015.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/05/16/01-mayperl-translation.html#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/yapc/">YAPC</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Sat, 16 May 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Расписание конференции YAPC::Russia 2015</title>
+            <link>http://perlnews.ru/blog/2015/05/15/01-may-perl-2015-schedule.html</link>
+            <guid>http://perlnews.ru/blog/2015/05/15/01-may-perl-2015-schedule.html</guid>
+            <description><![CDATA[
+                <p>Доступно <a href="http://event.yapcrussia.org/yr2015/schedule">расписание</a> конференции
+YAPC::Russia 2015, которая начнётся уже завтра.</p>
+
+<p>А сегодня можно посетить
+<a href="http://event.yapcrussia.org/yr2015/talk/327">preparty</a>, которая пройдёт в
+пивном ресторане «Шпатен-Хаус» в 19:00.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/yapc/">YAPC</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Fri, 15 May 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Конференция YAPC::Russia 2015 пройдёт 16-17 мая в Москве</title>
+            <link>http://perlnews.ru/blog/2015/03/23/01-yapc-russia-2015.html</link>
+            <guid>http://perlnews.ru/blog/2015/03/23/01-yapc-russia-2015.html</guid>
+            <description><![CDATA[
+                <p>Как <a href="https://www.mail-archive.com/moscow-pm@pm.org/msg16510.html">сообщает</a>
+Павел Щербинин, ежегодная конференция YAPC::Russia «May Perl» в этом году будет
+проведена с 16 по 17 мая в Москве в офисе Mail.Ru Group. Участие в конференции
+<strong>бесплатное</strong>, только не забудьте
+<a href="http://event.yapcrussia.org/yr2015/register/">зарегистрироваться</a>.</p>
+
+<p>На конференцию приглашены известные Perl-звёзды:</p>
+
+<ul>
+<li><strong>Saywer X</strong>, израильский Perl-программист, один из разработчиков
+Dancer/Dancer2, организатор встреч сообщества telaviv.pm. </li>
+<li><strong>Peter Rabbitson</strong> (<em>ribasushi</em>), главный бензопильщик популярного ORM
+DBIx::Class, регулярный участник и докладчик многих Perl-конференций.</li>
+</ul>
+
+<p>Ожидается около 30 докладов, вы можете выступить спикером, для этого
+необходимо <a href="http://event.yapcrussia.org/yr2015/newtalk/">подать заявку</a>.</p>
+
+<p>Мероприятие состоится по адресу Москва, Ленинградский пр-т, 39, стр. 79 (м.
+«Аэропорт»). Приходите и зовите своих коллег!</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/yapc/">YAPC</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 23 Mar 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

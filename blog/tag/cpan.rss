@@ -1,0 +1,542 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/cpan/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/cpan.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Питер Рэббитсон приостанавливает свою краудсорс-кампанию</title>
+            <link>http://perlnews.ru/blog/2015/12/08/01-suspending-riba2016/</link>
+            <guid>http://perlnews.ru/blog/2015/12/08/01-suspending-riba2016/</guid>
+            <description><![CDATA[
+                <p>Питер «ribasushi» Рэббитсон
+<a href="https://www.reddit.com/r/perl/comments/3vnsiw/suspending_efforts_on_my_riba2016_crowdfunding/">сообщил</a>,
+что объявленная два месяца назад кампания <a href="http://perlnews.ru/blog/2015/10/05/01-year-of-ribasushi/">«год
+ribasushi»</a> несмотря
+на неплохой старт в конце концов провалилась. Формально осталось 17 дней до
+завершения краудсорс-кампании, но собрано оказалось всего $30 000 вместо
+минимально необходимых $120 000. Нашлось только две крупные компании, которые
+смогли внести лишь $8 000, большую часть обеспечили два небольших
+консалтинговых агентства и 40 разработчиков — друзья и знакомые Питера.</p>
+
+<p>Поэтому Питер приостанавливает активное участие в кампании и за оставшиеся дни
+направит свои усилия на завершение текущих задач и выпуск релизов
+<code>DBIx::Class</code>, <code>SQL::Abstract</code> и <code>SQL::Translator</code>.</p>
+
+<p>После 25 декабря Питер <strong>завершит</strong> свою работу над открытыми проектами на CPAN
+и передаст права на выпуск модулей, которые он поддерживал, достойным
+кандидатам.</p>
+
+<p>Питер с сожалением замечает, что за последний год ему стало очевидно, что
+текущий курс, выбранный основными разработчиками языка и тулчейна угрожает всей
+экосистеме Perl. Практически единственное на данный день преимущество Perl в
+его стабильности и вездесущности поставлено под удар. Поэтому вся работа Питера
+для Perl 5 может оказаться бессмысленной тратой времени и ресурсов без
+противостояния разрушительному тренду. К сожалению, без финансирования со
+стороны заинтересованного бизнеса этой проблемы не решить.</p>
+
+<p>P.S. Из комментариев <a href="http://blogs.perl.org/users/peter_rabbitson/2015/12/suspending-efforts-on-my-riba2016-crowdfunding-campaign-looking-forward-to-my-own-xmas.html#comment-1629174">к
+кросс-посту</a>
+на blogs.perl.org выяснилось, что Питер не единственный, кто в этом году
+завершит работу над открытыми проектами, также John Napiorkowski (основной
+контрибьютор Catalyst) решил отойти от разработки.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/funding/">funding</a>
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Tue, 08 Dec 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>2016 — год ribasushi</title>
+            <link>http://perlnews.ru/blog/2015/10/05/01-year-of-ribasushi/</link>
+            <guid>http://perlnews.ru/blog/2015/10/05/01-year-of-ribasushi/</guid>
+            <description><![CDATA[
+                <p>На краудсорсинге tilt.com стартовала кампания <a href="https://www.tilt.com/campaigns/year-of-ribasushi-help-him-focus-on-cpan-for-2016">«Год ribasushi: помогите ему
+сфокусироваться на работе со CPAN в 2016
+году»</a>,
+успешное завершение которой позволило бы Питеру «ribasushi» Рэббитсону в
+течении 2016 года полностью сконцентрироваться на работе с открытыми проектами
+на CPAN и, в первую очередь,
+<a href="https://metacpan.org/pod/DBIx::Class">DBIx::Class</a>. Цель кампании — сбор
+<strong>$150’000</strong>, при этом кампания будет признана успешной при достижении порога в
+$120’000.</p>
+
+<p><img alt="shut up and take my money" src="http://perlnews.ru/blog/2015/10/05/01-year-of-ribasushi/shut-up-and-take-my-money.jpg"></p>
+
+<p>Сумма достаточно большая, поэтому прежде всего это обращение к коммерческим
+компаниям, которые используют DBIx::Class: поддержите дальнейшую разработку
+этого продукта. Чтобы достигнуть заявленной цели, потребуется найти <strong>25</strong>
+компаний, готовых вложить $500 ежемесячно. Или, по крайне мере <strong>20</strong>, чтобы
+кампания оказалась успешной.</p>
+
+<p>В
+<a href="https://www.tilt.com/tilts/year-of-ribasushi-help-him-focus-on-cpan-for-2016/description">описании</a>
+кампании приводится обширный перечень задач, над которыми предстоит работать,
+например, интеграция SQL::Abstract в DBIC, чтобы устранить «бутылочное
+горлышко» генерации SQL, ленивая загрузка схемы для сокращения времени запуска,
+разработка асинхронного интерфейса для DBIC и множество других улучшений.</p>
+
+<p>Что-то похожее произошло 15 лет назад, когда схожая кампания, собравшая около
+$100’000, позволила Дэмиану Конвею в 2001 году полностью сосредоточиться над
+работой с Perl-проектами и выступать на конференциях по всему миру.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/funding/">funding</a>
+                    <a href="http://perlnews.ru/blog/tag/dbic/">DBIC</a>
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 05 Oct 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Сервер тестировщиков CPAN снова работает</title>
+            <link>http://perlnews.ru/blog/2015/09/18/01-cpantesters-is-back/</link>
+            <guid>http://perlnews.ru/blog/2015/09/18/01-cpantesters-is-back/</guid>
+            <description><![CDATA[
+                <p>Администратор инфраструктуры CPAN Testers
+<a href="http://blog.cpantesters.org/diary/200">сообщил</a>, что работа сервисов
+восстановлена.</p>
+
+<p>На протяжении последних дней, пришедшие на помощь Matt S Trout и Doug Bell,
+пытались выяснить причину проблем. Как было замечено, работа с базой данной
+приводила к зависанию сервера на продолжительное время. Проверка дисков не дала
+никаких результатов.</p>
+
+<p>Компания Bytemark, предоставляющая хостинг, предложила более новый и мощный
+сервер, на который и были перенесены сервисы cpantesters. За прошедшую неделю
+всё работало без проблем. И самое приятное, что отчёты cpantesters теперь
+генерируются гораздо быстрее.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/cpantesters/">cpantesters</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Fri, 18 Sep 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Веб-сервер тестировщиков CPAN вышел из строя</title>
+            <link>http://perlnews.ru/blog/2015/08/31/01-cpantesters-server-down/</link>
+            <guid>http://perlnews.ru/blog/2015/08/31/01-cpantesters-server-down/</guid>
+            <description><![CDATA[
+                <p>Как <a href="http://blog.cpantesters.org/diary/199">сообщает</a> администратор
+инфраструктуры CPAN Testers, сервер прекратил свою работу из-за сбоя, причина
+которого пока не ясна. Проблемы начались несколько дней назад, и сегодня в 2:30
+UTC сервер окончательно перестал работать.</p>
+
+<p>На данный момент у администратора нет достаточно свободного времени, чтобы
+разобраться с проблемой самостоятельно и вести дальнейшее сопровождение.
+Поэтому был объявлен поиск добровольца, который возьмёт на себя дальнейшее
+сопровождение CPAN Testers.</p>
+
+<p>Судя по обновлению информации в блоге, подходящий кандидат с опытом был найден.
+Ждём итогов расследования инцидента.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/cpantesters/">cpantesters</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 31 Aug 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>20 лет архиву CPAN</title>
+            <link>http://perlnews.ru/blog/2015/08/16/20-cpan-anniversary/</link>
+            <guid>http://perlnews.ru/blog/2015/08/16/20-cpan-anniversary/</guid>
+            <description><![CDATA[
+                <p>16 августа 2015 года исполнилось 20 лет архиву CPAN. CPAN — это одно из
+старейших и крупнейших хранилищ свободного программного обеспечения: модулей и
+программ на Perl. Ровно 20 лет назад <em>Andreas König</em> залил самый первый модуль
+на CPAN через специальный веб-интерфейс <a href="https://pause.perl.org/pause/">PAUSE</a>.</p>
+
+<p><em>Нил Бауэрс</em> опубликовал краткий
+<a href="http://blogs.perl.org/users/neilb/2015/08/cpan-is-20.html">пересказ</a> подробной
+<a href="https://github.com/neilbowers/history-of-cpan/blob/master/history.md">истории</a>
+появления архива CPAN. Далее идёт свободный перевод этого пересказа.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/08/16/20-cpan-anniversary/#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Sun, 16 Aug 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Берлинский консенсус</title>
+            <link>http://perlnews.ru/blog/2015/05/14/01-berlin-consensus.html</link>
+            <guid>http://perlnews.ru/blog/2015/05/14/01-berlin-consensus.html</guid>
+            <description><![CDATA[
+                <p>На днях был опубликован <a href="https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/berlin-consensus.md">Берлинский
+консенсус</a>
+— финальная договорённость по результатам прошедшего <a href="http://perlnews.ru/blog/2015/04/21/02-qa-hackaton-berlin-2015.html">Берлинского
+QA-хакатона</a>.
+Данный документ описывает новые соглашения и идеи для репозитория CPAN и
+тулчейна Perl, а также новые рекомендации для CPAN-авторов. Рассмотрим более
+подробно концепции и тезисы Берлинского консенсуса.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/05/14/01-berlin-consensus.html#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Thu, 14 May 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Улучшения в производительности Hash::Ordered</title>
+            <link>http://perlnews.ru/blog/2015/05/06/01-hash-ordered-benchmark.html</link>
+            <guid>http://perlnews.ru/blog/2015/05/06/01-hash-ordered-benchmark.html</guid>
+            <description><![CDATA[
+                <p><a href="https://metacpan.org/pod/Hash::Ordered">Hash::Ordered</a> — это модуль для
+создания упорядоченных хешей, ключи в которых хранятся в заданном порядке.
+Поскольку модуль написан на чистом Perl, а упорядоченные хеши --- это объекты,
+операции над которыми производятся с помощью методов, то подобный хеш работает
+медленнее, чем обычный хеш. Такова цена сохранения упорядоченности хеша.</p>
+
+<p>Как
+<a href="http://www.dagolden.com/index.php/2461/faster-ordered-hashes-for-perl/">сообщает</a>
+Дэвид Голден в новой версии
+<a href="https://metacpan.org/release/DAGOLDEN/Hash-Ordered-0.009/">0.009</a> сделана
+оптимизация, которая в некоторых случаях значительно ускоряет работу с
+упорядоченными хешами. Было проведено сравнение производительности между
+версиями Hash::Ordered 0.002 и 0.009. Для наглядности представлен график
+сравнения:</p>
+
+<p><img alt="Бенчмарк Hash::Ordered" src="http://perlnews.ru/i/2015-05-06-hash_ordered_benchmark.png"></p>
+
+<p>Виден рост по многим тестам, особенно выросла производительность при удалении в
+хеше с большим числом элементов. Практически не изменилась скорость замены
+элементов, несколько снизилась скорость добавления (за счёт проверки, что ключ
+— это строка, а не ссылка).</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/benchmark/">benchmark</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 06 May 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Исправление серьёзных уязвимостей в Module::Signature</title>
+            <link>http://perlnews.ru/blog/2015/04/07/01-module-signature-update.html</link>
+            <guid>http://perlnews.ru/blog/2015/04/07/01-module-signature-update.html</guid>
+            <description><![CDATA[
+                <p>Модуль <code>Module::Signature</code> используется многими CPAN-клиентами для проверки
+GPG-подписи модулей, полученных со CPAN или любого из его зеркал. <em>Джон
+Лайтсей</em> <a href="http://www.openwall.com/lists/oss-security/2015/04/07/1">сообщил</a>,
+что обнаружил четыре уязвимости в коде модуля:</p>
+
+<ol>
+<li><code>Module::Signature</code>, из-за некорректного парсинга границ подписанных данных
+в файле подписи, мог извлечь информацию о файлах из неподписанной части.</li>
+<li>При проверке содержимого CPAN-модуля <code>Module::Signature</code> игнорировал
+некоторые файлы из архива, которые не были указаны в файле подписи, что
+затрагивает и файлы в каталоге <code>t</code>, которые автоматически выполняются при
+запуске тестов.</li>
+<li>При генерации контрольных сумм из подписанного манифеста <code>Module::Signature</code>
+использовал <code>open()</code> с двумя параметрами при чтении файлов. Это позволяло
+встраивать произвольные shell-команды в файле SIGNATURE, которые бы
+запускались при проверке подписи.</li>
+<li><code>Module::Signature</code> подгружает некоторые модули в процессе работы, модуль
+<code>Text::Diff</code> может отсутствовать в системе и соответственно может быть
+загружен из текущего каталога распакованного архива модуля, что может
+привести к выполнению произвольного кода.</li>
+</ol>
+
+<p>Вышло обновление <code>Module::Signature</code>
+<a href="https://metacpan.org/release/AUDREYT/Module-Signature-0.75">0.75</a>, в котором
+исправлены все перечисленные проблемы.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/security/">security</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Tue, 07 Apr 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Мартовские результаты CPAN Pull Requests</title>
+            <link>http://perlnews.ru/blog/2015/04/06/03-cpan-pull-requests-in-march-2015.html</link>
+            <guid>http://perlnews.ru/blog/2015/04/06/03-cpan-pull-requests-in-march-2015.html</guid>
+            <description><![CDATA[
+                <p>Нил Бауэрс опубликовал очередную
+<a href="http://neilb.org/2015/04/03/prc-march-stats.html">статистику</a> по запросам на
+слияние для CPAN-модулей на github в марте.</p>
+
+<p><img alt="График PR, март 2015" src="http://perlnews.ru/i/2015-04-06-cpr.png"></p>
+
+<p>Список модулей и результаты кампании <em>#cpanpr</em> в
+<a href="http://cpan-prc.org/march.html">марте</a> доступны на сайте cpan-prc.org. Как
+следует из отчёта в марте из 138 заданий было выполнено 82, что составило почти
+60%. На <a href="http://cpan-prc.org/april.html">апрель</a> назначено уже 125 заданий.</p>
+
+<p>По словам Нила, на данный момент в кампании активны 261 человек, ранее максимум
+активных участников составлял около 380 человек.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/cpanpr/">cpanpr</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 06 Apr 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>AnyEvent сломан на Strawberry Perl 5.20</title>
+            <link>http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html</link>
+            <guid>http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html</guid>
+            <description><![CDATA[
+                <p>В конце прошлой недели рассылка perl5-porters опять наполнились
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/03/msg226604.html">проклятиями</a>
+Марка Леманна из-за очередной поломки обратной совместимости в Perl5. Как
+выяснилось AnyEvent оказался сломан на платформе Windows из-за несовместимых
+изменений, который произошли в версии 5.19.4.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/facepalm/">facepalm</a>
+                    <a href="http://perlnews.ru/blog/tag/windows/">windows</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 16 Mar 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Результаты соревнования CPAN Pull Requests в феврале 2015</title>
+            <link>http://perlnews.ru/blog/2015/03/08/01-cpan-pull-requests-in-feb-2015.html</link>
+            <guid>http://perlnews.ru/blog/2015/03/08/01-cpan-pull-requests-in-feb-2015.html</guid>
+            <description><![CDATA[
+                <p>Нил Бауэрс опубликовал очередные
+<a href="http://neilb.org/2015/03/07/prc-feb-stats.html">результаты</a> кампании CPAN Pull
+Requests Challenge (<a href="https://twitter.com/hashtag/cpanpr"><em>#cpanpr</em></a>) за
+февраль.</p>
+
+<p><img alt="График PR, февраль 2015" src="http://perlnews.ru/i/2015-03-08-cpr.png"></p>
+
+<p>Результаты оказались несколько хуже чем, за
+<a href="http://perlnews.ru/blog/2015/02/03/cpan-pull-requests-in-jan-2015.html">январь</a>,
+но в целом, это второй самый высокий показатель за всё время ведения
+статистики. Более того спад в феврале наблюдается каждый год, поэтому с учётом
+такой динамики прирост PR в результате кампании <em>cpanpr</em> составил примерно то
+же значение, что и в январе.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/cpanpr/">cpanpr</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Sun, 08 Mar 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>В Perl 5.22 не попадёт новый Test-Simple</title>
+            <link>http://perlnews.ru/blog/2015/03/07/01-test-simple-stable.html</link>
+            <guid>http://perlnews.ru/blog/2015/03/07/01-test-simple-stable.html</guid>
+            <description><![CDATA[
+                <p>Как
+<a href="http://permalink.gmane.org/gmane.comp.lang.perl.perl5.porters/148640">сообщил</a>
+Chad Granum, чтобы не создавать спешки и суеты с тестированием обновлённого
+<a href="https://metacpan.org/release/Test-Simple">Test-Simple</a>, в состав Perl 5.22
+войдёт проверенная стабильная версия 1.001014. Релиз 1.301001, который содержит
+значительную переработку архитектуры тестирования и новое модернизированное
+API, попадёт в разрабатываемую версию Perl уже после релиза Perl 5.22.</p>
+
+<p>Основой нового <code>Test-Simple</code> станет
+<a href="https://metacpan.org/pod/release/EXODIST/Test-Simple-1.301001_098/lib/Test/Stream.pm">Test::Stream</a>,
+который станет собирать события всех процессов и тредов теста в одном месте.
+Раньше все методы, такие как <code>ok</code>, <code>diag</code>, <code>note</code> просто генерировали
+TAP-вывод, теперь же все подобные события поступают в <code>Test::Stream</code>, позволяя
+перенаправлять вывод в произвольные файловые дескрипторы в нужной кодировке,
+выполнять различные хуки до того, как состояние теста обновится. Упростится
+создание субтестов, вложенных тестов, а также создание собственных тестовых
+функций, которые теперь получат правильный контекст и не поломают TAP-вывод.
+Появится возможность легко проводить отладку тестов с выводом стека вызовов в
+точках, где происходит ошибка.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Sat, 07 Mar 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Существенное изменение в CGI.pm</title>
+            <link>http://perlnews.ru/blog/2015/02/20/01-cgi-update.html</link>
+            <guid>http://perlnews.ru/blog/2015/02/20/01-cgi-update.html</guid>
+            <description><![CDATA[
+                <p>Lee Johnson
+<a href="http://blogs.perl.org/users/lee_j/2015/02/removing-autoload-from-cgipm.html">уведомляет</a>
+о выходе экспериментальной версии модуля <code>CGI</code>
+<a href="https://metacpan.org/release/LEEJO/CGI-4.13_02/">4.13_02</a>. В данной версии
+полностью удалена оптимизация с использованием <code>AUTOLOAD</code>, появившаяся в CGI.pm
+ещё 20 лет назад. Как известно, код практически всех функций модуля
+подгружается и выполняется только в момент первого использования. Это позволяло
+выиграть несколько миллисекунд при загрузке модуля, что имело определённый
+смысл раньше, когда технология CGI была доминирующей. На сегодняшний день
+поддержка модуля существенно затруднена из-за формата исходного кода,
+неработающих метрик покрытия кода тестами и излишней магии автозагрузки.</p>
+
+<p>Соответственно произойдёт несколько существенных изменений, которые могут
+затронуть существующий код: модуль<code>CGI::Pretty</code> объявляется устаревшим, как и
+прагма <code>-compile</code> (или метод <code>compile</code>). Если вы используете прагму <code>-any</code> при
+загрузке модуля для поддержки произвольных тегов, то ваш код скорее всего
+окажется сломанным.</p>
+
+<p>Майнтейнер модуля призывает к широкому обсуждению изменения. Открыта
+<a href="https://github.com/leejo/CGI.pm/issues/162">заявка</a> на GitHub для обсуждения.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Fri, 20 Feb 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>В Pod::Simple по умолчанию будет кодировка CP-1252</title>
+            <link>http://perlnews.ru/blog/2015/02/10/01-pod-simple-cp1252.html</link>
+            <guid>http://perlnews.ru/blog/2015/02/10/01-pod-simple-cp1252.html</guid>
+            <description><![CDATA[
+                <p>Дэвид Уилер
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/02/msg225550.html">анонсировал</a>,
+что в следующем релизе <a href="https://metacpan.org/release/Pod-Simple">Pod::Simple</a>
+(парсер POD-документации, используемый в том числе для perldoc) будет изменена
+кодировка по-умолчанию с Latin-1 на CP-1252. Утверждается, что это будет
+особенно полезно для POD-документов, созданных на платформе Windows, где эта
+кодировка и встречается. Соответствующие изменения будут внесены и в
+спецификацию POD Perl.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/facepalm/">facepalm</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Tue, 10 Feb 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>cpanpr хакатон в BlueHost</title>
+            <link>http://perlnews.ru/blog/2015/02/07/01-bluehost-cpanpr-hackaton.html</link>
+            <guid>http://perlnews.ru/blog/2015/02/07/01-bluehost-cpanpr-hackaton.html</guid>
+            <description><![CDATA[
+                <p>Хостинговая компания BlueHost провела сегодня внутренний
+<a href="https://twitter.com/rvandam/status/563793149076594688">хакатон</a>, посвящённый
+соревнованию CPAN Pull Request (#cpanpr). Участвовало более 20 человек и было
+сделано 25 запросов на слияние.</p>
+
+<p><img alt="hackaton" src="http://perlnews.ru/i/2015-02-07-bluehost-hackaton.jpg"></p>
+
+<p>Чтобы каким-то образом фиксировать всю эту работу, один из участников хакатона
+Роб Ван Дам подготовил
+<a href="http://rvandam.com/cpan-prc-resources/recent.html">страничку</a> с последними
+запросами и их статусом (пока ещё не обновляется в реальном времени, но над
+этим работают). Используется модуль
+<a href="https://metacpan.org/pod/Net::GitHub">Net::GitHub</a>, запрашиваются модули,
+которые участвовали в соревновании в январе-феврале. Цветом выделены PR
+отправленные участниками сегодняшнего хакатона.</p>
+
+<p>Уже сейчас организаторы думают о проведении следующего хакатона в ближайшие
+несколько месяцев, а также проведении такого же мероприятия в локальной группе
+перловиков.</p>
+
+<p><em>PerlNews.Ru благодарит <a href="https://twitter.com/vtivti"><span class="typcn typcn-social-twitter"></span>
+Вячеслава Тихановского</a> за информацию о хакатоне</em></p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/cpanpr/">cpanpr</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Sat, 07 Feb 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Следующий стабильный релиз Moo 2.0</title>
+            <link>http://perlnews.ru/blog/2015/02/06/01-moo-2.0.html</link>
+            <guid>http://perlnews.ru/blog/2015/02/06/01-moo-2.0.html</guid>
+            <description><![CDATA[
+                <p>Грэм Ноп
+<a href="http://blogs.perl.org/users/graham_knop/2015/02/moo-20.html">оповещает</a> о
+грядущем мажорном релизе ООП-фреймворка Moo 2.0.</p>
+
+<p>Основное изменение в новой версии — Moo больше не делает предупреждения
+фатальными для классов, которые его загружают. Поскольку Moo всё больше
+используется на CPAN, становится очевидно, что разлом, который будет
+происходить при появлении новых предупреждений и затронет прежде всего ничего
+не подозревающих пользователей, не стоит тех перфекционистких целей, которые
+ставят фатальные предупреждения. Стремление уйти от внезапных поломок даже
+выразилось в появление такого костыля как
+<a href="https://metacpan.org/pod/Moo::Lax">Moo::Lax</a>.</p>
+
+<p>На данный момент модуль доступен на CPAN как пробный релиз <a href="https://metacpan.org/release/HAARG/Moo-1.999_001">Moo
+1.999_01</a>.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Fri, 06 Feb 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Результаты соревнования CPAN Pull Requests в январе 2015</title>
+            <link>http://perlnews.ru/blog/2015/02/03/cpan-pull-requests-in-jan-2015.html</link>
+            <guid>http://perlnews.ru/blog/2015/02/03/cpan-pull-requests-in-jan-2015.html</guid>
+            <description><![CDATA[
+                <p>Нил Бауэрс опубликовал
+<a href="http://neilb.org/2015/02/02/monthly-cpan-pr-graph.html">результаты</a> кампании
+CPAN Pull Requests Challenge (<a href="https://twitter.com/hashtag/cpanpr"><em>#cpanpr</em></a>)
+за прошедший месяц. Напомню, что <em>#cpanpr</em> — это конкурс, который проводится
+среди всех желающих. Участникам ежемесячно отправляется название модуля,
+исходный код которого присутствует на GitHub. Участник должен в течении месяца
+отправить pull request (запрос на слияние) для указанного модуля. Например,
+исправить документацию, или какой-либо незакрытый баг, или пофиксить тест. И
+совсем хорошо, если участник ещё напишет блог-пост о выполненном задании.</p>
+
+<p>Прошёл первый месяц кампании, участники выполнили свои задания. Есть ли
+результаты?</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/02/03/cpan-pull-requests-in-jan-2015.html#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/cpanpr/">cpanpr</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Tue, 03 Feb 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/smartmatch/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2015-09-19T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/smartmatch.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/smartmatch/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/09/19/01-smartmatch-3/</id>
+        <title>Новые идеи для smart match</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/09/19/01-smartmatch-3/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>После выхода Perl 5.18 оператор умного сравнения <code>~~</code>, а также связанные с ним
+<code>given</code> и <code>when</code> были объявлены экспериментальными. Основная причина этого
+изменения — чрезвычайно сложная и запутанная таблица действий в зависимости от
+типа аргументов этих операторов. Умное сравнение требовало радикального
+пересмотра в сторону упрощения.</p>
+
+<p>На днях в рассылке perl5-porters снова был поднят вопрос о том, каким должен
+стать обновлённый оператор умного сравнения. Рикардо Сигнес рассказал о своём
+новом
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/09/msg230881.html">видении</a>
+работы оператора умного сравнения.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/09/19/01-smartmatch-3/#section-2">Читать дальше &rarr;</a></p>
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/smartmatch/">smartmatch</a>
+            </p>
+        ]]></content>
+        <updated>2015-09-19T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="smartmatch" />
+    </entry>
+</feed>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/bug/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/bug.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Coro в Perl 5.24</title>
+            <link>http://perlnews.ru/blog/2016/05/06/01-coro-in-perl-5-24/</link>
+            <guid>http://perlnews.ru/blog/2016/05/06/01-coro-in-perl-5-24/</guid>
+            <description><![CDATA[
+                <p>В тот момент, когда перед выпуском Perl 5.24 остались считанные дни, в рассылке
+perl5-porters внезапно
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2016/05/msg236174.html">вспомнили</a>,
+что в новом Perl по-прежнему остаётся сломанным модуль Coro Марка Леманна. Одна
+из проблем была связана с тем, что в Perl 5.22 структура <code>MGVTBL</code> (магическая
+виртуальная таблица), формирующаяся во время компиляции perl, стала
+константной. Coro делал переопределение в таблице, поэтому и не мог работать с
+новым Perl 5.22. Было предложено откатить это изменение до выхода Perl 5.24.</p>
+
+<p>Вносить подобные изменения в последние дни перед выпуском слишком рискованно,
+поэтому произошёл спонтанный мозговой штурм проблемы, в результате которого
+удалось выяснить очень много интересных деталей. Оказалось, что переопределение
+<code>MGVTBL</code> требовалось Coro только для того, чтобы переопределить работу с
+хендлерами сигналов <code>__DIE__</code> и <code>__WARN__</code> для магического хеша <code>%SIG</code>, что в
+свою очередь было сделано из-за бага Perl, когда присутствует рассинхронизация
+в <code>PL_warnhook</code> и <code>$SIG{__WARN__}</code>. Теоретически оба должны ссылаться на
+хендлер обработки предупреждений, но некоторые кривые XS-программы, в том
+числе входящие в базовый Perl (например, find в PerlIO::Layer), могут изменить
+только <code>PL_warnhook</code>, забыв про <code>$SIG{__WARN__}</code>. То есть это был банальный
+костыль в Coro для обхода реальной проблемы в Perl. Эта проблема была
+зафиксирована в баге
+<a href="https://rt.perl.org/Public/Bug/Display.html?id=125439">#125349</a>,</p>
+
+<p>Более того, оказалось, что Coro можно было приспособить для работы с
+константной <code>MGVTBL</code>, Dave Mitchell и Father Chrysostomos продемонстрировали
+<a href="http://code.activestate.com/lists/perl5-porters/228699/">патч</a>, который
+позволяет Coro работать без проблем на Perl 5.22.</p>
+
+<p>Очевидно, что если бы этот мозговой штурм прошёл год назад, проблема была бы
+решена раньше и не возникло бы таких явлений как stableperl. Вероятно штурм бы
+и не потребовался, если бы Марк сообщил о проблеме в Perl, когда столкнулся с
+ней впервые.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/perl/">perl</a>
+                    <a href="http://perlnews.ru/blog/tag/bug/">bug</a>
+                    <a href="http://perlnews.ru/blog/tag/coro/">Coro</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Fri, 06 May 2016 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

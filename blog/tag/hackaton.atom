@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/hackaton/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2015-04-21T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/hackaton.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/hackaton/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/04/21/02-qa-hackaton-berlin-2015.html</id>
+        <title>Завершился Берлинский Perl QA-хакатон 2015</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/04/21/02-qa-hackaton-berlin-2015.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p><a href="http://act.qa-hackathon.org/qa2015/">Perl QA-хакатон</a> — это ежегодное
+мероприятие, на котором собираются люди, так или иначе занимающиеся вопросами
+обеспечением качества Perl-кода: тестирование, пакетирование, CPAN и связанные
+системы. В этом году хакатон проводился с 16 по 19 апреля в Берлине. В нём
+приняли участие более 30 известных Perl-хакеров, в том числе Рикардо Сигнес,
+Тацухико Миягава, Дэвид Голден, Лион Тиммерманс, Питэр Рэббитсон.</p>
+
+<p><img alt="perlqah2015" src="http://perlnews.ru/i/2015-04-21-perlqah2015.jpg"></p>
+
+                <p><a href="http://perlnews.ru/blog/2015/04/21/02-qa-hackaton-berlin-2015.html#section-2">Читать дальше &rarr;</a></p>
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/hackaton/">hackaton</a>
+            </p>
+        ]]></content>
+        <updated>2015-04-21T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="hackaton" />
+    </entry>
+</feed>
+

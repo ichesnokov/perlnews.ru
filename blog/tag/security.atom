@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/security/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2016-03-11T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/security.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/security/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2016/03/11/01-strawberry-perl/</id>
+        <title>Выпущен Strawberry Perl 5.22.1.3 и 5.20.3.3</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2016/03/11/01-strawberry-perl/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Выпущены два релиза дистрибутива Perl 5.22.1.3 и 5.20.3.3 для Windows
+<em>Strawberry Perl</em>. Оба релиза содержат исправление уязвимостей:</p>
+
+<ul>
+<li><p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8607">CVE-2015-8607</a>
+— функция <code>canonpath</code> модуля File::Spec не сохраняет taint-атрибут
+возвращаемого значения.</p></li>
+<li><p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8608">CVE-2015-8608</a>
+— обращение к памяти за пределами границ при обработке путей. Баг специфичен
+для Win32 платформы, возникает в случае если в пути в качестве буквы диска
+указан любой символ, отличный от <code>а..z</code> или <code>A..Z</code>.</p></li>
+<li><p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2381">CVE-2016-2381</a>
+— если в массиве переменных окружения оказывались дублирующиеся ключи, то в
+<code>%ENV</code> сохранялось последнее значение, в то время как <code>getenv</code> возвращал
+первое. В такой ситуации дочерний процесс мог получить неожиданное значение
+переменной окружения.</p></li>
+</ul>
+
+<p>Кроме того, в дистрибутивах обновлена библиотека openssl. Загрузить новые
+релизы можно на сайте проекта <a href="http://strawberryperl.com/">strawberryperl.com</a>.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/windows/">windows</a>
+                <a href="http://perlnews.ru/blog/tag/security/">security</a>
+            </p>
+        ]]></content>
+        <updated>2016-03-11T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="windows" />
+        <category term="security" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/04/16/01-movabletype-security-update.html</id>
+        <title>Вышли обновления безопасности MovableType 6.0.8 и 5.2.13</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/04/16/01-movabletype-security-update.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Вышли обновления, исправляющие ошибку в безопасности, для известной системы
+управления контентом MovableType версии 6.0.8 и 5.2.13 (и в частности Movable
+Type Open Source). В
+<a href="https://movabletype.org/news/2015/04/movable_type_608_and_5213_released_to_close_security_vulnera.html">отчёте</a>
+MovableType.com указано, что уязвимости подвержены ветки 6.0.x и 5.2.x.</p>
+
+<p><em>Джон Лайтсей</em> обнаружил уязвимость инъекции строки формата в шаблоны
+локализации Movable Type. Неаутентифицированный удалённый пользователь получает
+возможность выполнить произвольный код на сервере с правами учётной записи
+процесса веб-сервера. Проблема получила идентификатор
+<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0845">CVE-2015-0845</a></p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/security/">security</a>
+            </p>
+        ]]></content>
+        <updated>2015-04-16T00:00:00Z</updated>
+        <category term="security" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/04/07/01-module-signature-update.html</id>
+        <title>Исправление серьёзных уязвимостей в Module::Signature</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/04/07/01-module-signature-update.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Модуль <code>Module::Signature</code> используется многими CPAN-клиентами для проверки
+GPG-подписи модулей, полученных со CPAN или любого из его зеркал. <em>Джон
+Лайтсей</em> <a href="http://www.openwall.com/lists/oss-security/2015/04/07/1">сообщил</a>,
+что обнаружил четыре уязвимости в коде модуля:</p>
+
+<ol>
+<li><code>Module::Signature</code>, из-за некорректного парсинга границ подписанных данных
+в файле подписи, мог извлечь информацию о файлах из неподписанной части.</li>
+<li>При проверке содержимого CPAN-модуля <code>Module::Signature</code> игнорировал
+некоторые файлы из архива, которые не были указаны в файле подписи, что
+затрагивает и файлы в каталоге <code>t</code>, которые автоматически выполняются при
+запуске тестов.</li>
+<li>При генерации контрольных сумм из подписанного манифеста <code>Module::Signature</code>
+использовал <code>open()</code> с двумя параметрами при чтении файлов. Это позволяло
+встраивать произвольные shell-команды в файле SIGNATURE, которые бы
+запускались при проверке подписи.</li>
+<li><code>Module::Signature</code> подгружает некоторые модули в процессе работы, модуль
+<code>Text::Diff</code> может отсутствовать в системе и соответственно может быть
+загружен из текущего каталога распакованного архива модуля, что может
+привести к выполнению произвольного кода.</li>
+</ol>
+
+<p>Вышло обновление <code>Module::Signature</code>
+<a href="https://metacpan.org/release/AUDREYT/Module-Signature-0.75">0.75</a>, в котором
+исправлены все перечисленные проблемы.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                <a href="http://perlnews.ru/blog/tag/security/">security</a>
+            </p>
+        ]]></content>
+        <updated>2015-04-07T00:00:00Z</updated>
+        <category term="CPAN" />
+        <category term="security" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/26/01-request-tracker-update.html</id>
+        <title>Обновление безопасности Request Tracker 4.0.23 и 4.2.10</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/26/01-request-tracker-update.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Сегодня вышли обновления популярного баг-трекера и хелп-деска Request Tracker,
+который в частности используется для инфраструктуры открытых проектов, таких
+как Perl, OpenSSL, а также множества коммерческих организаций.</p>
+
+<p>Обновлена старая поддерживаемая версия
+<a href="https://www.bestpractical.com/release-notes/rt/4.0.23">4.0.23</a> и новая
+стабильная версия
+<a href="https://www.bestpractical.com/release-notes/rt/4.2.10">4.2.10</a>. Обновление
+содержит исправление трёх уязвимостей:</p>
+
+<ul>
+<li>CVE-2014-9472 — атака на отказ в обслуживание против почтового шлюза RT,
+который настроен на приём писем из любых источников. В зависимости от
+настроек логирования удалённый атакующий может вызвать высокую нагрузку на
+процессор или дисковую подсистему.</li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1165">CVE-2015-1165</a>
+— раскрытие URL RSS-ленты и соответственно данных в заявках</li>
+<li><a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1464">CVE-2015-1164</a>
+— URL RSS-ленты позволяет перехватить сессию пользователя, который создал эту
+ленту</li>
+</ul>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/security/">security</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-26T00:00:00Z</updated>
+        <category term="security" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/12/02-movabletype-security-update.html</id>
+        <title>Вышли обновления безопасности MovableType 6.0.7 и 5.2.12</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/12/02-movabletype-security-update.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Вышли обновления, исправляющие ошибку в безопасности, для известной системы
+управления контентом MovableType версии 6.0.7 и 5.2.12 (и в частности Movable
+Type Open Source). Как указано в
+<a href="https://movabletype.org/news/2015/02/movable_type_607_and_5212_released_to_close_security_vulnera.html">отчёте</a>
+уязвимости подвержены ветки 6.0.x и 5.2.x.</p>
+
+<p>Уязвимость позволяла производить атаку LFI (<em>local file inclusion</em> —
+подключение локального файла) из-за использования модуля
+<a href="https://metacpan.org/pod/Storable">Storable</a> (метод thaw нельзя использовать
+использовать на недоверенном контенте).</p>
+
+<p>Как <a href="http://www.openwall.com/lists/oss-security/2015/02/12/2">отметили</a> в
+рассылке oss-security, уязвимость может быть легко использована и для
+удалённого выполнения произвольного кода неаутентифицированным пользователем.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/security/">security</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-12T00:00:00Z</updated>
+        <category term="security" />
+    </entry>
+</feed>
+

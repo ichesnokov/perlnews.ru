@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/regexp/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/regexp.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Обсуждение на p5p: флаги регулярных выражений</title>
+            <link>http://perlnews.ru/blog/2015/02/16/01-extended-regex-modifiers.html</link>
+            <guid>http://perlnews.ru/blog/2015/02/16/01-extended-regex-modifiers.html</guid>
+            <description><![CDATA[
+                <p>На прошлой неделе в рассылке perl5-porters была затронута тема флагов
+регулярных выражений. В Perl 5.14 появился флаг <code>/a</code>, который ограничивал поиск
+совпадений для <code>\d</code>, <code>\s</code> и <code>\w</code> символами ASCII, а удвоенный флаг <code>/aa</code>
+усиливал эффект и исключал поиск совпадений между ASCII и не-ASCII символами
+(например, <code>k</code> перестаёт совпадать с <code>\N{KELVIN SIGN}</code>).</p>
+
+<p><a href="http://xkcd.com/1171/"><img alt="regexp" src="http://perlnews.ru/i/2015-02-16-perl_problems.png"></a></p>
+
+<p>Карл Уильямсон предложил признать устаревшим возможность указывать такие флаги
+в перемешку с другими флагами, например, вместо <code>/aa</code> писать <code>/ama</code>. Также
+предложено запретить возможность множественного использования флага <code>/i</code>, чтобы
+в будущем появилась возможность задавать <code>/ii</code> как вариант для задания более
+простого варианта поиска без учёта регистра (без учёта фолдинга). Это должно
+улучшить читаемость регулярных выражений. Но...</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/02/16/01-extended-regex-modifiers.html#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/regexp/">regexp</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 16 Feb 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Расширенный тип границ в регулярных выражениях</title>
+            <link>http://perlnews.ru/blog/2015/02/08/01-re-unicode-break.html</link>
+            <guid>http://perlnews.ru/blog/2015/02/08/01-re-unicode-break.html</guid>
+            <description><![CDATA[
+                <p>Карл Уильямсон работает над реализацией выражения <code>\b{...}</code>, как расширенного
+варианта <code>\b</code> для задания типа границ в регулярных выражениях.</p>
+
+<p>В Perl 5.22 появятся три варианта таких конструкций:</p>
+
+<ol>
+<li><code>\b{gcb}</code> —  граница кластера графемы (кластер графемы, это две или более
+кодовых точек образующих один символ, например <code>g̈</code>, состоящий из латинской
+<code>g</code> и знака двух точек)</li>
+<li><code>\b{cb}</code> — граница предложений. Будет срабатывать там, где по правилам
+Юникода происходит разделение предложений. Правда предложение <code>Mr. Jones</code>
+всё равно будет считаться двумя предложениями.</li>
+<li><code>\b{wb}</code> — граница слова.</li>
+</ol>
+
+<p>Кроме того Юникод определяет и перенос строки и его можно реализовать как
+<code>\b{lb}</code>, но на CPAN уже есть
+<a href="http://search.cpan.org/~nezumi/Unicode-LineBreak-2014.06/lib/Unicode/LineBreak.pod">Unicode::LineBreak</a>.</p>
+
+<p>Простое выражение <code>\b</code> определяет границу между символами <code>\w</code> и <code>\W</code>. Хотя
+большинство новичков почему-то считают, что это граница между <code>\s</code> и <code>\S</code>. Есть
+мысль реализовать такое как <code>\b{space}</code>, но на самом деле скорее всего имеется
+ввиду <code>\b{wb}</code>, который действительно хорошо ищет границы для естественных
+языков, например, он правильно выделит слово <code>don&#39;t</code> в предложении <code>... don&#39;t.</code>,
+включив апостроф, но исключив точку.</p>
+
+<p>В этой связи Карл предлагает задать новый флаг для прагмы <code>re</code></p>
+
+<pre><code>use re &quot;/w&quot;
+</code></pre>
+
+<p>который бы по умолчанию рассматривал обычный <code>\b</code> как <code>\b{wb}</code> в своей области
+определения.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                    <a href="http://perlnews.ru/blog/tag/regexp/">regexp</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Sun, 08 Feb 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

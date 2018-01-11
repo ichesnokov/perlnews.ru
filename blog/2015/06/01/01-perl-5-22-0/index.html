@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="summary" name="twitter:card">
+        <meta content="http://perlnews.ru/blog/2015/06/01/01-perl-5-22-0/index.html" name="twitter:url">
+        <meta content="Выпущен Perl 5.22.0" name="twitter:title">
+        <meta content="1 июня 2015 года была выпущена новая стабильная версия языка программирования Perl 5.22.0. Разработка велась примерно 12 месяцев, начиная с Perl 5.20.0, и содержит примерно 590 000 изменённых стро…" name="twitter:description">
+        <meta content="@perlnews_ru" name="twitter:site">
+        <link href="/theme/images/favicon.ico" rel="icon">
+        <link href="/theme/css/style.css" rel="stylesheet">
+        <title>
+            PerlNews.Ru
+            → Выпущен Perl 5.22.0
+        </title>
+        <script>
+  if (window.location.hostname === "perlnews.ru") {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59283423-1', 'auto');
+      ga('send', 'pageview');
+  }
+</script>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a class="brand" href="/">
+                        PerlNews.Ru
+                        <span class="brand-img"></span>
+                    </a>
+                    <ul>
+                        <li>
+                        <a href="/index.html">
+                            Новости
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/about.html">
+                            О блоге
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/resources.html">
+                            Ресурсы
+                        </a>
+                        </li>
+                        <li>
+                        <a href="http://irc.pragmaticperl.com">
+                            Чат
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://twitter.com/perlnews_ru">
+                            Twitter
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="main container">
+            <div class="row">
+
+    <div class="nine columns">
+        <main>
+            <header>
+                <h1>Выпущен Perl 5.22.0</h1>
+                <p class="tags">Темы:
+                    <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                </p>
+                <aside>
+                    <p><time datetime="2015-06-01">
+                        <span class="typcn typcn-time"><span>
+                        2015-06-01
+                    </span></span></time>
+                        <span class="typcn typcn-user"><span>
+                        perlnews
+                    </span></span></p>
+                </aside>
+            </header>
+            <section id="section-1">
+                <p>1 июня 2015 года была выпущена новая стабильная версия языка программирования
+Perl 5.22.0. Разработка велась примерно 12 месяцев, начиная с Perl 5.20.0, и
+содержит примерно 590 000 изменённых строк среди 2400 файлов от 94 авторов.</p>
+
+            </section>
+            <section id="section-2">
+                <p>Основные изменения, которые появились в новом релизе:</p>
+
+<ul>
+<li>Новые битовые операции. Была добавлена новая экспериментальная возможность,
+которая позволяет четырём стандартным битовым операторам (<code>&amp; | ^ ~</code>) всегда
+воспринимать свои операнды как числа, а также представляет четыре новых
+оператора с точкой (<code>&amp;. |. ^.  ~.</code>), которые соответственно трактуют операнды
+как строки.</li>
+<li>Новый оператор двойной бриллиант <code>&lt;&lt;&gt;&gt;</code>. Он подобен <code>&lt;&gt;</code>, но использует
+трёхаргументный вызов <code>open</code> для открытия файлов из <code>@ARGV</code>.</li>
+<li>Псевдонимы через ссылки. Переменным и подпрограммам теперь можно задавать
+псевдонимы, присваивая к ссылке:
+<code>
+\$c = \$d;
+\&amp;x = \&amp;y;
+</code></li>
+<li>Новый атрибут для анонимных функций <code>:const</code>. С ним функция немедленно
+исполняется и её значение запоминается и используется для создания новой
+функции-константы, которая и возвращается.</li>
+<li>Perl теперь поддерживает получение трассировки вызовов уровня C (также как
+работают символьные отладчики, например, gdb).</li>
+<li>Расширенный поиск границ для регулярных выражений:
+<ul>
+<li><code>qr/\b{gcb}/</code> — <code>gcb</code> (граница кластера графемы). Это свойство Юникода,
+которое ищет границы между последовательностью символов, которые являются
+представлением одного символа,</li>
+<li><code>qr/\b{wb}/</code> — <code>wb</code> (граница слова). Это свойство Юникода, которое ищет
+границы между словами (полностью совпадает с обычным <code>\b</code>),</li>
+<li><code>qr/\b{sb}/</code> — <code>sb</code> (граница предложения). Это свойство Юникода, которое
+помогает при разборе предложений на естественных языках.</li>
+</ul></li>
+<li>Флаг регулярных выражений для отключения захвата. Регулярные выражения теперь
+поддерживают флаг <code>/n</code>, который отключает захват и заполнение переменных
+<code>$1</code>, <code>$2</code>, и прочих внутри группировки.</li>
+<li><code>use re &#39;strict&#39;</code>. Это выражение включает строгие синтаксические правила к
+шаблонам регулярных выражений скомпилированные в области видимости данной
+прагмы.</li>
+<li>Поддерживается Юникод 7.0 (с корректировками).</li>
+<li>Появился новый документ
+<a href="https://metacpan.org/pod/release/RJBS/perl-5.22.0/pod/perlunicook.pod"><code>perlunicook</code></a>,
+который подробно на примерах рассказывает, как правильно «готовить» Юникод в
+Perl-программах.</li>
+<li>Теперь появилась возможность передавать параметр в <code>use locale</code> для указания
+списка категорий локали, для которых будут применяться правила локали,
+оставляя остальные категории незатронутыми. </li>
+<li>Текст сообщения об ошибке <code>&quot;$!&quot;</code> будет возвращён в UTF-8, если там содержится
+не-ASCII текст.</li>
+</ul>
+
+<p>Новый релиз также содержит множество оптимизаций и улучшений в
+производительности:</p>
+
+<ul>
+<li>Если метод или имя класса известны во время компиляции, то предварительно
+рассчитывается хеш для ускорения поиска методов во время исполнения. Также
+составные имена методов, такие как <code>SUPER::new</code>, разбираются во время
+компиляции, что снимает необходимость их обработки во время исполнения.</li>
+<li>Поиск элемента в массивах и хешах (особенно во вложенных), при котором
+используется константа или простая переменная в качестве индекса/ключа,
+теперь работает гораздо быстрее. Например, выражение <code>$a[0]{$k}[$i]</code> теперь
+требует вместо 10 операций только одну.</li>
+<li>Присвоение <code>substr</code> в конце подпрограммы (или как аргумент <code>return</code>) теперь
+оптимизируется в 4-х аргументный <code>substr</code>.</li>
+<li>Производительность <code>length</code> увеличена на 20%, если применяется к немагическим
+и несвязанным строкам, или если находится в области видимости прагмы <code>use
+bytes</code>, или если строка не использует внутри UTF-8.</li>
+<li>В выражении <code>array = split</code> присвоение может быть оптимизировано так, что
+<code>split</code> будет записывать непосредственно в массив.</li>
+<li>Множество внутренних функция было переработано, чтобы улучшить
+производительность и снизить их потребление памяти.</li>
+<li>Поиск в хеше по ключу-константе происходит быстрее.</li>
+</ul>
+
+<p>Также исправлено внушительное число ошибок. Подробности изложены в документе
+<a href="https://metacpan.org/pod/release/RJBS/perl-5.22.0/pod/perldelta.pod"><code>perldelta.pod</code></a>.</p>
+
+<p>Корректирующий релиз Perl 5.22.1 ожидается в течении месяца. А следующий
+стабильный релиз Perl 5.24.0 должен появиться в мае 2016 года.</p>
+
+            </section>
+        </main>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'perlnewsru';
+            if (window.location.hostname === "perlnews.ru") {
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    <div class="three columns sidebar">
+        
+        <nav id="tags">
+            <h1>Темы</h1>
+            <ul class="list-inline">
+                <li><a href="/blog/tag/aprilfd/">AprilFD</a></li>
+                <li><a href="/blog/tag/benchmark/">benchmark</a></li>
+                <li><a href="/blog/tag/books/">books</a></li>
+                <li><a href="/blog/tag/bug/">bug</a></li>
+                <li><a href="/blog/tag/community/">community</a></li>
+                <li><a href="/blog/tag/coro/">Coro</a></li>
+                <li><a href="/blog/tag/cpan/">CPAN</a></li>
+                <li><a href="/blog/tag/cpanpr/">cpanpr</a></li>
+                <li><a href="/blog/tag/cpantesters/">cpantesters</a></li>
+                <li><a href="/blog/tag/dbic/">DBIC</a></li>
+                <li><a href="/blog/tag/donation/">donation</a></li>
+                <li><a href="/blog/tag/facepalm/">facepalm</a></li>
+                <li><a href="/blog/tag/fork/">fork</a></li>
+                <li><a href="/blog/tag/fosdem/">FOSDEM</a></li>
+                <li><a href="/blog/tag/funding/">funding</a></li>
+                <li><a href="/blog/tag/hackaton/">hackaton</a></li>
+                <li><a href="/blog/tag/ide/">IDE</a></li>
+                <li><a href="/blog/tag/interview/">interview</a></li>
+                <li><a href="/blog/tag/mojo/">mojo</a></li>
+                <li><a href="/blog/tag/moscow-pm/">moscow.pm</a></li>
+                <li><a href="/blog/tag/perl/">Perl</a></li>
+                <li><a href="/blog/tag/perl6/">Perl6</a></li>
+                <li><a href="/blog/tag/perlnews-ru/">PerlNews.Ru</a></li>
+                <li><a href="/blog/tag/pragmaticperl/">PragmaticPerl</a></li>
+                <li><a href="/blog/tag/regexp/">regexp</a></li>
+                <li><a href="/blog/tag/security/">security</a></li>
+                <li><a href="/blog/tag/smartmatch/">smartmatch</a></li>
+                <li><a href="/blog/tag/starwars/">StarWars</a></li>
+                <li><a href="/blog/tag/tips/">tips</a></li>
+                <li><a href="/blog/tag/unicode/">unicode</a></li>
+                <li><a href="/blog/tag/warnings/">warnings</a></li>
+                <li><a href="/blog/tag/windows/">windows</a></li>
+                <li><a href="/blog/tag/yapc/">YAPC</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+        </div>
+        <footer>
+            <div class="container">
+<strong>© perlnews.ru</strong>
+<p>
+Все материалы доступны в соответствии с лицензией
+<a href="http://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0</a>
+<br>
+Работает на
+<a href="http://preaction.me/statocles">Statocles</a>
+и
+<a href="http://www.perl.org">Perl</a>
+</p>
+</div>
+
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/benchmark/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2016-05-12T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/benchmark.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/benchmark/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2016/05/12/01-perl-5-24-speedup/</id>
+        <title>Perl 5.24 стал быстрее</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2016/05/12/01-perl-5-24-speedup/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Одним из улучшений в Perl 5.24 стало ускорение арифметических операций. Начиная
+с Perl 5.8.0, когда появилась поддержка 64-битных целых, скорость
+арифметических операций снизилась из-за необходимости проверки различных граничных
+условий. Теперь же проверяется общий случай, что снимает необходимость проверки
+всех частных случаев, что в целом оптимизирует производительность.</p>
+
+<p>Синан Унур в своей
+<a href="https://www.nu42.com/2016/05/switch-to-perl-5-24.html">статье</a>
+продемонстрировал, что эта оптимизация даёт выигрыш в 30% по сравнению с
+Perl 5.20.2 в бенчмарке
+<a href="https://benchmarksgame.alioth.debian.org/u64q/performance.php?test=nbody">nbody</a>,
+который использует большое число арифметических операций. Благодаря этому
+Perl 5.24 обогнал Python 3 в данном тесте.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/benchmark/">benchmark</a>
+            </p>
+        ]]></content>
+        <updated>2016-05-12T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="benchmark" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/05/20/01-perl-microoptimization-tricks.html</id>
+        <title>Полезные трюки с микрооптимизацией</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/05/20/01-perl-microoptimization-tricks.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>В рассылке perl5-porters был задан
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/05/msg228068.html">вопрос</a>,
+почему две операции сильно отличаются по скорости (в пользу <code>do</code>):</p>
+
+<pre><code>do { ; }
+{ ; }
+</code></pre>
+
+<p><em>Zefram</em>
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/05/msg228069.html">указал</a>
+на то, что пустой блок рассматривается как цикл, который выполняется один раз,
+и для него формируется фрейм-контекст с поддержкой динамических операций вроде
+<code>next</code>. В то время как для <code>do</code> устанавливается только область видимости, что
+гораздо быстрее.</p>
+
+<p>Кроме этого было
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/05/msg228074.html">замечено</a>,
+что операция <code>;</code> это отдельная операция, которая устанавливает номер строки. В
+противовес этому <code>,</code> не имеет подобного оверхеда. Например:</p>
+
+<pre><code>$x = 1; $y = 2; print &quot;$x $y&quot;;
+$x = 1, $y = 2, print &quot;$x $y&quot;;
+</code></pre>
+
+<p>Оба выражения выполняют одно и то же, но вторая запись будет работать быстрее.</p>
+
+<p>Эта информация сразу вдохновила Питера Рэбиттсона использовать этот простой
+трюк на практике. Он продемонстрировал
+<a href="https://github.com/dbsrgits/dbix-class/commit/05a5ca4b">коммит</a>, который на
+15% увеличивает производительность <code>DBIx::Class</code> просто заменив все <code>;</code> на <code>,</code>
+в генерируемом коде для строкового eval. Этот прирост становится заметен на
+резалтсетах с ≥1000 рядов.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/tips/">tips</a>
+                <a href="http://perlnews.ru/blog/tag/benchmark/">benchmark</a>
+            </p>
+        ]]></content>
+        <updated>2015-05-20T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="tips" />
+        <category term="benchmark" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/05/06/01-hash-ordered-benchmark.html</id>
+        <title>Улучшения в производительности Hash::Ordered</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/05/06/01-hash-ordered-benchmark.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p><a href="https://metacpan.org/pod/Hash::Ordered">Hash::Ordered</a> — это модуль для
+создания упорядоченных хешей, ключи в которых хранятся в заданном порядке.
+Поскольку модуль написан на чистом Perl, а упорядоченные хеши --- это объекты,
+операции над которыми производятся с помощью методов, то подобный хеш работает
+медленнее, чем обычный хеш. Такова цена сохранения упорядоченности хеша.</p>
+
+<p>Как
+<a href="http://www.dagolden.com/index.php/2461/faster-ordered-hashes-for-perl/">сообщает</a>
+Дэвид Голден в новой версии
+<a href="https://metacpan.org/release/DAGOLDEN/Hash-Ordered-0.009/">0.009</a> сделана
+оптимизация, которая в некоторых случаях значительно ускоряет работу с
+упорядоченными хешами. Было проведено сравнение производительности между
+версиями Hash::Ordered 0.002 и 0.009. Для наглядности представлен график
+сравнения:</p>
+
+<p><img alt="Бенчмарк Hash::Ordered" src="http://perlnews.ru/i/2015-05-06-hash_ordered_benchmark.png"></p>
+
+<p>Виден рост по многим тестам, особенно выросла производительность при удалении в
+хеше с большим числом элементов. Практически не изменилась скорость замены
+элементов, несколько снизилась скорость добавления (за счёт проверки, что ключ
+— это строка, а не ссылка).</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                <a href="http://perlnews.ru/blog/tag/benchmark/">benchmark</a>
+            </p>
+        ]]></content>
+        <updated>2015-05-06T00:00:00Z</updated>
+        <category term="CPAN" />
+        <category term="benchmark" />
+    </entry>
+</feed>
+

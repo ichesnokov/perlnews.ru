@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/windows/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2016-03-17T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/windows.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/windows/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2016/03/17/01-winsock-errors/</id>
+        <title>Код ошибки Winsock теперь попадает в $^E</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2016/03/17/01-winsock-errors/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Давняя история борьбы Perl с кодами ошибок Winsock внезапно получила
+продолжение. Как известно, традиционно в Perl на Windows коды ошибок Winsock
+сохранялись в <code>errno</code> и транслировались в переменную <code>$!</code> так, чтобы
+соответствовать POSIX-кодам ошибок. Возникающие проблемы при таком подходе уже
+подробно освещались в статье <a href="http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html">«AnyEvent сломан на Strawberry
+Perl 5.20»</a></p>
+
+<p>И вот, в конце февраля было внесено новое
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2016/02/msg234472.html">предложение</a>
+по работе с ошибками Winsock. Чтобы немного смягчить имеющееся рассогласование,
+начиная с грядущего выпуска Perl 5.24 значение кода ошибки Winsock будет
+попадать в переменную <code>$^E</code>, которая как раз и служит для хранения
+платформо-специфичных ошибок. Отказ от модификации <code>$!</code> пока не
+предусматривается, но если он будет выполнен для Winsock, то пройдёт через
+стандартную схему устаревания и, как минимум, через один стабильный релиз.</p>
+
+<p>11 марта это
+<a href="http://perl5.git.perl.org/perl.git/commitdiff/22e30cb2a3fd49a3d6fe5a866b28ff36608340ae">изменение</a>
+было отправлено в основную ветку.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/windows/">windows</a>
+                <a href="http://perlnews.ru/blog/tag/perl/">perl</a>
+            </p>
+        ]]></content>
+        <updated>2016-03-17T00:00:00Z</updated>
+        <category term="windows" />
+        <category term="perl" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2016/03/11/01-strawberry-perl/</id>
+        <title>Выпущен Strawberry Perl 5.22.1.3 и 5.20.3.3</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2016/03/11/01-strawberry-perl/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Выпущены два релиза дистрибутива Perl 5.22.1.3 и 5.20.3.3 для Windows
+<em>Strawberry Perl</em>. Оба релиза содержат исправление уязвимостей:</p>
+
+<ul>
+<li><p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8607">CVE-2015-8607</a>
+— функция <code>canonpath</code> модуля File::Spec не сохраняет taint-атрибут
+возвращаемого значения.</p></li>
+<li><p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8608">CVE-2015-8608</a>
+— обращение к памяти за пределами границ при обработке путей. Баг специфичен
+для Win32 платформы, возникает в случае если в пути в качестве буквы диска
+указан любой символ, отличный от <code>а..z</code> или <code>A..Z</code>.</p></li>
+<li><p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2381">CVE-2016-2381</a>
+— если в массиве переменных окружения оказывались дублирующиеся ключи, то в
+<code>%ENV</code> сохранялось последнее значение, в то время как <code>getenv</code> возвращал
+первое. В такой ситуации дочерний процесс мог получить неожиданное значение
+переменной окружения.</p></li>
+</ul>
+
+<p>Кроме того, в дистрибутивах обновлена библиотека openssl. Загрузить новые
+релизы можно на сайте проекта <a href="http://strawberryperl.com/">strawberryperl.com</a>.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/windows/">windows</a>
+                <a href="http://perlnews.ru/blog/tag/security/">security</a>
+            </p>
+        ]]></content>
+        <updated>2016-03-11T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="windows" />
+        <category term="security" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/09/17/01-strawberry-perl-5-20-3-1/</id>
+        <title>Выпущен Strawberry Perl 5.20.3.1</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/09/17/01-strawberry-perl-5-20-3-1/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Выпущен релиз дистрибутива Perl для Windows Strawberry Perl 5.20.3.1, который
+базируется на последнем
+<a href="http://perlnews.ru/blog/2015/09/13/01-perl-5-20-3/">обновлении</a> Perl
+предыдущей стабильной ветки 5.20.</p>
+
+<p>Доступны msi-пакеты для установки:
+<a href="http://strawberryperl.com/download/5.20.3.1/strawberry-perl-5.20.3.1-32bit.msi">32-битной</a>
+и
+<a href="http://strawberryperl.com/download/5.20.3.1/strawberry-perl-5.20.3.1-64bit.msi">64-битной</a>
+версии.</p>
+
+<p>Помимо Perl, обновлены сопутствующие версии CPAN-модулей, а также библиотека
+openssl до версии 1.0.2d. Полная информация о релизах соответственно:
+<a href="http://strawberryperl.com/release-notes/5.20.3.1-32bit.html">32</a>,
+<a href="http://strawberryperl.com/release-notes/5.20.3.1-64bit.html">64</a>.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/windows/">windows</a>
+            </p>
+        ]]></content>
+        <updated>2015-09-17T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="windows" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/06/04/02-strawberry-perl-5-22-0-1/</id>
+        <title>Выпущен Strawberry Perl 5.22.0.1</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/06/04/02-strawberry-perl-5-22-0-1/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Выпущен релиз дистрибутива новой мажорной версии Perl для Windows <em>Strawberry
+Perl</em> 5.22.0.1.</p>
+
+<p>Доступны msi-пакеты для установки:
+<a href="http://strawberryperl.com/download/5.22.0.1/strawberry-perl-5.22.0.1-32bit.msi">32-битной</a>
+и
+<a href="http://strawberryperl.com/download/5.22.0.1/strawberry-perl-5.22.0.1-64bit.msi">64-битной</a>
+версии.</p>
+
+<p>Портабельные версии:
+<a href="http://strawberryperl.com/download/5.22.0.1/strawberry-perl-5.22.0.1-32bit-portable.zip">32-битная</a>,
+<a href="http://strawberryperl.com/download/5.22.0.1/strawberry-perl-5.22.0.1-64bit-portable.zip">64-битная</a>.</p>
+
+<p>Новые версии содержат последнюю стабильную версию Perl 5.22.0. Кроме того, был
+обновлен обновлён тулчейн gcc 4.9.2 и mingw-w64 v4.0.2. Полная информация о
+релизах соотвественно
+<a href="http://strawberryperl.com/release-notes/5.22.0.1-32bit.html">32</a> и
+<a href="http://strawberryperl.com/release-notes/5.22.0.1-64bit.html">64</a>.</p>
+
+<p>К сожалению, msi-пакеты не подписаны, поэтому проверяйте <a href="http://strawberryperl.com/releases.html">sha1
+отпечаток</a>.</p>
+
+<p>На данный момент известно о нескольких проблемах в релизах: сломан модуль
+<code>IPC::Run</code>, а в 64-битной сборке отсутствует <code>Math::Pari</code> вместе со всеми
+зависимостями.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/windows/">windows</a>
+            </p>
+        ]]></content>
+        <updated>2015-06-04T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="windows" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html</id>
+        <title>AnyEvent сломан на Strawberry Perl 5.20</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>В конце прошлой недели рассылка perl5-porters опять наполнились
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/03/msg226604.html">проклятиями</a>
+Марка Леманна из-за очередной поломки обратной совместимости в Perl5. Как
+выяснилось AnyEvent оказался сломан на платформе Windows из-за несовместимых
+изменений, который произошли в версии 5.19.4.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html#section-2">Читать дальше &rarr;</a></p>
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                <a href="http://perlnews.ru/blog/tag/facepalm/">facepalm</a>
+                <a href="http://perlnews.ru/blog/tag/windows/">windows</a>
+            </p>
+        ]]></content>
+        <updated>2015-03-16T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="CPAN" />
+        <category term="facepalm" />
+        <category term="windows" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/24/01-strawberry-perl-5.20.2.1.html</id>
+        <title>Выпущен Strawberry Perl 5.20.2.1</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/24/01-strawberry-perl-5.20.2.1.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Хорошая новость для пользователей Windows: выпущен релиз дистрибутива Perl для
+Windows Strawberry Perl 5.20.2.1.</p>
+
+<p>Доступны msi-пакеты для установки:
+<a href="http://strawberryperl.com/download/5.20.2.1/strawberry-perl-5.20.2.1-32bit.msi">32-битной</a>
+и
+<a href="http://strawberryperl.com/download/5.20.2.1/strawberry-perl-5.20.2.1-64bit.msi">64-битной</a>
+версии.</p>
+
+<p>Новые версии содержат обновлённый стабильный релиз Perl 5.20.2. Кроме того были
+обновлены сопутствуюище версии библиотек, компилятора gcc. Полная информация о
+релизах соотвественно
+<a href="http://strawberryperl.com/release-notes/5.20.2.1-32bit.html">32</a> и
+<a href="http://strawberryperl.com/release-notes/5.20.2.1-64bit.html">64</a>.</p>
+
+<p>К сожалению, msi-пакеты не подписаны, поэтому проверяйте <a href="http://strawberryperl.com/releases.html">sha1
+отпечаток</a>.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/windows/">windows</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-24T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="windows" />
+    </entry>
+</feed>
+

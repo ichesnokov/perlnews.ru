@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="summary" name="twitter:card">
+        <meta content="http://perlnews.ru/blog/2015/07/21/01-perl-5-23-1/index.html" name="twitter:url">
+        <meta content="Выпущен Perl 5.23.1" name="twitter:title">
+        <meta content="20 июля выпущен второй релиз Perl ветки для разработчиков 5.23. Данный выпуск состоялся спустя месяц после релиза 5.23.0 и содержит изменения в 8 400 строках исходного кода. …" name="twitter:description">
+        <meta content="@perlnews_ru" name="twitter:site">
+        <link href="/theme/images/favicon.ico" rel="icon">
+        <link href="/theme/css/style.css" rel="stylesheet">
+        <title>
+            PerlNews.Ru
+            → Выпущен Perl 5.23.1
+        </title>
+        <script>
+  if (window.location.hostname === "perlnews.ru") {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59283423-1', 'auto');
+      ga('send', 'pageview');
+  }
+</script>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a class="brand" href="/">
+                        PerlNews.Ru
+                        <span class="brand-img"></span>
+                    </a>
+                    <ul>
+                        <li>
+                        <a href="/index.html">
+                            Новости
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/about.html">
+                            О блоге
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/resources.html">
+                            Ресурсы
+                        </a>
+                        </li>
+                        <li>
+                        <a href="http://irc.pragmaticperl.com">
+                            Чат
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://twitter.com/perlnews_ru">
+                            Twitter
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="main container">
+            <div class="row">
+
+    <div class="nine columns">
+        <main>
+            <header>
+                <h1>Выпущен Perl 5.23.1</h1>
+                <p class="tags">Темы:
+                    <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                </p>
+                <aside>
+                    <p><time datetime="2015-07-21">
+                        <span class="typcn typcn-time"><span>
+                        2015-07-21
+                    </span></span></time>
+                        <span class="typcn typcn-user"><span>
+                        perlnews
+                    </span></span></p>
+                </aside>
+            </header>
+            <section id="section-1">
+                <p>20 июля выпущен второй релиз Perl ветки для разработчиков 5.23. Данный выпуск
+состоялся спустя месяц после релиза 5.23.0 и содержит изменения в 8 400 строках
+исходного кода.</p>
+
+            </section>
+            <section id="section-2">
+                <p>Основные изменения:</p>
+
+<ul>
+<li><p>Доработана логика целочисленных смещений. Теперь отрицательное смещение бит
+означает смену направления смещения:</p>
+
+<pre><code>0x7b &gt;&gt; -4 == 0x7b &lt;&lt; 4 == 0x7
+</code></pre>
+
+<p>Отрицательное смещение и смещение на число бит больше, чем в машинном слове
+раньше было неопределённым и зависело от C-реализации. Теперь результат
+всегда определён:</p>
+
+<pre><code># Типичное поведение _ДО_ Perl 5.23.1
+1 &lt;&lt; 67 == 1 &lt;&lt; ( 67 % 64 ) == 1 &lt;&lt; 3 == 8
+
+
+# Теперь смещение на ≥ 64 (для 64-битных систем)
+# означает зануление числа
+
+
+1 &gt;&gt; 64 == 0
+</code></pre></li>
+<li><p>Постфиксное разыменование больше не является экспериментальным. Это означает,
+что больше не будут выводится предупреждения при использовании нового
+синтаксиса постфиксного разыменования. Более того, постфиксное разыменование
+теперь работает «из коробки», то есть не требует включения <code>use feature
+postderef</code>. Фича <code>postderef_qq</code> автоматически подключается при использовании
+<code>use v5.24</code>.</p>
+
+<pre><code>$array_ref-&gt;@* # тоже самое, что и @{ $array_ref }
+</code></pre></li>
+<li><p>Удалена экспериментальная возможность авторазыменования (<code>autoderef</code>).
+Теперь аргументом для <code>push</code>, <code>pop</code>, <code>keys</code>, <code>splice</code>, … не может быть скаляр.</p>
+
+<pre><code>push $array_ref, $element;      # Ошибка!
+
+
+push @$array_ref, $element;     # Ок (совместимо с любым Perl)
+push $array_ref-&gt;@*, $element;  # Новый альтернативный способ
+</code></pre></li>
+<li><p>Функции <code>printf</code> и <code>sprintf</code> теперь позволяют перемещать аргумент точности
+для чисел плавающей запятой:</p>
+
+<pre><code>printf &#39;%.*2$f&#39;, 5, 3;       # выведет 5.000
+</code></pre></li>
+<li><p>Больше не допускается использование непечатных символов ASCII (коды 0-31,
+127) в именах переменных. Вместо непечатного символа можно использовать
+комбинацию из двух символов, начинающейся с символа каретки (циркумфле́кс),
+например <code>$^]</code>.</p></li>
+<li><p><code>alarm()</code> и <code>sleep()</code> теперь выводят предупреждение и возвращают <code>undef</code>,
+если аргумент отрицательный. Раньше отрицательный аргумент передавался в
+соответствующую C-функцию, что могло приводить к неожиданным результатам.</p></li>
+</ul>
+
+            </section>
+        </main>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'perlnewsru';
+            if (window.location.hostname === "perlnews.ru") {
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    <div class="three columns sidebar">
+        
+        <nav id="tags">
+            <h1>Темы</h1>
+            <ul class="list-inline">
+                <li><a href="/blog/tag/aprilfd/">AprilFD</a></li>
+                <li><a href="/blog/tag/benchmark/">benchmark</a></li>
+                <li><a href="/blog/tag/books/">books</a></li>
+                <li><a href="/blog/tag/bug/">bug</a></li>
+                <li><a href="/blog/tag/community/">community</a></li>
+                <li><a href="/blog/tag/coro/">Coro</a></li>
+                <li><a href="/blog/tag/cpan/">CPAN</a></li>
+                <li><a href="/blog/tag/cpanpr/">cpanpr</a></li>
+                <li><a href="/blog/tag/cpantesters/">cpantesters</a></li>
+                <li><a href="/blog/tag/dbic/">DBIC</a></li>
+                <li><a href="/blog/tag/donation/">donation</a></li>
+                <li><a href="/blog/tag/facepalm/">facepalm</a></li>
+                <li><a href="/blog/tag/fork/">fork</a></li>
+                <li><a href="/blog/tag/fosdem/">FOSDEM</a></li>
+                <li><a href="/blog/tag/funding/">funding</a></li>
+                <li><a href="/blog/tag/hackaton/">hackaton</a></li>
+                <li><a href="/blog/tag/ide/">IDE</a></li>
+                <li><a href="/blog/tag/interview/">interview</a></li>
+                <li><a href="/blog/tag/mojo/">mojo</a></li>
+                <li><a href="/blog/tag/moscow-pm/">moscow.pm</a></li>
+                <li><a href="/blog/tag/perl/">Perl</a></li>
+                <li><a href="/blog/tag/perl6/">Perl6</a></li>
+                <li><a href="/blog/tag/perlnews-ru/">PerlNews.Ru</a></li>
+                <li><a href="/blog/tag/pragmaticperl/">PragmaticPerl</a></li>
+                <li><a href="/blog/tag/regexp/">regexp</a></li>
+                <li><a href="/blog/tag/security/">security</a></li>
+                <li><a href="/blog/tag/smartmatch/">smartmatch</a></li>
+                <li><a href="/blog/tag/starwars/">StarWars</a></li>
+                <li><a href="/blog/tag/tips/">tips</a></li>
+                <li><a href="/blog/tag/unicode/">unicode</a></li>
+                <li><a href="/blog/tag/warnings/">warnings</a></li>
+                <li><a href="/blog/tag/windows/">windows</a></li>
+                <li><a href="/blog/tag/yapc/">YAPC</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+        </div>
+        <footer>
+            <div class="container">
+<strong>© perlnews.ru</strong>
+<p>
+Все материалы доступны в соответствии с лицензией
+<a href="http://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0</a>
+<br>
+Работает на
+<a href="http://preaction.me/statocles">Statocles</a>
+и
+<a href="http://www.perl.org">Perl</a>
+</p>
+</div>
+
+        </footer>
+    </body>
+</html>

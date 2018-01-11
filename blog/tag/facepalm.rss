@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/facepalm/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/facepalm.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Марк Леманн создал форк Perl: «stableperl»</title>
+            <link>http://perlnews.ru/blog/2015/06/08/01-schmorps-stable-perl-fork/</link>
+            <guid>http://perlnews.ru/blog/2015/06/08/01-schmorps-stable-perl-fork/</guid>
+            <description><![CDATA[
+                <p>Марк Леманн, также известный как <em>schmorp</em>, создатель библиотеки
+<a href="http://libev.schmorp.de">libev</a>, <a href="https://metacpan.org/pod/AnyEvent">AnyEvent</a>
+и <a href="https://metacpan.org/pod/Coro">Coro</a>, объявил о создании форка Perl под
+названием
+<a href="http://schplog.schmorp.de/2015-06-06-a-stable-perl.html">«stableperl»</a>.</p>
+
+<p>Как известно, Марк постоянно конфликтовал с разработчиками Perl5 из-за
+регулярных нарушений обратной совместимости в новых релизах, а релиз Perl
+<em>5.22.0</em>, который привёл к неработоспособности <code>Coro</code>, очевидно, стал последней
+каплей.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/06/08/01-schmorps-stable-perl-fork/#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                    <a href="http://perlnews.ru/blog/tag/facepalm/">facepalm</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 08 Jun 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>AnyEvent сломан на Strawberry Perl 5.20</title>
+            <link>http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html</link>
+            <guid>http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html</guid>
+            <description><![CDATA[
+                <p>В конце прошлой недели рассылка perl5-porters опять наполнились
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/03/msg226604.html">проклятиями</a>
+Марка Леманна из-за очередной поломки обратной совместимости в Perl5. Как
+выяснилось AnyEvent оказался сломан на платформе Windows из-за несовместимых
+изменений, который произошли в версии 5.19.4.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/facepalm/">facepalm</a>
+                    <a href="http://perlnews.ru/blog/tag/windows/">windows</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 16 Mar 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>В Pod::Simple по умолчанию будет кодировка CP-1252</title>
+            <link>http://perlnews.ru/blog/2015/02/10/01-pod-simple-cp1252.html</link>
+            <guid>http://perlnews.ru/blog/2015/02/10/01-pod-simple-cp1252.html</guid>
+            <description><![CDATA[
+                <p>Дэвид Уилер
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/02/msg225550.html">анонсировал</a>,
+что в следующем релизе <a href="https://metacpan.org/release/Pod-Simple">Pod::Simple</a>
+(парсер POD-документации, используемый в том числе для perldoc) будет изменена
+кодировка по-умолчанию с Latin-1 на CP-1252. Утверждается, что это будет
+особенно полезно для POD-документов, созданных на платформе Windows, где эта
+кодировка и встречается. Соответствующие изменения будут внесены и в
+спецификацию POD Perl.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/facepalm/">facepalm</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Tue, 10 Feb 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="/theme/images/favicon.ico" rel="icon">
+        <link href="/theme/css/style.css" rel="stylesheet">
+        <title>
+            PerlNews.Ru
+        </title>
+        <link href="/blog/index.atom" rel="alternate" type="application/atom+xml">
+        <link href="/blog/index.rss" rel="alternate" type="application/rss+xml">
+        <script>
+  if (window.location.hostname === "perlnews.ru") {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59283423-1', 'auto');
+      ga('send', 'pageview');
+  }
+</script>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a class="brand" href="/">
+                        PerlNews.Ru
+                        <span class="brand-img"></span>
+                    </a>
+                    <ul>
+                        <li>
+                        <a href="/index.html">
+                            Новости
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/about.html">
+                            О блоге
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/resources.html">
+                            Ресурсы
+                        </a>
+                        </li>
+                        <li>
+                        <a href="http://irc.pragmaticperl.com">
+                            Чат
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://twitter.com/perlnews_ru">
+                            Twitter
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="main container">
+            
+<div class="row">
+
+    <div class="nine columns">
+        <main>
+
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/05/23/yapc-russia-2016/">Конференция YAPC::Russia 2016 пройдёт 25 июня в Москве</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/yapc/" rel="tag">YAPC</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-05-23">
+                            2016-05-23
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p><a href="http://permalink.gmane.org/gmane.comp.lang.perl.perl-mongers.moscow/18846">Анонсирована</a>
+очередная ежегодная конференция YAPC::Russia. В этом году мероприятие пройдёт
+25 июня в Москве в офисе Mail.Ru Group. Участие в конференции бесплатное, но
+необходимо <a href="https://corp.mail.ru/ru/press/events/222/">зарегистрироваться</a>.</p>
+
+<p>Программа конференции находится в процессе формирования, всех желающих
+выступить с докладом просят
+<a href="https://corp.mail.ru/ru/press/events/222/">связаться</a> с Павлом Щербиниными и
+сообщить тему доклада с краткой информацией о докладчике.</p>
+
+<p>Также, как и в прошлом году, организаторы обещают прямую видеотрансляцию
+докладов.</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/05/23/yapc-russia-2016/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/05/12/01-perl-5-24-speedup/">Perl 5.24 стал быстрее</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/benchmark/" rel="tag">benchmark</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-05-12">
+                            2016-05-12
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Одним из улучшений в Perl 5.24 стало ускорение арифметических операций. Начиная
+с Perl 5.8.0, когда появилась поддержка 64-битных целых, скорость
+арифметических операций снизилась из-за необходимости проверки различных граничных
+условий. Теперь же проверяется общий случай, что снимает необходимость проверки
+всех частных случаев, что в целом оптимизирует производительность.</p>
+
+<p>Синан Унур в своей
+<a href="https://www.nu42.com/2016/05/switch-to-perl-5-24.html">статье</a>
+продемонстрировал, что эта оптимизация даёт выигрыш в 30% по сравнению с
+Perl 5.20.2 в бенчмарке
+<a href="https://benchmarksgame.alioth.debian.org/u64q/performance.php?test=nbody">nbody</a>,
+который использует большое число арифметических операций. Благодаря этому
+Perl 5.24 обогнал Python 3 в данном тесте.</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/05/12/01-perl-5-24-speedup/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/05/09/01-perl-5-24-0/">Выпущен Perl 5.24.0</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-05-09">
+                            2016-05-09
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>9 мая 2016 года была выпущена новая стабильная версия языка программирования
+Perl 5.24.0. Разработка велась примерно 11 месяцев, начиная с Perl 5.22.0, и
+содержит примерно 360 000 изменённых строк среди 1800 файлов от 77 авторов.</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/05/09/01-perl-5-24-0/#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2016/05/09/01-perl-5-24-0/#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/05/06/01-coro-in-perl-5-24/">Coro в Perl 5.24</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">perl</a>
+                        <a href="/blog/tag/bug/" rel="tag">bug</a>
+                        <a href="/blog/tag/coro/" rel="tag">Coro</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-05-06">
+                            2016-05-06
+                        </time>
+                        </p>
+                    </aside>
+
+                </header>
+                <p>В тот момент, когда перед выпуском Perl 5.24 остались считанные дни, в рассылке
+perl5-porters внезапно
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2016/05/msg236174.html">вспомнили</a>,
+что в новом Perl по-прежнему остаётся сломанным модуль Coro Марка Леманна. Одна
+из проблем была связана с тем, что в Perl 5.22 структура <code>MGVTBL</code> (магическая
+виртуальная таблица), формирующаяся во время компиляции perl, стала
+константной. Coro делал переопределение в таблице, поэтому и не мог работать с
+новым Perl 5.22. Было предложено откатить это изменение до выхода Perl 5.24.</p>
+
+<p>Вносить подобные изменения в последние дни перед выпуском слишком рискованно,
+поэтому произошёл спонтанный мозговой штурм проблемы, в результате которого
+удалось выяснить очень много интересных деталей. Оказалось, что переопределение
+<code>MGVTBL</code> требовалось Coro только для того, чтобы переопределить работу с
+хендлерами сигналов <code>__DIE__</code> и <code>__WARN__</code> для магического хеша <code>%SIG</code>, что в
+свою очередь было сделано из-за бага Perl, когда присутствует рассинхронизация
+в <code>PL_warnhook</code> и <code>$SIG{__WARN__}</code>. Теоретически оба должны ссылаться на
+хендлер обработки предупреждений, но некоторые кривые XS-программы, в том
+числе входящие в базовый Perl (например, find в PerlIO::Layer), могут изменить
+только <code>PL_warnhook</code>, забыв про <code>$SIG{__WARN__}</code>. То есть это был банальный
+костыль в Coro для обхода реальной проблемы в Perl. Эта проблема была
+зафиксирована в баге
+<a href="https://rt.perl.org/Public/Bug/Display.html?id=125439">#125349</a>,</p>
+
+<p>Более того, оказалось, что Coro можно было приспособить для работы с
+константной <code>MGVTBL</code>, Dave Mitchell и Father Chrysostomos продемонстрировали
+<a href="http://code.activestate.com/lists/perl5-porters/228699/">патч</a>, который
+позволяет Coro работать без проблем на Perl 5.22.</p>
+
+<p>Очевидно, что если бы этот мозговой штурм прошёл год назад, проблема была бы
+решена раньше и не возникло бы таких явлений как stableperl. Вероятно штурм бы
+и не потребовался, если бы Марк сообщил о проблеме в Perl, когда столкнулся с
+ней впервые.</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/05/06/01-coro-in-perl-5-24/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/04/24/02-sawyer-x-new-pumpking/">Sawyer X новый pumpking Perl</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/community/" rel="tag">community</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-04-24">
+                            2016-04-24
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Рикардо Сигнес
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2016/04/msg236010.html">сообщил</a>,
+что новым добровольцем, вызвавшимся быть ответственным за релизы Perl, стал
+<a href="http://pragmaticperl.com/issues/03/pragmaticperl-03-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D1%8C%D1%8E-%D1%81-sawyer-x.html">Sawyer
+X</a>,
+известный в сообществе израильский Perl-программист.</p>
+
+<p>Рикардо заметил, что предыдущий pumpking Джес Винсент сопровождал Perl два
+года, сам Рикардо — четыре (два в квадрате), следовательно Сойеру предстоит по
+меньшей мере 4² = 16 лет увлекательной работы.</p>
+
+<p>В рассылке perl5 porters началось обсуждение новости. Уже предрекают появление
+Dancer в базовом Perl, вместо ушедшего оттуда модуля CGI.</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/04/24/02-sawyer-x-new-pumpking/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/04/24/01-silver-camel-2016/">Рикардо Сигнес получил серебряного верблюда</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/community/" rel="tag">community</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-04-24">
+                            2016-04-24
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <div class="left">
+<p><img alt="silver camel" src="/blog/2016/04/24/01-silver-camel-2016/silver_camel_rjbs.jpg"></p>
+</div>
+
+<p>На проходящем <a href="http://act.qa-hackathon.org/qa2016/">Perl QA Хакатоне</a> в
+английском городе Рагби Рикардо Сигнес получил довольно уникальную награду:
+серебряный верблюд. Это первое публичное Perl-мероприятие, которое посетил Рик
+после анонса, что Perl 5.24.0 станет его последним релизом. Награда стала
+данью признания выдающихся заслуг Рикардо Сигнеса в его работе над выпусками
+Perl на протяжении последних пяти лет.</p>
+
+<p>Награда «серебряный верблюд» появилась в 2014 году, когда ею впервые был
+удостоен Марк Китинг за его вклад в развитие Perl-сообщества в Соединённом
+Королевстве. Дело в том, что Марк являлся членом маркетингового комитета фонда
+перл и никогда бы не смог получить награду «Белый верблюд», поскольку именно
+фонд перла выбирает лауреатов награды и по этой причине не может выбирать
+никого из жюри. «Серебряный верблюд» позволил изящно обойти это ограничение.</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/04/24/01-silver-camel-2016/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/04/14/rjbs-slide-on-the-ice/">Последний релиз Рикардо Сигнеса</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/community/" rel="tag">community</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-04-14">
+                            2016-04-14
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Рикардо Сигнес, текущий релизер стабильных релизов Perl (pumpking),
+<a href="http://permalink.gmane.org/gmane.comp.lang.perl.perl5.porters/158061">сообщил</a>
+о том, что релиз v5.24.0 и одновременно выходящий релиз v5.25.0 для
+разработчиков, станут его последними релизами Perl.</p>
+
+<p>Рикардо на протяжении последних почти 5 лет выпускал стабильные релизы Perl,
+начиная c 5.16.0. Он обещает по-прежнему активно участвовать в сообществе, но
+уже не в роли pumpking. Тема письма в perl5-porters «...and slide on the ice»
+является окончанием цитаты из эпизода MASH:</p>
+
+<blockquote>
+  <p>Ladies and gentlemen, take my advice. Pull down your pants, and slide on the
+  ice</p>
+  
+  <p><em>Maj. Sidney Freedman</em></p>
+</blockquote>
+
+<p>что можно трактовать как, жизнь коротка, не следует всегда оставаться слишком
+серьёзным.</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/04/14/rjbs-slide-on-the-ice/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/04/14/perl-5-24-0-rc1/">Выпущен Perl 5.24.0-RC1</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-04-14">
+                            2016-04-14
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Не откладывая в долгий ящик, Рикардо Сигнес выпустил первый «настоящий»
+релиз-кандидат новой мажорной версии Perl
+<a href="https://metacpan.org/release/RJBS/perl-5.24.0-RC1">5.24.0-RC1</a>. Список
+изменений по сравнению с Perl 5.22.0 доступен в
+<a href="https://metacpan.org/pod/release/RJBS/perl-5.24.0-RC1/pod/perldelta.pod">perldelta</a>.
+Среди основных изменений можно отметить:</p>
+
+<ul>
+<li><p>Постфиксное разыменование больше не экспериментальное, соответственно удалена
+поддержка авторазыменования.</p></li>
+<li><p>Поддержка стандарта Юникод 8.0.</p></li>
+<li><p>Удалена поддержка лексической переменной <code>my $_</code>.</p></li>
+<li><p>Оптимизирована процедура входа и выхода в/из область видимости, что ускоряет
+вызов функций, циклов и блоков кода.</p></li>
+<li><p>Прирост в скорости в регулярных выражениях с фиксированной строкой поиска за
+счёт использования соответствующей аппаратной поддержки.</p></li>
+<li><p>Множество исправлений ошибок.</p></li>
+</ul>
+
+                <p class="tags">
+                    <a href="/blog/2016/04/14/perl-5-24-0-rc1/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/04/11/01-perl-releases/">Релиз-кандидаты Perl 5.22.2-RC1 и 5.24.0-RC0</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-04-11">
+                            2016-04-11
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>10 апреля вышел первый релиз-кандидат Perl
+<a href="https://metacpan.org/release/SHAY/perl-5.22.2-RC1">5.22.2-RC1</a>. Новый минорный
+релиз текущей стабильной ветки Perl 5.22 содержит только исправления ошибок
+безопасности: CVE-2015-8607, CVE-2015-8608, CVE-2016-2381 (подробно о них уже
+рассказывалось в
+<a href="http://perlnews.ru/blog/2016/03/11/01-strawberry-perl/">новости</a> о релизе
+Strawberry Perl), а также ошибка
+<a href="https://rt.perl.org/Public/Bug/Display.html?id=127322">#RT127322</a>, когда при
+создании временных файлов перед вызовом <code>mkstemp</code>, в Perl предварительно
+устанавливались биты <code>umask</code> 0600 (вместо 0177), что на современных Linux
+системах приводило к результирующему значению бит прав 0000, что не является
+проблемой безопасности, но на древних системах с glibc ≤ 2.06 давало
+результирующее значение 0066, что уже является проблемой.</p>
+
+<p>Также было
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2016/04/msg235744.html">объявлено</a>
+о создании релиз-кандидата будущей стабильной версии Perl 5.24.0-RC0. Это не
+совсем «настоящий» релиз, так как тарбол не был отправлен на CPAN, и собрать новый
+релиз можно только из исходного кода в git-репозитории. Но Рикардо Сигнес
+обещает выпустить настоящий RC1 уже через пару недель. Таким образом, в этом
+году ожидается необычно ранний релиз Perl по сравнению с предыдущими
+(например, 5.22.0 вышел 1 июня).</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/04/11/01-perl-releases/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/03/25/01-mojo-hostile-forks/">Враждебные форки</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/mojo/" rel="tag">mojo</a>
+                        <a href="/blog/tag/fork/" rel="tag">fork</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-03-25">
+                            2016-03-25
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>В документации Mojolicious появилось
+<a href="https://github.com/kraih/mojo/blob/master/lib/Mojolicious/Guides/Contributing.pod#fork-policy">предостережение</a>
+от создания форков отдельных частей проекта Mojolicious, которые не были
+одобрены разработчиками Mojolicious. Форки не только ведут к истощению ресурсов
+проекта, бренда, но также лишают его возможных баг-репортов и патчей. В
+качестве примеров можно привести
+<a href="https://metacpan.org/pod/DOM::Tiny">DOM::Tiny</a> , который является форком
+<a href="https://metacpan.org/pod/Mojo::DOM">Mojo::DOM</a>, или
+<a href="https://metacpan.org/pod/JSON::Tiny">JSON::Tiny</a>, который является форком
+<a href="https://metacpan.org/pod/Mojo::JSON">Mojo::JSON</a>.
+Например, <a href="https://github.com/daoswald/JSON-Tiny/pull/2">улучшение</a> для
+JSON::Tiny никто не удосужился предложить портировать обратно в Mojo::JSON, а
+<a href="https://github.com/kraih/mojo/commit/7a65c82">улучшения</a> в Mojo::JSON не
+попадают в форк, таким образом складывается ситуация, когда оба проекта несут
+потери.</p>
+
+<p>Себастьян Ридель настроен серьёзно и уже поместил негативный
+<a href="http://cpanratings.perl.org/dist/DOM-Tiny#12742">отзыв</a> дистрибутиву
+DOM-Tiny на cpanratings.</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/03/25/01-mojo-hostile-forks/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/03/17/01-winsock-errors/">Код ошибки Winsock теперь попадает в $^E</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/windows/" rel="tag">windows</a>
+                        <a href="/blog/tag/perl/" rel="tag">perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-03-17">
+                            2016-03-17
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Давняя история борьбы Perl с кодами ошибок Winsock внезапно получила
+продолжение. Как известно, традиционно в Perl на Windows коды ошибок Winsock
+сохранялись в <code>errno</code> и транслировались в переменную <code>$!</code> так, чтобы
+соответствовать POSIX-кодам ошибок. Возникающие проблемы при таком подходе уже
+подробно освещались в статье <a href="http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html">«AnyEvent сломан на Strawberry
+Perl 5.20»</a></p>
+
+<p>И вот, в конце февраля было внесено новое
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2016/02/msg234472.html">предложение</a>
+по работе с ошибками Winsock. Чтобы немного смягчить имеющееся рассогласование,
+начиная с грядущего выпуска Perl 5.24 значение кода ошибки Winsock будет
+попадать в переменную <code>$^E</code>, которая как раз и служит для хранения
+платформо-специфичных ошибок. Отказ от модификации <code>$!</code> пока не
+предусматривается, но если он будет выполнен для Winsock, то пройдёт через
+стандартную схему устаревания и, как минимум, через один стабильный релиз.</p>
+
+<p>11 марта это
+<a href="http://perl5.git.perl.org/perl.git/commitdiff/22e30cb2a3fd49a3d6fe5a866b28ff36608340ae">изменение</a>
+было отправлено в основную ветку.</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/03/17/01-winsock-errors/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/03/11/01-strawberry-perl/">Выпущен Strawberry Perl 5.22.1.3 и 5.20.3.3</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/windows/" rel="tag">windows</a>
+                        <a href="/blog/tag/security/" rel="tag">security</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-03-11">
+                            2016-03-11
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Выпущены два релиза дистрибутива Perl 5.22.1.3 и 5.20.3.3 для Windows
+<em>Strawberry Perl</em>. Оба релиза содержат исправление уязвимостей:</p>
+
+<ul>
+<li><p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8607">CVE-2015-8607</a>
+— функция <code>canonpath</code> модуля File::Spec не сохраняет taint-атрибут
+возвращаемого значения.</p></li>
+<li><p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-8608">CVE-2015-8608</a>
+— обращение к памяти за пределами границ при обработке путей. Баг специфичен
+для Win32 платформы, возникает в случае если в пути в качестве буквы диска
+указан любой символ, отличный от <code>а..z</code> или <code>A..Z</code>.</p></li>
+<li><p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2381">CVE-2016-2381</a>
+— если в массиве переменных окружения оказывались дублирующиеся ключи, то в
+<code>%ENV</code> сохранялось последнее значение, в то время как <code>getenv</code> возвращал
+первое. В такой ситуации дочерний процесс мог получить неожиданное значение
+переменной окружения.</p></li>
+</ul>
+
+<p>Кроме того, в дистрибутивах обновлена библиотека openssl. Загрузить новые
+релизы можно на сайте проекта <a href="http://strawberryperl.com/">strawberryperl.com</a>.</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/03/11/01-strawberry-perl/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/02/18/01-fosdem-2016-perl-video/">Выложены видеозаписи Perl-докладов на FOSDEM 2016</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/fosdem/" rel="tag">FOSDEM</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-02-18">
+                            2016-02-18
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>На сайте конференции FOSDEM 2016 выложены видеозаписи докладов, проходившие в
+зале <a href="https://fosdem.org/2016/schedule/track/perl/">Perl</a>.</p>
+
+<ul>
+<li><a href="https://video.fosdem.org/2016/h2214/welcome-to-the-perl-devroom.mp4">«The Pinnacle of Hubris»</a>
+<em>a Story of Laziness, Impatience and Karma</em>, Karl Moens</li>
+<li><a href="https://video.fosdem.org/2016/h2214/amd64-assembly-programming-for-perl-programmers.mp4">«(amd64) Assembly programming for Perl
+programmers»</a>,
+Bart Wiegmans</li>
+<li><a href="https://video.fosdem.org/2016/h2214/crust.mp4">«Crust»</a> <em>Perl6 Port of
+Plack</em>, Daisuke Maki</li>
+<li><a href="https://video.fosdem.org/2016/h2214/from-regular-expressions-to-parsing-javascript.mp4">«From Regular Expressions to Parsing
+JavaScript»</a>
+<em>Learn Perl6 Grammars</em>, Jeffrey Goff</li>
+<li><a href="https://video.fosdem.org/2016/h2214/perl-6.mp4">«Perl 6»</a> <em>The end of the
+beginning</em> , Elizabeth Mattijsen</li>
+<li><a href="https://video.fosdem.org/2016/h2214/perl-and-mathematics.mp4">«Perl and
+Mathematics»</a>
+<em>2015 in review</em>, Dana Jacobsen</li>
+<li><a href="https://video.fosdem.org/2016/h2214/perl-is-not-dead-it-got-better.mp4">«Perl is not dead,... it got
+better!»</a>,
+Stevan Little</li>
+<li><a href="https://video.fosdem.org/2016/h2214/ponapi.mp4">«PONAPI»</a> <em>The
+anti-bikeshedding tool for your REST API</em>, Mickey Nasriachi</li>
+<li><a href="https://video.fosdem.org/2016/h2214/rperl-perl-11-and-the-future-of-perl-performance.mp4">«RPerl, Perl 11, and The Future of Perl
+Performance»</a>,
+Will the Chill Braswell</li>
+<li><a href="https://video.fosdem.org/2016/h2214/teaching-perl.mp4">«Teaching Perl»</a>
+<em>We&#39;re doing it wrong</em>, Juan Julián Merelo</li>
+<li><a href="https://video.fosdem.org/2016/h2214/whats-new-in-perl.mp4">«What&#39;s new in
+Perl?»</a> <em>News from
+the front</em>, Sawyer X</li>
+</ul>
+
+<p>P.S. По всей видимости, видеофайлы выложены частично битые. Первая минута не
+проигрывается, но дальше воспроизводится нормально. Требуется полная загрузка
+видеофайла для начала воспроизведения.</p>
+
+<p>P.P.S. Все видеофайлы, кроме «Perl 6», перегенерированы и доступны для
+просмотра.</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/02/18/01-fosdem-2016-perl-video/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/02/04/01-rakudo-star-2016-01/">Вышел Rakudo Star 2016.01</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl6/" rel="tag">Perl6</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-02-04">
+                            2016-02-04
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел официальный
+<a href="http://rakudo.org/2016/02/03/announce-rakudo-star-release-2016-01/">анонс</a>
+«Rakudo Star» 2016.01 — дистрибутива Perl 6. Поскольку предыдущий релиз вышел в
+ноябре 2015, то этот релиз является первым стабильным выпуском Perl 6,
+соответствующим спецификации <strong>v6.c</strong>.</p>
+
+<p>Этот релиз «Rakudo Star» был выпущен с поддержкой бэкенда MoarVM (все модули
+проходят тесты на всех поддерживаемых платформах). JVM бэкенд в данной версии
+не является полнофункциональным, поэтому рекомендуется использовать только
+бэкенд MoarVM. Загрузить архив с исходным кодом можно
+<a href="http://rakudo.org/downloads/star/rakudo-star-2016.01.tar.gz">здесь</a>.</p>
+
+<p>В мире Perl 6 есть различие между языком «Perl 6» и конкретной реализацией
+языка, такой как «Rakudo Star». Данный релиз содержит компилятор Perl 6
+<a href="https://raw.githubusercontent.com/rakudo/rakudo/2016.01.1/docs/announce/2016.01.md">Rakudo 2016.01.1</a>
+и бэкенд <a href="http://moarvm.org/">MoarVM 2016.01</a>, а также различные модули,
+документацию и другие полезные ресурсы от сообщества.</p>
+
+<p><em><strong>P.S.</strong></em> Доступны для загрузки MSI-инсталляторы для платформ Windows:
+<a href="http://rakudo.org/downloads/star/rakudo-star-2016.01-x86%20(no%20JIT).msi">x86</a>
+(без JIT),
+<a href="http://rakudo.org/downloads/star/rakudo-star-2016.01-x86_64%20(JIT).msi">x86_64</a>
+(c JIT).</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/02/04/01-rakudo-star-2016-01/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/02/02/01-rakudo-2016-01/">Вышел Rakudo 2016.01</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl6/" rel="tag">Perl6</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-02-02">
+                            2016-02-02
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел первый в 2016 году релиз компилятора Perl 6 — Rakudo 2016.01. Это также
+первый пост-Рождественский релиз, построенный по-прежнему на основе
+спецификации <strong>v6.c</strong>. Выпуск задержался на две недели, что связано прежде
+всего с продолжительным периодом зимних праздников, да и просто разработчикам
+был необходим отдых после напряжённой работы над первым стабильным релизом.</p>
+
+<p>Данный релиз не имеет новой функциональности и содержит только исправления
+ошибок и оптимизации. Загрузить архив с исходным кодом можно на сайте
+<a href="http://rakudo.org/downloads/rakudo/">rakudo</a>.</p>
+
+<p>Разработчики отмечают в
+<a href="https://github.com/rakudo/rakudo/blob/2016.01/docs/announce/2016.01.md">анонсе</a>,
+что новые релизы Perl 6 в этом году могут содержать новую функциональность,
+которая не является частью спецификации v6.c. Данные возможности можно будет
+включать с помощью прагм, работающих в лексической области видимости. При этом
+будет гарантироваться, что всё, работающее согласно спецификации v6.c, будет
+продолжать работать. Кроме того ожидаются и инкрементальные изменения самой
+спецификации.</p>
+
+<p>К сожалению, до сих пор не выпущен новый дистрибутив «Rakudo Star», содержащий
+стабильный Rakudo, наборы модулей и документацию, как и не выпущены msi-пакеты
+для установки в системе Windows. <del>Никакого инсайда по этому поводу пока не
+поступало</del>.</p>
+
+<p><em><strong>P.S.</strong></em> Для предварительного тестирования доступен первый релиз-кандидат
+«Rakudo Star»
+<a href="http://hack.p6c.org/~moritz/rakudo-star-2016.01-RC0.tar.gz">2016.01-RC0</a>.</p>
+
+<p><em><strong>P.P.S.</strong></em> Выпущен экстренный релиз Rakudo
+<a href="http://rakudo.org/downloads/rakudo/rakudo-2016.01.1.tar.gz">2016.01.1</a>,
+исправляющий проблему в процессе инсталляции модулей CORE. Проблема актуальна
+если при инсталляции используется параметр <code>DESTDIR</code>, указывающий путь к
+каталогу для установки (как правило, при сборке rpm/deb пакетов).</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/02/02/01-rakudo-2016-01/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/01/25/01-moscow-pm-meeting-4-feb-2016/">Встреча moscow.pm 4 февраля 2016 г.</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/moscow-pm/" rel="tag">moscow.pm</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-01-25">
+                            2016-01-25
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Анонсирована <a href="https://corp.mail.ru/ru/press/events/168/">встреча</a> Moscow.pm 4
+февраля в 18.30 в офисе Mail.Ru Group.</p>
+
+<p>Программа мероприятия:</p>
+
+<ul>
+<li><p>«Технологии конкурентного программирования», Илья Чесноков (программист в UK2
+Group)</p></li>
+<li><p>«Учимся рисовать», Дмитрий Симонов (независимый программист)</p></li>
+<li><p>«Index Condition Pushdown», Павел Щербинин (руководитель групп разработки
+Новости и Hi-Tech в Mail.Ru Group)</p></li>
+</ul>
+
+<p>Не забудьте <a href="https://corp.mail.ru/ru/press/events/168/">зарегистрироваться</a>!</p>
+
+                <p class="tags">
+                    <a href="/blog/2016/01/25/01-moscow-pm-meeting-4-feb-2016/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2016/01/21/01-perl-5-23-7/">Вышел Perl 5.23.7</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2016-01-21">
+                            2016-01-21
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Выпущен Perl 5.23.7 — восьмой релиз ветки для разработчиков. В данном релизе
+исправлено три проблемы, связанные с безопасностью:</p>
+
+<ul>
+<li><p>CVE-2015-8607: функция <code>canonpath()</code> модуля <code>File::Spec</code> не сохраняет
+taint-флаг для возвращаемого значения
+(<a href="https://rt.perl.org/Public/Bug/Display.html?id=126862">RT#126862</a>).
+Проблема присутствует в дистрибутиве PathTools, который входил в состав Perl
+5.20 и Perl 5.22. Исправлено в PathTools
+<a href="https://metacpan.org/source/RJBS/PathTools-3.62/Changes">3.62</a>.</p></li>
+<li><p>CVE-2015-8608: обращение к памяти за пределами границ при обработке путей
+(<a href="https://rt.perl.org/Public/Bug/Display.html?id=126755">RT#126765</a>). Баг
+специфичен для Win32 платформы, возникает в случае если в пути в качестве
+буквы диска указан любой символ, отличный от <code>а..z</code> или <code>A..Z</code>. Проблема
+актуальна для Perl, начиная с версии <code>5.005_02</code></p></li>
+<li><p>Доступ к неинициированной памяти в реализации функции <code>crypt()</code> на Win32
+<a href="https://rt.perl.org/Ticket/Display.html?id=126922">RT#126922</a>. Может
+привести к криптографически слабому результату работы функции.</p></li>
+</ul>
+
+<p>Присутствует несовместимое изменение в работе <code>\b{wb}</code> в регулярных выражениях,
+которое теперь больше соответствует ожиданиям и может заменить <code>\b</code> при
+обработке текста с использованием правил Юникода для символов разделителей
+слов.</p>
+
+<p>Информацию о других изменениях можно прочитать в
+<a href="https://metacpan.org/pod/release/STEVAN/perl-5.23.7/pod/perldelta.pod">perldelta</a></p>
+
+                <p class="tags">
+                    <a href="/blog/2016/01/21/01-perl-5-23-7/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/12/31/01-pragmatic-perl-34/">34-й выпуск журнала Pragmatic Perl</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/pragmaticperl/" rel="tag">PragmaticPerl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-12-31">
+                            2015-12-31
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел 34-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/34"><img alt="Pragmatic Perl 34" src="/blog/2015/12/31/01-pragmatic-perl-34/pp34.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><p><a href="http://pragmaticperl.com/a/19c65174">От редактора</a>, Вячеслав Тихановский</p></li>
+<li><p><a href="http://pragmaticperl.com/a/03f5a6a7">Впечатления от воркшопа Saint Perl 2015</a>, Владимир Леттиев<br>
+<em>Не изменяя традиции 19 декабря 2015 г. прошёл седьмой ежегодный воркшоп
+Saint Perl для всех любителей и профессионалов мира Perl в Санкт-Петербурге</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/513cbaaa">Взгляд на 2015 г.</a>, Андрей Шитов<br>
+<em>Краткий обзор заметных событий в мире Perl за прошедший год</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/08df5d9c">Управление модулями и прекомпиляция в Perl
+6</a>, Владимир Леттиев<br>
+<em>25 декабря 2015 г. вышел первый стабильный релиз Rakudo Perl 6, среди новшеств которого совершенно новая система управления модулями и прекомпиляция. Рассмотрим в деталях процесс загрузки, разрешения зависимостей и компиляции модулей</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/c5e39c3c">Perl 6-винегрет</a>, Андрей Шитов<br>
+<em>Новогодний оливье — сборная солянка про разные интересные штуки в Perl 6</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/c8d2c40d">Использование Rust из Perl</a>, Денис Федосеев<br>
+<em>Встраивание Rust в Perl с помощью FFI</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/60f97f58">Обзор CPAN за ноябрь 2015 г.</a>, Владимир Леттиев<br>
+<em>Рубрика с обзором интересных новинок CPAN за прошедший месяц.</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/f47a739a">Интервью с Дмитрием Шаматриным</a>, Вячеслав Тихановский<br>
+<em>Дмитрий Шаматрин — программист, с недавнего времени организатор Perl-конференций</em></p></li>
+</ul>
+
+                <p class="tags">
+                    <a href="/blog/2015/12/31/01-pragmatic-perl-34/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/12/26/01-released-perl-6/">Вышел Perl 6.0</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl6/" rel="tag">Perl6</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-12-26">
+                            2015-12-26
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Как и было обещано, на рождество вышел первый стабильный релиз Perl 6, который
+получил кодовое имя «Коледа» или по-русски Коляда, т.е. Сочельник — праздник
+кануна Рождества. Сообщество разработчиков Perl 6 в течении 15 лет шли к этому
+релизу. Данная версия компилятора соответствует официальной Perl 6 спецификации
+v6.c «Christmas» и проходит тесты <a href="https://github.com/perl6/roast">roast</a>.</p>
+
+<p>Вот что пишут в
+<a href="https://github.com/rakudo/rakudo/blob/nom/docs/announce/2015.12.md">анонсе</a> о
+языке Perl 6:</p>
+
+<ul>
+<li><p>Сохранил главные ценности Perl: выразительность и способность решать
+поставленные задачи, он отражает влияние естественного языка и расширяет
+границы дизайна языка.</p></li>
+<li><p>Имеет чистый современный синтаксис, основанный на схожих конструкциях, но
+пересмотревший те вещи, которые требовали пересмотра.</p></li>
+<li><p>По-настоящему мультипарадигменный, включающий элегантный
+объектно-ориентированный, функциональный, процедурный и параллельный подходы в
+программировании.</p></li>
+<li><p>Служит как эффективный язык-клей: простота вызовов C/C++ (через NativeCall) и
+Perl5 (с помощью Inline::Perl5).</p></li>
+<li><p>Значительно пересмотрен и создан новый стандарт для регулярных выражений,
+который расширяем до полноценных грамматик, достаточно мощных, чтобы
+разбирать синтаксис самого Perl 6.</p></li>
+<li><p>Отличная поддержка Юникода со строками, работающих на уровне графем.</p></li>
+<li><p>Лексические уровень и инкапсуляция, позволяющие легко проводить рефакторинг.</p></li>
+<li><p>Расширяемое мета-программирование, определяемые пользователем операторы и роли.</p></li>
+</ul>
+
+<p>Стабильный релиз не означает, что там нет багов или он работает безупречно.
+Безусловно будут выпускаться новые версии и стабильные релизы, но это релиз
+самый первый, который ознаменует начало новой эпохи. Спецификация языка и тест
+roast теперь надолго будет зафиксированы на версии v6.c, а это означает, что
+синтаксис и фичи языка уже не будут меняться. Будет дописываться документация и
+выпускаться книги по языку Perl 6, которые можно смело начинать изучать —
+изменений в обозримом будущем не будет. По крайне мере, не раньше, чем выйдет
+спецификация языка 6.d (Diwali).</p>
+
+<p>Загрузить компилятор Perl 6 Rakudo 2015.12 можно из
+<a href="http://rakudo.org/downloads/rakudo/">rakudo.org/downloads/rakudo/</a>. Релиз
+дистрибутива Perl 6 «Rakudo Start» с компилятором Rakudo, документацией и
+модулями вскоре появится в
+<a href="http://rakudo.org/downloads/star/">rakudo.org/downloads/star/</a></p>
+
+<p>Следующий релиз №95 Rakudo Perl 6 ожидается 16 января 2016.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/12/26/01-released-perl-6/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/12/22/01-perl-5-23-6/">Perl 5.23: эпизод VII «Пробуждение Фузза»</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/starwars/" rel="tag">StarWars</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-12-22">
+                            2015-12-22
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел седьмой релиз Perl 5.23 для разработчиков с необычным эпиграфом:</p>
+
+<pre><code>    Давным-давно в микросекундах в не очень далёкой галактике...
+
+                            5.23 эпизод VII
+                           ПРОБУЖДЕНИЕ ФУЗЗА
+
+                            Период волнений.
+                           Повстанцы угрожают
+                          намерениями форкнуть
+                        ПЕРЛ и вернуть галактике
+                       скорость  и   стабильность.
+                      Канцлер Рик Хулиган борется за
+                    удержание остатков Республики против
+                волны варварства и опустошения нового врага:
+                           НАЛЁТЧИКОВ ФУЗЗА.
+
+          Тем временем, после 15 лет подготовки и продолжительных
+       ожиданий, Верховный Вождь Тим Подхалим готовит для удара новое
+     разрушительное оружие ПЕРЛ ШЕСТЬТОЧКАНОЛЬ, которое навсегда расколет
+    Республику и возвестит о создании новой  Империи частичной типизации...
+</code></pre>
+
+<p>Под фуззом (fuzz) имеется ввиду фаззер <a href="http://lcamtuf.coredump.cx/afl/">AFL</a>,
+на который приходится внушительное число обнаруженных багов в разборе кода за
+последнее время. Имя Рик Хулиган намекает на текущего сопровождающего Perl 5
+Рикардо Сигнеса, ну а Тим Подхалим (Tim Toady) наверно не нуждается в
+пояснении.</p>
+
+<p>А и да, <a href="https://metacpan.org/pod/release/DAGOLDEN/perl-5.23.6/pod/perldelta.pod">список
+изменений</a>
+не особенно внушительный, но стоит обратить внимание на ускорение операций с
+регистром символов для языков, в которых отсутствует разделение на верхний и нижний
+регистр (например, китайский), а также внедрена проверка свойств юникода
+(<code>\p{}</code> и <code>\P{}</code>) в регулярных выражениях на этапе компиляции. Добавлена
+поддержка платформы OpenIndiana (преемник OpenSolaris). Исправлено несколько
+ошибок и регрессий.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/12/22/01-perl-5-23-6/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+        </main>
+
+        <ul class="pager">
+            <li class="prev">
+                <a class="button button-primary" href="/blog/page/2" rel="next">
+                    <span class="typcn typcn-arrow-left-thick"></span>
+                    Раньше
+                </a>
+            </li>
+            <li class="next">
+                <a class="button disabled" href="/blog/" rel="prev">
+                    Позже
+                    <span class="typcn typcn-arrow-right-thick"></span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="three columns sidebar">
+        
+        <h1>Темы</h1>
+        <ul class="list-inline">
+            <li><a href="/blog/tag/aprilfd/">AprilFD</a></li>
+            <li><a href="/blog/tag/benchmark/">benchmark</a></li>
+            <li><a href="/blog/tag/books/">books</a></li>
+            <li><a href="/blog/tag/bug/">bug</a></li>
+            <li><a href="/blog/tag/community/">community</a></li>
+            <li><a href="/blog/tag/coro/">Coro</a></li>
+            <li><a href="/blog/tag/cpan/">CPAN</a></li>
+            <li><a href="/blog/tag/cpanpr/">cpanpr</a></li>
+            <li><a href="/blog/tag/cpantesters/">cpantesters</a></li>
+            <li><a href="/blog/tag/dbic/">DBIC</a></li>
+            <li><a href="/blog/tag/donation/">donation</a></li>
+            <li><a href="/blog/tag/facepalm/">facepalm</a></li>
+            <li><a href="/blog/tag/fork/">fork</a></li>
+            <li><a href="/blog/tag/fosdem/">FOSDEM</a></li>
+            <li><a href="/blog/tag/funding/">funding</a></li>
+            <li><a href="/blog/tag/hackaton/">hackaton</a></li>
+            <li><a href="/blog/tag/ide/">IDE</a></li>
+            <li><a href="/blog/tag/interview/">interview</a></li>
+            <li><a href="/blog/tag/mojo/">mojo</a></li>
+            <li><a href="/blog/tag/moscow-pm/">moscow.pm</a></li>
+            <li><a href="/blog/tag/perl/">Perl</a></li>
+            <li><a href="/blog/tag/perl6/">Perl6</a></li>
+            <li><a href="/blog/tag/perlnews-ru/">PerlNews.Ru</a></li>
+            <li><a href="/blog/tag/pragmaticperl/">PragmaticPerl</a></li>
+            <li><a href="/blog/tag/regexp/">regexp</a></li>
+            <li><a href="/blog/tag/security/">security</a></li>
+            <li><a href="/blog/tag/smartmatch/">smartmatch</a></li>
+            <li><a href="/blog/tag/starwars/">StarWars</a></li>
+            <li><a href="/blog/tag/tips/">tips</a></li>
+            <li><a href="/blog/tag/unicode/">unicode</a></li>
+            <li><a href="/blog/tag/warnings/">warnings</a></li>
+            <li><a href="/blog/tag/windows/">windows</a></li>
+            <li><a href="/blog/tag/yapc/">YAPC</a></li>
+        </ul>
+        <h1>Лента</h1>
+        <ul class="list-inline">
+            <li>
+                <span class="typcn typcn-rss"></span>
+                <a href="/blog/index.atom" rel="alternate" type="application/atom+xml">
+                    Atom
+                </a>
+            </li>
+            <li>
+                <span class="typcn typcn-rss"></span>
+                <a href="/blog/index.rss" rel="alternate" type="application/rss+xml">
+                    RSS
+                </a>
+            </li>
+        </ul>
+        <h1>СоцСети</h1>
+        <ul class="list-inline">
+            <li>
+                <a href="https://twitter.com/perlnews_ru"><span class="typcn
+                        typcn-social-twitter"></span>PerlNews_RU</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script type="text/javascript">
+    var disqus_shortname = 'perlnewsru';
+    if (window.location.hostname === "perlnews.ru") {
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    }
+</script>
+
+        </div>
+        <footer>
+            <div class="container">
+<strong>© perlnews.ru</strong>
+<p>
+Все материалы доступны в соответствии с лицензией
+<a href="http://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0</a>
+<br>
+Работает на
+<a href="http://preaction.me/statocles">Statocles</a>
+и
+<a href="http://www.perl.org">Perl</a>
+</p>
+</div>
+
+        </footer>
+    </body>
+</html>

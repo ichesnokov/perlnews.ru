@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/perlnews-ru/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2015-02-02T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/perlnews-ru.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/perlnews-ru/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/02/blog-opening.html</id>
+        <title>Открытие блога</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/02/blog-opening.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Друзья, я рад сообщить вам, что запущен новый сайт PerlNews.Ru, который будет
+освещать новости и события из мира разработки Perl на русском языке.</p>
+
+<p>Вас ждёт информация о последних заметных изменениях в разрабатываемой версии
+Perl 5, будут публиковаться переводы статей из популярных Perl-блогов, пересказ
+важных обсуждений в почтовой рассылке <code>perl5-porters</code> и легендарной
+<code>moscow.pm</code>, а также сообщений на Reddit, HackerNews, затрагивающих Perl. Не
+будут обойдены стороной и новости CPAN. Обязательно будут анонсироваться
+Perl-воркшопы и конференции и другие важные мероприятия.</p>
+
+<p>В ближайшее время будут прорабатываться новостные рубрики и оформляться
+новости. Подписывайтесь на RSS-ленту ресурса, отправляйте свои пожелания и
+критику на адрес
+editor<span class="typcn typcn-social-at-circular"></span>perlnews.ru.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perlnews-ru/">PerlNews.Ru</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-02T00:00:00Z</updated>
+        <category term="PerlNews.Ru" />
+    </entry>
+</feed>
+

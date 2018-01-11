@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/warnings/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/warnings.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Дискуссия о статусе фатальных предупреждений</title>
+            <link>http://perlnews.ru/blog/2015/03/18/01-status-of-fatal-warnings.html</link>
+            <guid>http://perlnews.ru/blog/2015/03/18/01-status-of-fatal-warnings.html</guid>
+            <description><![CDATA[
+                <p>В рассылке perl5-porters активно обсуждается проблема фатальных предупреждений.
+Как известно, при использовании конструкции</p>
+
+<pre><code>use warnings FATAL =&gt; &#39;all&#39;;
+</code></pre>
+
+<p>меняется поведение программы, которая теперь генерирует исключение после вывода
+предупреждений. Есть по крайне мере два серьёзных основания объявить
+использование фатальных предупреждений нерекомендуемой практикой.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/03/18/01-status-of-fatal-warnings.html#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                    <a href="http://perlnews.ru/blog/tag/warnings/">warnings</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 18 Mar 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

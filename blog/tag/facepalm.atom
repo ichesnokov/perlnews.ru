@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/facepalm/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2015-06-08T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/facepalm.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/facepalm/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/06/08/01-schmorps-stable-perl-fork/</id>
+        <title>Марк Леманн создал форк Perl: «stableperl»</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/06/08/01-schmorps-stable-perl-fork/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Марк Леманн, также известный как <em>schmorp</em>, создатель библиотеки
+<a href="http://libev.schmorp.de">libev</a>, <a href="https://metacpan.org/pod/AnyEvent">AnyEvent</a>
+и <a href="https://metacpan.org/pod/Coro">Coro</a>, объявил о создании форка Perl под
+названием
+<a href="http://schplog.schmorp.de/2015-06-06-a-stable-perl.html">«stableperl»</a>.</p>
+
+<p>Как известно, Марк постоянно конфликтовал с разработчиками Perl5 из-за
+регулярных нарушений обратной совместимости в новых релизах, а релиз Perl
+<em>5.22.0</em>, который привёл к неработоспособности <code>Coro</code>, очевидно, стал последней
+каплей.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/06/08/01-schmorps-stable-perl-fork/#section-2">Читать дальше &rarr;</a></p>
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/facepalm/">facepalm</a>
+            </p>
+        ]]></content>
+        <updated>2015-06-08T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="facepalm" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html</id>
+        <title>AnyEvent сломан на Strawberry Perl 5.20</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>В конце прошлой недели рассылка perl5-porters опять наполнились
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/03/msg226604.html">проклятиями</a>
+Марка Леманна из-за очередной поломки обратной совместимости в Perl5. Как
+выяснилось AnyEvent оказался сломан на платформе Windows из-за несовместимых
+изменений, который произошли в версии 5.19.4.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html#section-2">Читать дальше &rarr;</a></p>
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                <a href="http://perlnews.ru/blog/tag/facepalm/">facepalm</a>
+                <a href="http://perlnews.ru/blog/tag/windows/">windows</a>
+            </p>
+        ]]></content>
+        <updated>2015-03-16T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="CPAN" />
+        <category term="facepalm" />
+        <category term="windows" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/10/01-pod-simple-cp1252.html</id>
+        <title>В Pod::Simple по умолчанию будет кодировка CP-1252</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/10/01-pod-simple-cp1252.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Дэвид Уилер
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/02/msg225550.html">анонсировал</a>,
+что в следующем релизе <a href="https://metacpan.org/release/Pod-Simple">Pod::Simple</a>
+(парсер POD-документации, используемый в том числе для perldoc) будет изменена
+кодировка по-умолчанию с Latin-1 на CP-1252. Утверждается, что это будет
+особенно полезно для POD-документов, созданных на платформе Windows, где эта
+кодировка и встречается. Соответствующие изменения будут внесены и в
+спецификацию POD Perl.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                <a href="http://perlnews.ru/blog/tag/facepalm/">facepalm</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-10T00:00:00Z</updated>
+        <category term="CPAN" />
+        <category term="facepalm" />
+    </entry>
+</feed>
+

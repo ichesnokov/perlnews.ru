@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/fosdem/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/fosdem.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Выложены видеозаписи Perl-докладов на FOSDEM 2016</title>
+            <link>http://perlnews.ru/blog/2016/02/18/01-fosdem-2016-perl-video/</link>
+            <guid>http://perlnews.ru/blog/2016/02/18/01-fosdem-2016-perl-video/</guid>
+            <description><![CDATA[
+                <p>На сайте конференции FOSDEM 2016 выложены видеозаписи докладов, проходившие в
+зале <a href="https://fosdem.org/2016/schedule/track/perl/">Perl</a>.</p>
+
+<ul>
+<li><a href="https://video.fosdem.org/2016/h2214/welcome-to-the-perl-devroom.mp4">«The Pinnacle of Hubris»</a>
+<em>a Story of Laziness, Impatience and Karma</em>, Karl Moens</li>
+<li><a href="https://video.fosdem.org/2016/h2214/amd64-assembly-programming-for-perl-programmers.mp4">«(amd64) Assembly programming for Perl
+programmers»</a>,
+Bart Wiegmans</li>
+<li><a href="https://video.fosdem.org/2016/h2214/crust.mp4">«Crust»</a> <em>Perl6 Port of
+Plack</em>, Daisuke Maki</li>
+<li><a href="https://video.fosdem.org/2016/h2214/from-regular-expressions-to-parsing-javascript.mp4">«From Regular Expressions to Parsing
+JavaScript»</a>
+<em>Learn Perl6 Grammars</em>, Jeffrey Goff</li>
+<li><a href="https://video.fosdem.org/2016/h2214/perl-6.mp4">«Perl 6»</a> <em>The end of the
+beginning</em> , Elizabeth Mattijsen</li>
+<li><a href="https://video.fosdem.org/2016/h2214/perl-and-mathematics.mp4">«Perl and
+Mathematics»</a>
+<em>2015 in review</em>, Dana Jacobsen</li>
+<li><a href="https://video.fosdem.org/2016/h2214/perl-is-not-dead-it-got-better.mp4">«Perl is not dead,... it got
+better!»</a>,
+Stevan Little</li>
+<li><a href="https://video.fosdem.org/2016/h2214/ponapi.mp4">«PONAPI»</a> <em>The
+anti-bikeshedding tool for your REST API</em>, Mickey Nasriachi</li>
+<li><a href="https://video.fosdem.org/2016/h2214/rperl-perl-11-and-the-future-of-perl-performance.mp4">«RPerl, Perl 11, and The Future of Perl
+Performance»</a>,
+Will the Chill Braswell</li>
+<li><a href="https://video.fosdem.org/2016/h2214/teaching-perl.mp4">«Teaching Perl»</a>
+<em>We&#39;re doing it wrong</em>, Juan Julián Merelo</li>
+<li><a href="https://video.fosdem.org/2016/h2214/whats-new-in-perl.mp4">«What&#39;s new in
+Perl?»</a> <em>News from
+the front</em>, Sawyer X</li>
+</ul>
+
+<p>P.S. По всей видимости, видеофайлы выложены частично битые. Первая минута не
+проигрывается, но дальше воспроизводится нормально. Требуется полная загрузка
+видеофайла для начала воспроизведения.</p>
+
+<p>P.P.S. Все видеофайлы, кроме «Perl 6», перегенерированы и доступны для
+просмотра.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/fosdem/">FOSDEM</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Thu, 18 Feb 2016 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Выложены первые видеозаписи Perl-докладов на FOSDEM 2015</title>
+            <link>http://perlnews.ru/blog/2015/03/04/01-fosdem-perl-video.html</link>
+            <guid>http://perlnews.ru/blog/2015/03/04/01-fosdem-perl-video.html</guid>
+            <description><![CDATA[
+                <p>На сайте с видеозаписями конференции FOSDEM 2015 появились первые девять
+записей докладов, проходившие в зале Perl.</p>
+
+<ul>
+<li><a href="http://video.fosdem.org/2015/devroom-perl/dancer_status__NO_AUDIO.mp4">«Dancer
+Status»</a>,
+Sawyer X</li>
+<li><a href="http://video.fosdem.org/2015/devroom-perl/devops_logique.mp4">«Devops
+Logique»</a>, Matt
+&#39;mst&#39; Trout</li>
+<li><a href="http://video.fosdem.org/2015/devroom-perl/life_without_plastic_bags__PARTIAL_AUDIO.mp4">«&quot;Fast enough” Perl 6. How I learned to stop worrying and love
+games»</a>,
+Tadeusz &#39;tadzik&#39; Sosnierz</li>
+<li><a href="http://video.fosdem.org/2015/devroom-perl/modules_ecosystem_perl6.mp4">«Leapfrogging the bootstrap. Bringing whole module ecosystems to Perl
+6.»</a>,
+Stefan &#39;nine&#39; Seifert</li>
+<li><a href="http://video.fosdem.org/2015/devroom-perl/perl5_22_things_to_come.mp4">«Perl 5.22. The Shape of Things to
+Come»</a>,
+Ricardo Signes</li>
+<li><a href="http://video.fosdem.org/2015/devroom-perl/perl6_beyond_dynamic_vs_static.mp4">«Perl 6: beyond dynamic vs.
+static»</a>,
+Jonathan &#39;jnthn&#39; Worthington</li>
+<li><a href="http://video.fosdem.org/2015/devroom-perl/perl6_for_mortals.mp4">«Perl 6 A Dynamic Language for Mere
+Mortals»</a>,
+Curtis &#39;Ovid&#39; Poe</li>
+<li><a href="http://video.fosdem.org/2015/devroom-perl/perl6_lang_spec_lessons_learned.mp4">«How (not) to create a language specification for Perl 6 Lessons
+learned»</a>,
+Patrick &#39;pmichaud&#39; Michaud</li>
+<li><a href="http://video.fosdem.org/2015/devroom-perl/perl_syntactic_legacy.mp4">«Perl&#39;s Syntactic Legacy. Using the future to improve the
+past»</a>,
+Stevan Little</li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/fosdem/">FOSDEM</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 04 Mar 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Интервью Ларри Уолла в подкасте rebuild.fm</title>
+            <link>http://perlnews.ru/blog/2015/02/06/02-timtoady-rebuild-fm-interview.html</link>
+            <guid>http://perlnews.ru/blog/2015/02/06/02-timtoady-rebuild-fm-interview.html</guid>
+            <description><![CDATA[
+                <p>Вслед за Рикардо Сигнесом Тацухико Миягава взял интервью у создателя Perl —
+Ларри Уолла. Подкаст также проходил в Бельгии после крупнейшей европейской
+конференции FOSDEM, на которой Ларри Уолл сделал давно обещанный анонс выпуска
+стабильного релиза Perl 6 в 2015 году. Темой выпуска естественно стал Perl 6.</p>
+
+<p>Запись интервью на английском языке доступна на <a href="http://rebuild.fm/78/">сайте</a>
+подкаста rebuild.fm. Далее последует краткое изложение беседы.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/02/06/02-timtoady-rebuild-fm-interview.html#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+                    <a href="http://perlnews.ru/blog/tag/fosdem/">FOSDEM</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Fri, 06 Feb 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Интервью Рикардо Сигнеса для подкаста rebuild.fm</title>
+            <link>http://perlnews.ru/blog/2015/02/04/rjbs-rebuild-fm-interview.html</link>
+            <guid>http://perlnews.ru/blog/2015/02/04/rjbs-rebuild-fm-interview.html</guid>
+            <description><![CDATA[
+                <p>На проходившей в Бельгии конференции FOSDEM 2015 один из докладов делал Рикардо
+Сигнес — ответственный за релизы стабильных версий Perl (pumpkin). Доклад был
+посвящён процессу подготовки релизов Perl и, в частности, грядущему стабильному
+релизу 5.22. Тацухико Миягаве удалось взять интервью, в ходе которого и
+обсуждалась тема доклада.</p>
+
+<p>Запись интервью на английском языке доступна на <a href="http://rebuild.fm/77/">сайте</a>
+подкаста. Далее кратко о чём же беседовали два известных Perl-хакера.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/02/04/rjbs-rebuild-fm-interview.html#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                    <a href="http://perlnews.ru/blog/tag/fosdem/">FOSDEM</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 04 Feb 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Релиз Perl6 ожидается в 2015 году</title>
+            <link>http://perlnews.ru/blog/2015/02/02/perl6-on-christmas-2015.html</link>
+            <guid>http://perlnews.ru/blog/2015/02/02/perl6-on-christmas-2015.html</guid>
+            <description><![CDATA[
+                <p>На проходящей в Брюсселе конференции FOSDEM, Ларри Уолл в своём докладе <em>Get
+Ready to Party!</em>
+<a href="http://blogs.perl.org/users/shadowcat_mdk/2015/02/fosdem-2015-its-christmas.html">анонсировал</a>,
+что разработчики Perl 6 постараются выпустить релиз 1.0 для разработчиков на
+61-й день рождения Ларри в этом году, ну а первая стабильная версия будет
+выпущена на Рождество 2015 года.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+                    <a href="http://perlnews.ru/blog/tag/fosdem/">FOSDEM</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 02 Feb 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

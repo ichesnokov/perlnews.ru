@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="summary" name="twitter:card">
+        <meta content="http://perlnews.ru/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html" name="twitter:url">
+        <meta content="AnyEvent сломан на Strawberry Perl 5.20" name="twitter:title">
+        <meta content="В конце прошлой недели рассылка perl5-porters опять наполнились проклятиями Марка Леманна из-за очередной поломки обратной совместимости в Perl5. Как выяснилось AnyEvent оказался сломан на платфор…" name="twitter:description">
+        <meta content="@perlnews_ru" name="twitter:site">
+        <link href="/theme/images/favicon.ico" rel="icon">
+        <link href="/theme/css/style.css" rel="stylesheet">
+        <title>
+            PerlNews.Ru
+            → AnyEvent сломан на Strawberry Perl 5.20
+        </title>
+        <script>
+  if (window.location.hostname === "perlnews.ru") {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59283423-1', 'auto');
+      ga('send', 'pageview');
+  }
+</script>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a class="brand" href="/">
+                        PerlNews.Ru
+                        <span class="brand-img"></span>
+                    </a>
+                    <ul>
+                        <li>
+                        <a href="/index.html">
+                            Новости
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/about.html">
+                            О блоге
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/resources.html">
+                            Ресурсы
+                        </a>
+                        </li>
+                        <li>
+                        <a href="http://irc.pragmaticperl.com">
+                            Чат
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://twitter.com/perlnews_ru">
+                            Twitter
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="main container">
+            <div class="row">
+
+    <div class="nine columns">
+        <main>
+            <header>
+                <h1>AnyEvent сломан на Strawberry Perl 5.20</h1>
+                <p class="tags">Темы:
+                    <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    <a href="/blog/tag/cpan/" rel="tag">CPAN</a>
+                    <a href="/blog/tag/facepalm/" rel="tag">facepalm</a>
+                    <a href="/blog/tag/windows/" rel="tag">windows</a>
+                </p>
+                <aside>
+                    <p><time datetime="2015-03-16">
+                        <span class="typcn typcn-time"><span>
+                        2015-03-16
+                    </span></span></time>
+                        <span class="typcn typcn-user"><span>
+                        perlnews
+                    </span></span></p>
+                </aside>
+            </header>
+            <section id="section-1">
+                <p>В конце прошлой недели рассылка perl5-porters опять наполнились
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/03/msg226604.html">проклятиями</a>
+Марка Леманна из-за очередной поломки обратной совместимости в Perl5. Как
+выяснилось AnyEvent оказался сломан на платформе Windows из-за несовместимых
+изменений, который произошли в версии 5.19.4.</p>
+
+            </section>
+            <section id="section-2">
+                <p>Как известно, POSIX регламентирует стандарт наименования кодов ошибок, чтобы
+облегчить создание более переносимых программ. Все подобные коды ошибок
+определены в заголовочном файле <code>errno.h</code> стандартной библиотеки C. Но как
+известно существуют и не-POSIX платформы, которые определяют свои коды ошибок,
+например, на системе Windows в <code>errno.h</code> присутствуют ошибки с префиксом <code>WSA</code>,
+например <code>WSAEINVAL</code>, которая возвращается, если передано недопустимое значение.
+Данная ошибка по смыслу соответствует стандартному <code>EINVAL</code>.</p>
+
+<p>Чтобы облегчить создание переносимых программ многие реализации скриптовых
+языков и, в том числе Perl, производят преобразование <code>WSAE*</code> кодов в
+соответствующие <code>E*</code> коды, таким образом, программа проверяющая, например,
+только код ошибки <code>EINVAL</code> будет работать как на POSIX-платформе, так и на
+Windows. К сожалению, не все нужные <code>E*</code> коды присутствовали в <code>errno.h</code>
+компилятора Visual C++ для подобных преобразований. Поэтому в Perl долгое время
+искусственно добавляли недостающие <code>E*</code> коды с номером &gt; 100. Всё изменилось с
+выходом VC+2010, где отсутствующие коды появились и стали конфликтовать с теми,
+что были добавлены в Perl. Для того, чтобы исправить этот конфликт в Perl
+убрали конфликтующие определения и попытались насколько возможно
+преобразовывать <code>WSAE*</code> коды в <code>E*</code> коды, чтобы избежать поломки обратной
+совместимости. Например, в соответствующих модулях Perl при присвоение значения
+<code>$!</code> код ошибки предварительно преобразуется из <code>WSAE*</code> в <code>E*</code>, но даже этого
+оказалось мало, поэтому в 5.19.4 был сделан хак, который при присвоении <code>$!</code>
+даже в коде пользователя автомагически преобразовывает <code>WSAE*</code> код  в <code>E*</code> код,
+например:</p>
+
+<pre><code>C:\&gt; perl -le &quot;$! = 10061; print 0+$!&quot;
+107
+</code></pre>
+
+<p>Последнее изменение формально и сломало AnyEvent, который использовал
+статические значение константы <code>WSAEWOULDBLOCK</code> 10035, которое в новом Perl
+транслировалось в POSIX-значение <code>EWOULDBLOCK(140)</code>:</p>
+
+<pre><code>} elsif ($! != EAGAIN &amp;&amp; $! != EINTR &amp;&amp; $! != WSAEWOULDBLOCK) {
+</code></pre>
+
+<p>Кстати, в <code>IO::Socket</code> появились конструкции, которые начинают дополнительно
+проверять версию Perl, прежде чем проверять код ошибки (в просторечии —
+подпорки к костылям):</p>
+
+<pre><code>elsif (!connect($sock,$addr) &amp;&amp;
+        not ($!{EISCONN} || ($^O eq &#39;MSWin32&#39; &amp;&amp;
+        ($! == (($] &lt; 5.019004) ? 10022 :
+            Errno::EINVAL))))
+</code></pre>
+
+<p>К сожалению, проблема значительно более серьёзна, чем просто поломка обратной
+совместимости. Дело в том, что некоторые коды <code>WSAE*</code> не соответствуют
+POSIX-кодам <code>E*</code>. Например, ошибка <code>WSAEINPROGRESS</code> имеет абсолютно другой
+смысл, чем <code>EINPROGRESS</code>. Т.к. <code>WSAEINPROGRESS</code> возникает, когда процесс(поток)
+пытается выполнить операцию с сокетом, на котором уже проводится блокирующая
+операция, в то время как <code>EINPROGRESS</code> в POSIX означает, что сокет в
+неблокирущемся состоянии и соединение не может быть выполнено мгновенно без
+блокирования. Т.е. насильственное приведение <code>WSAEINPROGRESS</code> к <code>EINPROGRESS</code>
+ломает правильно работающую программу и вообще затрудняет написание переносимых
+программ:</p>
+
+<pre><code># фрагмент tcp_connect() из AnyEvent::Socket
+
+(connect $state{fh}, $sockaddr)
+|| ($! == Errno::EINPROGRESS # POSIX
+    || $! == Errno::EWOULDBLOCK
+    # WSAEINPROGRESS intentionally not checked - it means something else entirely
+    || $! == AnyEvent::Util::WSAEINVAL # not convinced, but doesn&#39;t hurt
+    || $! == AnyEvent::Util::WSAEWOULDBLOCK)
+</code></pre>
+
+<p>Подобные же несоответствия есть у кодов <code>WSAEMFILE</code>, <code>WSAEINTR</code>, <code>WSAEFAULT</code>,
+<code>WSAEACCESS</code>, которые никак не соответствуют кодам из POSIX. Да и странно
+пытаться привести не POSIX-систему Windows в рамки POSIX-стандарта.</p>
+
+<p>Perl в этом отношении не одинок, практически все языки (Ruby, Python, Tcl, PHP)
+точно также слепо копируют <code>WSAE*</code> коды в <code>E*</code> без оглядки на их реальное
+действие, что приводит к тому, что программы работающие под windows ведут себя
+неправильно и наполнены трудноуловимыми глюками.</p>
+
+            </section>
+        </main>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'perlnewsru';
+            if (window.location.hostname === "perlnews.ru") {
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    <div class="three columns sidebar">
+        
+        <nav id="tags">
+            <h1>Темы</h1>
+            <ul class="list-inline">
+                <li><a href="/blog/tag/aprilfd/">AprilFD</a></li>
+                <li><a href="/blog/tag/benchmark/">benchmark</a></li>
+                <li><a href="/blog/tag/books/">books</a></li>
+                <li><a href="/blog/tag/bug/">bug</a></li>
+                <li><a href="/blog/tag/community/">community</a></li>
+                <li><a href="/blog/tag/coro/">Coro</a></li>
+                <li><a href="/blog/tag/cpan/">CPAN</a></li>
+                <li><a href="/blog/tag/cpanpr/">cpanpr</a></li>
+                <li><a href="/blog/tag/cpantesters/">cpantesters</a></li>
+                <li><a href="/blog/tag/dbic/">DBIC</a></li>
+                <li><a href="/blog/tag/donation/">donation</a></li>
+                <li><a href="/blog/tag/facepalm/">facepalm</a></li>
+                <li><a href="/blog/tag/fork/">fork</a></li>
+                <li><a href="/blog/tag/fosdem/">FOSDEM</a></li>
+                <li><a href="/blog/tag/funding/">funding</a></li>
+                <li><a href="/blog/tag/hackaton/">hackaton</a></li>
+                <li><a href="/blog/tag/ide/">IDE</a></li>
+                <li><a href="/blog/tag/interview/">interview</a></li>
+                <li><a href="/blog/tag/mojo/">mojo</a></li>
+                <li><a href="/blog/tag/moscow-pm/">moscow.pm</a></li>
+                <li><a href="/blog/tag/perl/">Perl</a></li>
+                <li><a href="/blog/tag/perl6/">Perl6</a></li>
+                <li><a href="/blog/tag/perlnews-ru/">PerlNews.Ru</a></li>
+                <li><a href="/blog/tag/pragmaticperl/">PragmaticPerl</a></li>
+                <li><a href="/blog/tag/regexp/">regexp</a></li>
+                <li><a href="/blog/tag/security/">security</a></li>
+                <li><a href="/blog/tag/smartmatch/">smartmatch</a></li>
+                <li><a href="/blog/tag/starwars/">StarWars</a></li>
+                <li><a href="/blog/tag/tips/">tips</a></li>
+                <li><a href="/blog/tag/unicode/">unicode</a></li>
+                <li><a href="/blog/tag/warnings/">warnings</a></li>
+                <li><a href="/blog/tag/windows/">windows</a></li>
+                <li><a href="/blog/tag/yapc/">YAPC</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+        </div>
+        <footer>
+            <div class="container">
+<strong>© perlnews.ru</strong>
+<p>
+Все материалы доступны в соответствии с лицензией
+<a href="http://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0</a>
+<br>
+Работает на
+<a href="http://preaction.me/statocles">Statocles</a>
+и
+<a href="http://www.perl.org">Perl</a>
+</p>
+</div>
+
+        </footer>
+    </body>
+</html>

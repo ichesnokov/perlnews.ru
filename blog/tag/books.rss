@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/books/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/books.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>AllPerlBooks.com — крупнейший каталог книг о Perl</title>
+            <link>http://perlnews.ru/blog/2015/04/26/01-allperlbooks-dot-com.html</link>
+            <guid>http://perlnews.ru/blog/2015/04/26/01-allperlbooks-dot-com.html</guid>
+            <description><![CDATA[
+                <p>Появился новый сайт <a href="http://allperlbooks.com">AllPerlBooks.com</a>, который
+является крупнейшим каталогом, содержащим информацию обо всех когда-либо
+напечатанных книгах о Perl на различных языках мира. Цель сайта показать как
+много книг о Perl было выпущено, начиная с момента создания языка, и продолжает
+выпускаться по сей день. На данный момент в каталоге есть данные о 354 книгах и
+ежедневно каталог пополняется всё новыми экземплярами. К окончанию
+β-тестирования ожидается около <strong>500</strong> книг. Автором проекта является Андрей
+Шитов.</p>
+
+<p>Сайт позволяет найти нужные книги по имени автора, издательству, году выпуска,
+языку, а также теме, например,
+<a href="http://allperlbooks.com/tag/bioinformatics">биоинформатика</a> или <a href="http://allperlbooks.com/tag/regexes">регулярные
+выражения</a>.</p>
+
+<p>Если у вас есть книга, которая отсутствует в каталоге, вы можете добавить
+информацию о ней на специальной <a href="http://allperlbooks.com/upload">странице</a>,
+указав данные издания и отсканированную обложку.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/books/">books</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Sun, 26 Apr 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

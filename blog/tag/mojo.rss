@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/mojo/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/mojo.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Враждебные форки</title>
+            <link>http://perlnews.ru/blog/2016/03/25/01-mojo-hostile-forks/</link>
+            <guid>http://perlnews.ru/blog/2016/03/25/01-mojo-hostile-forks/</guid>
+            <description><![CDATA[
+                <p>В документации Mojolicious появилось
+<a href="https://github.com/kraih/mojo/blob/master/lib/Mojolicious/Guides/Contributing.pod#fork-policy">предостережение</a>
+от создания форков отдельных частей проекта Mojolicious, которые не были
+одобрены разработчиками Mojolicious. Форки не только ведут к истощению ресурсов
+проекта, бренда, но также лишают его возможных баг-репортов и патчей. В
+качестве примеров можно привести
+<a href="https://metacpan.org/pod/DOM::Tiny">DOM::Tiny</a> , который является форком
+<a href="https://metacpan.org/pod/Mojo::DOM">Mojo::DOM</a>, или
+<a href="https://metacpan.org/pod/JSON::Tiny">JSON::Tiny</a>, который является форком
+<a href="https://metacpan.org/pod/Mojo::JSON">Mojo::JSON</a>.
+Например, <a href="https://github.com/daoswald/JSON-Tiny/pull/2">улучшение</a> для
+JSON::Tiny никто не удосужился предложить портировать обратно в Mojo::JSON, а
+<a href="https://github.com/kraih/mojo/commit/7a65c82">улучшения</a> в Mojo::JSON не
+попадают в форк, таким образом складывается ситуация, когда оба проекта несут
+потери.</p>
+
+<p>Себастьян Ридель настроен серьёзно и уже поместил негативный
+<a href="http://cpanratings.perl.org/dist/DOM-Tiny#12742">отзыв</a> дистрибутиву
+DOM-Tiny на cpanratings.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/mojo/">mojo</a>
+                    <a href="http://perlnews.ru/blog/tag/fork/">fork</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Fri, 25 Mar 2016 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="/theme/images/favicon.ico" rel="icon">
+        <link href="/theme/css/style.css" rel="stylesheet">
+        <title>
+            PerlNews.Ru
+        </title>
+        <link href="/blog/index.atom" rel="alternate" type="application/atom+xml">
+        <link href="/blog/index.rss" rel="alternate" type="application/rss+xml">
+        <script>
+  if (window.location.hostname === "perlnews.ru") {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59283423-1', 'auto');
+      ga('send', 'pageview');
+  }
+</script>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a class="brand" href="/">
+                        PerlNews.Ru
+                        <span class="brand-img"></span>
+                    </a>
+                    <ul>
+                        <li>
+                        <a href="/index.html">
+                            Новости
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/about.html">
+                            О блоге
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/resources.html">
+                            Ресурсы
+                        </a>
+                        </li>
+                        <li>
+                        <a href="http://irc.pragmaticperl.com">
+                            Чат
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://twitter.com/perlnews_ru">
+                            Twitter
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="main container">
+            
+<div class="row">
+
+    <div class="nine columns">
+        <main>
+
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/05/22/01-perl-5.22.0-rc2.html">Выпущен Perl 5.22.0 RC2</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-05-22">
+                            2015-05-22
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел второй релиз кандидат новой стабильной версии Perl 5.22.0. Просмотреть
+информацию о релизе и загрузить новую версию можно с любого зеркала CPAN или
+найти ссылки на <a href="https://metacpan.org/release/RJBS/perl-5.22.0-RC2/">странице</a>.</p>
+
+<p>Оличия от RC1 заключаются лишь в нескольких правках в perldelta, исправлении
+бага с <code>NAN_COMPARE_BROKEN</code> для VC6 и сборки с отладочной информацией для
+платформы VMS, а также поддержке <code>mkstemp()</code> на mingw-w64-v4 (что в теории
+должно решить проблему со сборкой новой версии Strawberry Perl).</p>
+
+<p>Если не будет найдено серьёзных проблем, то официальный релиз новой стабильной
+версии Perl состоится 1 июня.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/05/22/01-perl-5.22.0-rc2.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/05/20/01-perl-microoptimization-tricks.html">Полезные трюки с микрооптимизацией</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/tips/" rel="tag">tips</a>
+                        <a href="/blog/tag/benchmark/" rel="tag">benchmark</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-05-20">
+                            2015-05-20
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>В рассылке perl5-porters был задан
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/05/msg228068.html">вопрос</a>,
+почему две операции сильно отличаются по скорости (в пользу <code>do</code>):</p>
+
+<pre><code>do { ; }
+{ ; }
+</code></pre>
+
+<p><em>Zefram</em>
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/05/msg228069.html">указал</a>
+на то, что пустой блок рассматривается как цикл, который выполняется один раз,
+и для него формируется фрейм-контекст с поддержкой динамических операций вроде
+<code>next</code>. В то время как для <code>do</code> устанавливается только область видимости, что
+гораздо быстрее.</p>
+
+<p>Кроме этого было
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/05/msg228074.html">замечено</a>,
+что операция <code>;</code> это отдельная операция, которая устанавливает номер строки. В
+противовес этому <code>,</code> не имеет подобного оверхеда. Например:</p>
+
+<pre><code>$x = 1; $y = 2; print &quot;$x $y&quot;;
+$x = 1, $y = 2, print &quot;$x $y&quot;;
+</code></pre>
+
+<p>Оба выражения выполняют одно и то же, но вторая запись будет работать быстрее.</p>
+
+<p>Эта информация сразу вдохновила Питера Рэбиттсона использовать этот простой
+трюк на практике. Он продемонстрировал
+<a href="https://github.com/dbsrgits/dbix-class/commit/05a5ca4b">коммит</a>, который на
+15% увеличивает производительность <code>DBIx::Class</code> просто заменив все <code>;</code> на <code>,</code>
+в генерируемом коде для строкового eval. Этот прирост становится заметен на
+резалтсетах с ≥1000 рядов.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/05/20/01-perl-microoptimization-tricks.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/05/19/01-perl-5.22.0-rc1.html">Выпущен Perl 5.22.0 RC1</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-05-19">
+                            2015-05-19
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел первый релиз кандидат новой стабильной версии Perl 5.22.0. Просмотреть
+информацию о релизе и загрузить новую версию можно с любого зеркала CPAN или
+найти ссылки на <a href="https://metacpan.org/release/RJBS/perl-5.22.0-RC1/">странице</a>.</p>
+
+<p>Если не будет найдено серьёзных проблем, то официальный релиз новой стабильной
+версии Perl состоится 1 июня.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/05/19/01-perl-5.22.0-rc1.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/05/16/01-mayperl-translation.html">Онлайн трансляция YAPC::Russia 2015</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/yapc/" rel="tag">YAPC</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-05-16">
+                            2015-05-16
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Началась <a href="https://corp.mail.ru/stream/mayperl/">онлайн-трансляция</a> конференции
+YAPC::Russia 2015.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/05/16/01-mayperl-translation.html#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/05/16/01-mayperl-translation.html#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/05/15/01-may-perl-2015-schedule.html">Расписание конференции YAPC::Russia 2015</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/yapc/" rel="tag">YAPC</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-05-15">
+                            2015-05-15
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Доступно <a href="http://event.yapcrussia.org/yr2015/schedule">расписание</a> конференции
+YAPC::Russia 2015, которая начнётся уже завтра.</p>
+
+<p>А сегодня можно посетить
+<a href="http://event.yapcrussia.org/yr2015/talk/327">preparty</a>, которая пройдёт в
+пивном ресторане «Шпатен-Хаус» в 19:00.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/05/15/01-may-perl-2015-schedule.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/05/14/01-berlin-consensus.html">Берлинский консенсус</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/cpan/" rel="tag">CPAN</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-05-14">
+                            2015-05-14
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>На днях был опубликован <a href="https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/berlin-consensus.md">Берлинский
+консенсус</a>
+— финальная договорённость по результатам прошедшего <a href="http://perlnews.ru/blog/2015/04/21/02-qa-hackaton-berlin-2015.html">Берлинского
+QA-хакатона</a>.
+Данный документ описывает новые соглашения и идеи для репозитория CPAN и
+тулчейна Perl, а также новые рекомендации для CPAN-авторов. Рассмотрим более
+подробно концепции и тезисы Берлинского консенсуса.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/05/14/01-berlin-consensus.html#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/05/14/01-berlin-consensus.html#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/05/06/01-hash-ordered-benchmark.html">Улучшения в производительности Hash::Ordered</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/cpan/" rel="tag">CPAN</a>
+                        <a href="/blog/tag/benchmark/" rel="tag">benchmark</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-05-06">
+                            2015-05-06
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p><a href="https://metacpan.org/pod/Hash::Ordered">Hash::Ordered</a> — это модуль для
+создания упорядоченных хешей, ключи в которых хранятся в заданном порядке.
+Поскольку модуль написан на чистом Perl, а упорядоченные хеши --- это объекты,
+операции над которыми производятся с помощью методов, то подобный хеш работает
+медленнее, чем обычный хеш. Такова цена сохранения упорядоченности хеша.</p>
+
+<p>Как
+<a href="http://www.dagolden.com/index.php/2461/faster-ordered-hashes-for-perl/">сообщает</a>
+Дэвид Голден в новой версии
+<a href="https://metacpan.org/release/DAGOLDEN/Hash-Ordered-0.009/">0.009</a> сделана
+оптимизация, которая в некоторых случаях значительно ускоряет работу с
+упорядоченными хешами. Было проведено сравнение производительности между
+версиями Hash::Ordered 0.002 и 0.009. Для наглядности представлен график
+сравнения:</p>
+
+<p><img alt="Бенчмарк Hash::Ordered" src="/i/2015-05-06-hash_ordered_benchmark.png"></p>
+
+<p>Виден рост по многим тестам, особенно выросла производительность при удалении в
+хеше с большим числом элементов. Практически не изменилась скорость замены
+элементов, несколько снизилась скорость добавления (за счёт проверки, что ключ
+— это строка, а не ссылка).</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/05/06/01-hash-ordered-benchmark.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/05/06/02-pragmatic-perl-27.html">27-й выпуск журнала Pragmatic Perl</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/pragmaticperl/" rel="tag">PragmaticPerl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-05-06">
+                            2015-05-06
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел 27-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/27"><img alt="Pragmatic Perl 27" src="/i/2015-05-06-pp27.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><a href="http://pragmaticperl.com/issues/27/pragmaticperl-27-%D0%BE%D1%82-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B0.html">От
+редактора</a>,
+Вячеслав Тихановский</li>
+<li><a href="http://pragmaticperl.com/a/93ff29e4">«Отладка приложений на AnyEvent»</a>,
+Владимир Леттиев<br> <em>Отладка асинхронных приложений часто затруднена из-за
+нелинейного характера выполняемого кода, когда ошибки проявляются под
+нагрузкой или в каких-то исключительных трудновоспроизводимых ситуациях.
+Привычные инструменты могут быть неудобны и неинформативны. Если приложение
+построено на основе AnyEvent, то для него уже существуют готовые рецепты
+отладки.</em></li>
+<li><a href="http://pragmaticperl.com/a/a45947c6">«Операторы Perl 6. Часть 1»</a>, Андрей
+Шитов<br> <em>Обзор префиксных, постфиксных и инфиксных операторов Perl 6</em></li>
+<li><a href="http://pragmaticperl.com/a/8be9c3af">«Метаоператоры в Perl 6»</a>, Андрей
+Шитов<br><em>Рассмотрены доступные в языке метаоператоры — операторы,
+расширяющие синтаксические возможности языка, используя другие операторы</em></li>
+<li><a href="http://pragmaticperl.com/a/fde694d9">«Обзор CPAN за апрель 2015 г.»</a>,
+Владимир Леттиев<br> <em>Рубрика с обзором интересных новинок CPAN за прошедший
+месяц.</em></li>
+<li><a href="http://pragmaticperl.com/a/3f2ba52d">«Интервью с Сюзанной Шмидт»</a>, Вячеслав
+Тихановский<br><em>Сюзанна Шмидт (sushee) — политолог, которая стала
+Perl-программистом</em></li>
+</ul>
+
+                <p class="tags">
+                    <a href="/blog/2015/05/06/02-pragmatic-perl-27.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/26/01-allperlbooks-dot-com.html">AllPerlBooks.com — крупнейший каталог книг о Perl</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/books/" rel="tag">books</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-26">
+                            2015-04-26
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Появился новый сайт <a href="http://allperlbooks.com">AllPerlBooks.com</a>, который
+является крупнейшим каталогом, содержащим информацию обо всех когда-либо
+напечатанных книгах о Perl на различных языках мира. Цель сайта показать как
+много книг о Perl было выпущено, начиная с момента создания языка, и продолжает
+выпускаться по сей день. На данный момент в каталоге есть данные о 354 книгах и
+ежедневно каталог пополняется всё новыми экземплярами. К окончанию
+β-тестирования ожидается около <strong>500</strong> книг. Автором проекта является Андрей
+Шитов.</p>
+
+<p>Сайт позволяет найти нужные книги по имени автора, издательству, году выпуска,
+языку, а также теме, например,
+<a href="http://allperlbooks.com/tag/bioinformatics">биоинформатика</a> или <a href="http://allperlbooks.com/tag/regexes">регулярные
+выражения</a>.</p>
+
+<p>Если у вас есть книга, которая отсутствует в каталоге, вы можете добавить
+информацию о ней на специальной <a href="http://allperlbooks.com/upload">странице</a>,
+указав данные издания и отсканированную обложку.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/26/01-allperlbooks-dot-com.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/21/01-perl-5.21.11.html">Выпущен Perl 5.21.11</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-21">
+                            2015-04-21
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел последний релиз Perl ветки 5.21 для разработчиков. Новый релиз содержит
+изменения в порядка 1 700 строках исходного кода, не считая изменений в
+автогенерируемых файлах. Полный список изменений можно прочесть в
+<a href="https://metacpan.org/pod/release/SHAY/perl-5.21.11/pod/perldelta.pod">perldelta</a>.
+Новый стабильный релиз 5.22 ожидается в мае.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/21/01-perl-5.21.11.html#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/04/21/01-perl-5.21.11.html#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/21/02-qa-hackaton-berlin-2015.html">Завершился Берлинский Perl QA-хакатон 2015</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/hackaton/" rel="tag">hackaton</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-21">
+                            2015-04-21
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p><a href="http://act.qa-hackathon.org/qa2015/">Perl QA-хакатон</a> — это ежегодное
+мероприятие, на котором собираются люди, так или иначе занимающиеся вопросами
+обеспечением качества Perl-кода: тестирование, пакетирование, CPAN и связанные
+системы. В этом году хакатон проводился с 16 по 19 апреля в Берлине. В нём
+приняли участие более 30 известных Perl-хакеров, в том числе Рикардо Сигнес,
+Тацухико Миягава, Дэвид Голден, Лион Тиммерманс, Питэр Рэббитсон.</p>
+
+<p><img alt="perlqah2015" src="/i/2015-04-21-perlqah2015.jpg"></p>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/21/02-qa-hackaton-berlin-2015.html#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/04/21/02-qa-hackaton-berlin-2015.html#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/16/01-movabletype-security-update.html">Вышли обновления безопасности MovableType 6.0.8 и 5.2.13</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/security/" rel="tag">security</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-16">
+                            2015-04-16
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышли обновления, исправляющие ошибку в безопасности, для известной системы
+управления контентом MovableType версии 6.0.8 и 5.2.13 (и в частности Movable
+Type Open Source). В
+<a href="https://movabletype.org/news/2015/04/movable_type_608_and_5213_released_to_close_security_vulnera.html">отчёте</a>
+MovableType.com указано, что уязвимости подвержены ветки 6.0.x и 5.2.x.</p>
+
+<p><em>Джон Лайтсей</em> обнаружил уязвимость инъекции строки формата в шаблоны
+локализации Movable Type. Неаутентифицированный удалённый пользователь получает
+возможность выполнить произвольный код на сервере с правами учётной записи
+процесса веб-сервера. Проблема получила идентификатор
+<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0845">CVE-2015-0845</a></p>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/16/01-movabletype-security-update.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/11/01-moscowpm-video.html">Выложены доклады moscow.pm от 5 марта 2015</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/moscow-pm/" rel="tag">moscow.pm</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-11">
+                            2015-04-11
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>На официальном
+<a href="https://www.youtube.com/channel/UCXG2gjCfXDkvg9TfPmNXPIg/videos">YouTube-канале</a>
+moscow.pm появились записи докладов группы от 5 марта 2015 года, посвящённые
+Perl 6:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=oFeoZ_t6kH0">«Perl 6 2.0»</a>, Андрей Шитов <iframe allowfullscreen frameborder="0" height="315" src="https://www.youtube.com/embed/oFeoZ_t6kH0" width="560"></iframe></li>
+<li><a href="https://www.youtube.com/watch?v=C6D7Ohll-FA">«Perl 6 сегодня: 8 лет спустя»</a>, Алексей Капранов, Яндекс <iframe allowfullscreen frameborder="0" height="315" src="https://www.youtube.com/embed/C6D7Ohll-FA" width="560"></iframe></li>
+</ul>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/11/01-moscowpm-video.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/07/01-module-signature-update.html">Исправление серьёзных уязвимостей в Module::Signature</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/cpan/" rel="tag">CPAN</a>
+                        <a href="/blog/tag/security/" rel="tag">security</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-07">
+                            2015-04-07
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Модуль <code>Module::Signature</code> используется многими CPAN-клиентами для проверки
+GPG-подписи модулей, полученных со CPAN или любого из его зеркал. <em>Джон
+Лайтсей</em> <a href="http://www.openwall.com/lists/oss-security/2015/04/07/1">сообщил</a>,
+что обнаружил четыре уязвимости в коде модуля:</p>
+
+<ol>
+<li><code>Module::Signature</code>, из-за некорректного парсинга границ подписанных данных
+в файле подписи, мог извлечь информацию о файлах из неподписанной части.</li>
+<li>При проверке содержимого CPAN-модуля <code>Module::Signature</code> игнорировал
+некоторые файлы из архива, которые не были указаны в файле подписи, что
+затрагивает и файлы в каталоге <code>t</code>, которые автоматически выполняются при
+запуске тестов.</li>
+<li>При генерации контрольных сумм из подписанного манифеста <code>Module::Signature</code>
+использовал <code>open()</code> с двумя параметрами при чтении файлов. Это позволяло
+встраивать произвольные shell-команды в файле SIGNATURE, которые бы
+запускались при проверке подписи.</li>
+<li><code>Module::Signature</code> подгружает некоторые модули в процессе работы, модуль
+<code>Text::Diff</code> может отсутствовать в системе и соответственно может быть
+загружен из текущего каталога распакованного архива модуля, что может
+привести к выполнению произвольного кода.</li>
+</ol>
+
+<p>Вышло обновление <code>Module::Signature</code>
+<a href="https://metacpan.org/release/AUDREYT/Module-Signature-0.75">0.75</a>, в котором
+исправлены все перечисленные проблемы.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/07/01-module-signature-update.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/06/02-wenzperl-donate-perl6.html">WenZPerl пожертвовали 10&#39;000 € в разработку Perl 6</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl6/" rel="tag">Perl6</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-06">
+                            2015-04-06
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Согласно
+<a href="http://news.perlfoundation.org/2015/04/wenzperl-donate-10000-eur-to-n.html">сообщению</a>
+фонда Perl, голландская консалтинговая компания WenZPerl перечислила 10&#39;000 €
+на разработку Perl 6. Эти средства, а также средства фонда пошли на
+финансирование гранта на 25&#39;000 $ для Джонатана Уортингтона основного
+разработчика компилятора  Rakudo Perl 6 и MoarVM.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/06/02-wenzperl-donate-perl6.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/06/03-cpan-pull-requests-in-march-2015.html">Мартовские результаты CPAN Pull Requests</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/cpan/" rel="tag">CPAN</a>
+                        <a href="/blog/tag/cpanpr/" rel="tag">cpanpr</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-06">
+                            2015-04-06
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Нил Бауэрс опубликовал очередную
+<a href="http://neilb.org/2015/04/03/prc-march-stats.html">статистику</a> по запросам на
+слияние для CPAN-модулей на github в марте.</p>
+
+<p><img alt="График PR, март 2015" src="/i/2015-04-06-cpr.png"></p>
+
+<p>Список модулей и результаты кампании <em>#cpanpr</em> в
+<a href="http://cpan-prc.org/march.html">марте</a> доступны на сайте cpan-prc.org. Как
+следует из отчёта в марте из 138 заданий было выполнено 82, что составило почти
+60%. На <a href="http://cpan-prc.org/april.html">апрель</a> назначено уже 125 заданий.</p>
+
+<p>По словам Нила, на данный момент в кампании активны 261 человек, ранее максимум
+активных участников составлял около 380 человек.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/06/03-cpan-pull-requests-in-march-2015.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/06/01-pragmatic-perl-26.html">26-й выпуск журнала Pragmatic Perl</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/pragmaticperl/" rel="tag">PragmaticPerl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-06">
+                            2015-04-06
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел 26-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/26"><img alt="Pragmatic Perl 26" src="/i/2015-04-06-pp26.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><a href="http://pragmaticperl.com/a/8a95cb49">«От редактора»</a>, Вячеслав Тихановский</li>
+<li><a href="http://pragmaticperl.com/a/fe9713ca">«Анонс конференции YAPC::Russia
+2015»</a>,<br><em>YAPC::Russia — ежегодная
+конференция, посвященная языку программирования Perl и его сообществу ,
+которая проводится в Москве (под названием May Perl), Киеве (під назвою Perl
+Mova) и Санкт-Петербурге.</em></li>
+<li><a href="http://pragmaticperl.com/a/8b56c075">«Работа с WebSocket в Perl»</a>, Вячеслав
+Тихановский<br><em>Рассмотрены несколько подоходов при работе с технологией
+WebSocket из Perl</em></li>
+<li><a href="http://pragmaticperl.com/a/7f2b1caf">«Промисы в Perl 6»</a>, Андрей
+Шитов<br><em>Вторая часть обзора возможностей Perl 6 для параллельных и
+конкуррентных вычислений</em></li>
+<li><a href="http://pragmaticperl.com/a/678abff0">«Грамматики в Perl 6»</a>, Андрей
+Шитов<br><em>В этой статье рассказано об одной из наиболее мощных возможностей
+Perl 6 — грамматиках</em></li>
+<li><a href="http://pragmaticperl.com/a/f5d6b7f9">«Обзор CPAN за март 2015 г.»</a>, Владимир
+Леттиев<br><em>Рубрика с обзором интересных новинок CPAN за прошедший месяц.</em></li>
+<li><a href="http://pragmaticperl.com/a/c36cbdf5">«Интервью с Виктором Турским»</a>,
+Вячеслав Тихановский<br><em>Виктор Турский (koorchik) — украинский
+Perl-программист, сооснователь компании WebbyLab</em></li>
+</ul>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/06/01-pragmatic-perl-26.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/01/02-unicode-8-beta.html">Поддержка бета-версии Юникод 8.0.0 в Perl</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/unicode/" rel="tag">unicode</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-01">
+                            2015-04-01
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Карл Уильямсон реализовал поддержку бета-версии стандарта Юникод 8.0.0 для
+Perl. Поскольку на данный момент в разрабатываемой ветке blead объявлен фриз и
+новые фичи не принимаются, то пока реализация доступна лишь в выделенной ветке
+<a href="http://perl5.git.perl.org/perl.git/shortlog/refs/heads/smoke-me/khw-uni8">smoke-me/khw-uni8</a>.</p>
+
+<p><img alt="emoji-diversity" src="/i/2015-04-01-emoji-diversity.png"></p>
+
+<p>Напомним, что финальная версия стандарта Юникод 8.0.0 ожидается в июне 2015
+года. Среди новшеств новой версии можно отметить поддержку тонов кожи для
+emoji-символов, где изображены люди, поддержку нового символа национальной
+валюты — грузинского лари и множество других новых символов.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/01/02-unicode-8-beta.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/01/01-android6-on-perl6.html">Android 6 будет работать на Perl 6</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl6/" rel="tag">Perl6</a>
+                        <a href="/blog/tag/aprilfd/" rel="tag">AprilFD</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-01">
+                            2015-04-01
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Как сообщают внутренние источники в Гугл, в связи с судебной тяжбой Оракла
+против Гугл из-за виртуальной машины Java Dalvik, было принято решение выбрать
+другую виртуальную машину и язык для платформы Android.
+<a href="http://www.moarvm.com/">MoarVM</a> и язык <a href="http://perl6.org/">Perl 6</a> показались
+команде Android весьма перспективными и была начата работа над портированием
+Perl 6 на Android. Это также объясняет неожиданный
+<a href="http://perlnews.ru/blog/2015/02/02/perl6-on-christmas-2015.html">доклад</a> Ларри
+Уолла на FOSDEM о том, что релиз Perl 6 состоится на Рождество 2015 года, ведь
+именно на этот период планируется выход Android 6.0 под кодовым названием
+<em>Camelia Wagashi</em>. Как стало известно, ранние наработки и исходный код
+<a href="https://code.google.com/p/perldroid/">проекта</a> уже просочились в сеть и
+активно изучаются энтузиастами.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/01/01-android6-on-perl6.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/03/23/01-yapc-russia-2015.html">Конференция YAPC::Russia 2015 пройдёт 16-17 мая в Москве</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/yapc/" rel="tag">YAPC</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-03-23">
+                            2015-03-23
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Как <a href="https://www.mail-archive.com/moscow-pm@pm.org/msg16510.html">сообщает</a>
+Павел Щербинин, ежегодная конференция YAPC::Russia «May Perl» в этом году будет
+проведена с 16 по 17 мая в Москве в офисе Mail.Ru Group. Участие в конференции
+<strong>бесплатное</strong>, только не забудьте
+<a href="http://event.yapcrussia.org/yr2015/register/">зарегистрироваться</a>.</p>
+
+<p>На конференцию приглашены известные Perl-звёзды:</p>
+
+<ul>
+<li><strong>Saywer X</strong>, израильский Perl-программист, один из разработчиков
+Dancer/Dancer2, организатор встреч сообщества telaviv.pm. </li>
+<li><strong>Peter Rabbitson</strong> (<em>ribasushi</em>), главный бензопильщик популярного ORM
+DBIx::Class, регулярный участник и докладчик многих Perl-конференций.</li>
+</ul>
+
+<p>Ожидается около 30 докладов, вы можете выступить спикером, для этого
+необходимо <a href="http://event.yapcrussia.org/yr2015/newtalk/">подать заявку</a>.</p>
+
+<p>Мероприятие состоится по адресу Москва, Ленинградский пр-т, 39, стр. 79 (м.
+«Аэропорт»). Приходите и зовите своих коллег!</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/03/23/01-yapc-russia-2015.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+        </main>
+
+        <ul class="pager">
+            <li class="prev">
+                <a class="button button-primary" href="/blog/page/5" rel="next">
+                    <span class="typcn typcn-arrow-left-thick"></span>
+                    Раньше
+                </a>
+            </li>
+            <li class="next">
+                <a class="button button-primary" href="/blog/page/3" rel="prev">
+                    Позже
+                    <span class="typcn typcn-arrow-right-thick"></span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="three columns sidebar">
+        
+        <h1>Темы</h1>
+        <ul class="list-inline">
+            <li><a href="/blog/tag/aprilfd/">AprilFD</a></li>
+            <li><a href="/blog/tag/benchmark/">benchmark</a></li>
+            <li><a href="/blog/tag/books/">books</a></li>
+            <li><a href="/blog/tag/bug/">bug</a></li>
+            <li><a href="/blog/tag/community/">community</a></li>
+            <li><a href="/blog/tag/coro/">Coro</a></li>
+            <li><a href="/blog/tag/cpan/">CPAN</a></li>
+            <li><a href="/blog/tag/cpanpr/">cpanpr</a></li>
+            <li><a href="/blog/tag/cpantesters/">cpantesters</a></li>
+            <li><a href="/blog/tag/dbic/">DBIC</a></li>
+            <li><a href="/blog/tag/donation/">donation</a></li>
+            <li><a href="/blog/tag/facepalm/">facepalm</a></li>
+            <li><a href="/blog/tag/fork/">fork</a></li>
+            <li><a href="/blog/tag/fosdem/">FOSDEM</a></li>
+            <li><a href="/blog/tag/funding/">funding</a></li>
+            <li><a href="/blog/tag/hackaton/">hackaton</a></li>
+            <li><a href="/blog/tag/ide/">IDE</a></li>
+            <li><a href="/blog/tag/interview/">interview</a></li>
+            <li><a href="/blog/tag/mojo/">mojo</a></li>
+            <li><a href="/blog/tag/moscow-pm/">moscow.pm</a></li>
+            <li><a href="/blog/tag/perl/">Perl</a></li>
+            <li><a href="/blog/tag/perl6/">Perl6</a></li>
+            <li><a href="/blog/tag/perlnews-ru/">PerlNews.Ru</a></li>
+            <li><a href="/blog/tag/pragmaticperl/">PragmaticPerl</a></li>
+            <li><a href="/blog/tag/regexp/">regexp</a></li>
+            <li><a href="/blog/tag/security/">security</a></li>
+            <li><a href="/blog/tag/smartmatch/">smartmatch</a></li>
+            <li><a href="/blog/tag/starwars/">StarWars</a></li>
+            <li><a href="/blog/tag/tips/">tips</a></li>
+            <li><a href="/blog/tag/unicode/">unicode</a></li>
+            <li><a href="/blog/tag/warnings/">warnings</a></li>
+            <li><a href="/blog/tag/windows/">windows</a></li>
+            <li><a href="/blog/tag/yapc/">YAPC</a></li>
+        </ul>
+        <h1>Лента</h1>
+        <ul class="list-inline">
+            <li>
+                <span class="typcn typcn-rss"></span>
+                <a href="/blog/index.atom" rel="alternate" type="application/atom+xml">
+                    Atom
+                </a>
+            </li>
+            <li>
+                <span class="typcn typcn-rss"></span>
+                <a href="/blog/index.rss" rel="alternate" type="application/rss+xml">
+                    RSS
+                </a>
+            </li>
+        </ul>
+        <h1>СоцСети</h1>
+        <ul class="list-inline">
+            <li>
+                <a href="https://twitter.com/perlnews_ru"><span class="typcn
+                        typcn-social-twitter"></span>PerlNews_RU</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script type="text/javascript">
+    var disqus_shortname = 'perlnewsru';
+    if (window.location.hostname === "perlnews.ru") {
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    }
+</script>
+
+        </div>
+        <footer>
+            <div class="container">
+<strong>© perlnews.ru</strong>
+<p>
+Все материалы доступны в соответствии с лицензией
+<a href="http://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0</a>
+<br>
+Работает на
+<a href="http://preaction.me/statocles">Statocles</a>
+и
+<a href="http://www.perl.org">Perl</a>
+</p>
+</div>
+
+        </footer>
+    </body>
+</html>

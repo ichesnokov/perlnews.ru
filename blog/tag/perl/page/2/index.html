@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="/theme/images/favicon.ico" rel="icon">
+        <link href="/theme/css/style.css" rel="stylesheet">
+        <title>
+            PerlNews.Ru
+        </title>
+        <link href="/blog/tag/perl.atom" rel="alternate" type="application/atom+xml">
+        <link href="/blog/tag/perl.rss" rel="alternate" type="application/rss+xml">
+        <script>
+  if (window.location.hostname === "perlnews.ru") {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59283423-1', 'auto');
+      ga('send', 'pageview');
+  }
+</script>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a class="brand" href="/">
+                        PerlNews.Ru
+                        <span class="brand-img"></span>
+                    </a>
+                    <ul>
+                        <li>
+                        <a href="/index.html">
+                            Новости
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/about.html">
+                            О блоге
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/resources.html">
+                            Ресурсы
+                        </a>
+                        </li>
+                        <li>
+                        <a href="http://irc.pragmaticperl.com">
+                            Чат
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://twitter.com/perlnews_ru">
+                            Twitter
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="main container">
+            
+<div class="row">
+
+    <div class="nine columns">
+        <main>
+
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/06/27/01-non-experimental-postderef/">Постфиксное разыменование больше не экспериментальное</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-06-27">
+                            2015-06-27
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Принят
+<a href="http://perl5.git.perl.org/perl.git/commitdiff/2ad792cd4e9684519736fe03fd28a706b71ceda3">патч</a>,
+который убирает статус экспериментальной у возможности постфиксного
+разыменования. Напомним, что постфиксное разыменование впервые появилось в
+Perl 5.20 и позволяет использовать новый синтаксис для разыменования:</p>
+
+<pre><code>$array_ref-&gt;@*; # вместо @{ $array_ref }
+$hash_ref-&gt;%*;  # вместо %{ $hash_ref }
+...
+</code></pre>
+
+<p>С выходом Perl 5.24, больше не потребуется использовать конструкцию</p>
+
+<pre><code>no warnings &quot;experimental::postderef&quot;;
+</code></pre>
+
+<p>чтобы подавлять предупреждение, это выражение станет пустой операцией. Для
+активирования возможности можно по-прежнему использовать выражение</p>
+
+<pre><code>use feature &quot;postderef&quot;, &quot;postderef_qq&quot;;
+</code></pre>
+
+<p>или просто</p>
+
+<pre><code>use v5.24;
+</code></pre>
+
+                <p class="tags">
+                    <a href="/blog/2015/06/27/01-non-experimental-postderef/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/06/20/01-perl-5-23-0/">Выпущен Perl 5.23.0</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-06-20">
+                            2015-06-20
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>20 июня выпущен первый релиз Perl новой ветки для разработчиков 5.23. Данный
+выпуск состоялся спустя три недели после релиза 5.22.0 и содержит изменения в
+86 000 строках исходного кода.</p>
+
+<p>Основные изменения:</p>
+
+<ul>
+<li>Поддержка стандарта Юникод 8.0.</li>
+<li>Класс символов <code>/\C/</code> в регулярных выражениях больше не поддерживается.</li>
+<li><code>chdir(&#39;&#39;)</code> или <code>chdir(undef)</code> больше не меняет текущий каталог на домашний
+каталог и приводит к фатальной ошибке. Используйте просто <code>chdir()</code>.</li>
+<li>Макрос <code>PadlistNAMES</code> теперь снова lvalue (решена одна из проблем для работы
+модуля <code>Coro</code>).</li>
+<li>Обновлены некоторые базовые модули, в том числе POSIX, с экспериментальной
+поддержкой <em>NaN payload API</em> (из последнего черновика стандарта ISO C API).</li>
+</ul>
+
+                <p class="tags">
+                    <a href="/blog/2015/06/20/01-perl-5-23-0/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/06/08/01-schmorps-stable-perl-fork/">Марк Леманн создал форк Perl: «stableperl»</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/facepalm/" rel="tag">facepalm</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-06-08">
+                            2015-06-08
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Марк Леманн, также известный как <em>schmorp</em>, создатель библиотеки
+<a href="http://libev.schmorp.de">libev</a>, <a href="https://metacpan.org/pod/AnyEvent">AnyEvent</a>
+и <a href="https://metacpan.org/pod/Coro">Coro</a>, объявил о создании форка Perl под
+названием
+<a href="http://schplog.schmorp.de/2015-06-06-a-stable-perl.html">«stableperl»</a>.</p>
+
+<p>Как известно, Марк постоянно конфликтовал с разработчиками Perl5 из-за
+регулярных нарушений обратной совместимости в новых релизах, а релиз Perl
+<em>5.22.0</em>, который привёл к неработоспособности <code>Coro</code>, очевидно, стал последней
+каплей.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/06/08/01-schmorps-stable-perl-fork/#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/06/08/01-schmorps-stable-perl-fork/#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/06/04/02-strawberry-perl-5-22-0-1/">Выпущен Strawberry Perl 5.22.0.1</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/windows/" rel="tag">windows</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-06-04">
+                            2015-06-04
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Выпущен релиз дистрибутива новой мажорной версии Perl для Windows <em>Strawberry
+Perl</em> 5.22.0.1.</p>
+
+<p>Доступны msi-пакеты для установки:
+<a href="http://strawberryperl.com/download/5.22.0.1/strawberry-perl-5.22.0.1-32bit.msi">32-битной</a>
+и
+<a href="http://strawberryperl.com/download/5.22.0.1/strawberry-perl-5.22.0.1-64bit.msi">64-битной</a>
+версии.</p>
+
+<p>Портабельные версии:
+<a href="http://strawberryperl.com/download/5.22.0.1/strawberry-perl-5.22.0.1-32bit-portable.zip">32-битная</a>,
+<a href="http://strawberryperl.com/download/5.22.0.1/strawberry-perl-5.22.0.1-64bit-portable.zip">64-битная</a>.</p>
+
+<p>Новые версии содержат последнюю стабильную версию Perl 5.22.0. Кроме того, был
+обновлен обновлён тулчейн gcc 4.9.2 и mingw-w64 v4.0.2. Полная информация о
+релизах соотвественно
+<a href="http://strawberryperl.com/release-notes/5.22.0.1-32bit.html">32</a> и
+<a href="http://strawberryperl.com/release-notes/5.22.0.1-64bit.html">64</a>.</p>
+
+<p>К сожалению, msi-пакеты не подписаны, поэтому проверяйте <a href="http://strawberryperl.com/releases.html">sha1
+отпечаток</a>.</p>
+
+<p>На данный момент известно о нескольких проблемах в релизах: сломан модуль
+<code>IPC::Run</code>, а в 64-битной сборке отсутствует <code>Math::Pari</code> вместе со всеми
+зависимостями.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/06/04/02-strawberry-perl-5-22-0-1/#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/06/01/01-perl-5-22-0/">Выпущен Perl 5.22.0</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-06-01">
+                            2015-06-01
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>1 июня 2015 года была выпущена новая стабильная версия языка программирования
+Perl 5.22.0. Разработка велась примерно 12 месяцев, начиная с Perl 5.20.0, и
+содержит примерно 590 000 изменённых строк среди 2400 файлов от 94 авторов.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/06/01/01-perl-5-22-0/#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/06/01/01-perl-5-22-0/#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/05/22/01-perl-5.22.0-rc2.html">Выпущен Perl 5.22.0 RC2</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-05-22">
+                            2015-05-22
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел второй релиз кандидат новой стабильной версии Perl 5.22.0. Просмотреть
+информацию о релизе и загрузить новую версию можно с любого зеркала CPAN или
+найти ссылки на <a href="https://metacpan.org/release/RJBS/perl-5.22.0-RC2/">странице</a>.</p>
+
+<p>Оличия от RC1 заключаются лишь в нескольких правках в perldelta, исправлении
+бага с <code>NAN_COMPARE_BROKEN</code> для VC6 и сборки с отладочной информацией для
+платформы VMS, а также поддержке <code>mkstemp()</code> на mingw-w64-v4 (что в теории
+должно решить проблему со сборкой новой версии Strawberry Perl).</p>
+
+<p>Если не будет найдено серьёзных проблем, то официальный релиз новой стабильной
+версии Perl состоится 1 июня.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/05/22/01-perl-5.22.0-rc2.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/05/20/01-perl-microoptimization-tricks.html">Полезные трюки с микрооптимизацией</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/tips/" rel="tag">tips</a>
+                        <a href="/blog/tag/benchmark/" rel="tag">benchmark</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-05-20">
+                            2015-05-20
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>В рассылке perl5-porters был задан
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/05/msg228068.html">вопрос</a>,
+почему две операции сильно отличаются по скорости (в пользу <code>do</code>):</p>
+
+<pre><code>do { ; }
+{ ; }
+</code></pre>
+
+<p><em>Zefram</em>
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/05/msg228069.html">указал</a>
+на то, что пустой блок рассматривается как цикл, который выполняется один раз,
+и для него формируется фрейм-контекст с поддержкой динамических операций вроде
+<code>next</code>. В то время как для <code>do</code> устанавливается только область видимости, что
+гораздо быстрее.</p>
+
+<p>Кроме этого было
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/05/msg228074.html">замечено</a>,
+что операция <code>;</code> это отдельная операция, которая устанавливает номер строки. В
+противовес этому <code>,</code> не имеет подобного оверхеда. Например:</p>
+
+<pre><code>$x = 1; $y = 2; print &quot;$x $y&quot;;
+$x = 1, $y = 2, print &quot;$x $y&quot;;
+</code></pre>
+
+<p>Оба выражения выполняют одно и то же, но вторая запись будет работать быстрее.</p>
+
+<p>Эта информация сразу вдохновила Питера Рэбиттсона использовать этот простой
+трюк на практике. Он продемонстрировал
+<a href="https://github.com/dbsrgits/dbix-class/commit/05a5ca4b">коммит</a>, который на
+15% увеличивает производительность <code>DBIx::Class</code> просто заменив все <code>;</code> на <code>,</code>
+в генерируемом коде для строкового eval. Этот прирост становится заметен на
+резалтсетах с ≥1000 рядов.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/05/20/01-perl-microoptimization-tricks.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/05/19/01-perl-5.22.0-rc1.html">Выпущен Perl 5.22.0 RC1</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-05-19">
+                            2015-05-19
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел первый релиз кандидат новой стабильной версии Perl 5.22.0. Просмотреть
+информацию о релизе и загрузить новую версию можно с любого зеркала CPAN или
+найти ссылки на <a href="https://metacpan.org/release/RJBS/perl-5.22.0-RC1/">странице</a>.</p>
+
+<p>Если не будет найдено серьёзных проблем, то официальный релиз новой стабильной
+версии Perl состоится 1 июня.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/05/19/01-perl-5.22.0-rc1.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/21/01-perl-5.21.11.html">Выпущен Perl 5.21.11</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-21">
+                            2015-04-21
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел последний релиз Perl ветки 5.21 для разработчиков. Новый релиз содержит
+изменения в порядка 1 700 строках исходного кода, не считая изменений в
+автогенерируемых файлах. Полный список изменений можно прочесть в
+<a href="https://metacpan.org/pod/release/SHAY/perl-5.21.11/pod/perldelta.pod">perldelta</a>.
+Новый стабильный релиз 5.22 ожидается в мае.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/21/01-perl-5.21.11.html#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/04/21/01-perl-5.21.11.html#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/21/02-qa-hackaton-berlin-2015.html">Завершился Берлинский Perl QA-хакатон 2015</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/hackaton/" rel="tag">hackaton</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-21">
+                            2015-04-21
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p><a href="http://act.qa-hackathon.org/qa2015/">Perl QA-хакатон</a> — это ежегодное
+мероприятие, на котором собираются люди, так или иначе занимающиеся вопросами
+обеспечением качества Perl-кода: тестирование, пакетирование, CPAN и связанные
+системы. В этом году хакатон проводился с 16 по 19 апреля в Берлине. В нём
+приняли участие более 30 известных Perl-хакеров, в том числе Рикардо Сигнес,
+Тацухико Миягава, Дэвид Голден, Лион Тиммерманс, Питэр Рэббитсон.</p>
+
+<p><img alt="perlqah2015" src="/i/2015-04-21-perlqah2015.jpg"></p>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/21/02-qa-hackaton-berlin-2015.html#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/04/21/02-qa-hackaton-berlin-2015.html#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/04/01/02-unicode-8-beta.html">Поддержка бета-версии Юникод 8.0.0 в Perl</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/unicode/" rel="tag">unicode</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-04-01">
+                            2015-04-01
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Карл Уильямсон реализовал поддержку бета-версии стандарта Юникод 8.0.0 для
+Perl. Поскольку на данный момент в разрабатываемой ветке blead объявлен фриз и
+новые фичи не принимаются, то пока реализация доступна лишь в выделенной ветке
+<a href="http://perl5.git.perl.org/perl.git/shortlog/refs/heads/smoke-me/khw-uni8">smoke-me/khw-uni8</a>.</p>
+
+<p><img alt="emoji-diversity" src="/i/2015-04-01-emoji-diversity.png"></p>
+
+<p>Напомним, что финальная версия стандарта Юникод 8.0.0 ожидается в июне 2015
+года. Среди новшеств новой версии можно отметить поддержку тонов кожи для
+emoji-символов, где изображены люди, поддержку нового символа национальной
+валюты — грузинского лари и множество других новых символов.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/04/01/02-unicode-8-beta.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/03/21/01-perl-5.21.10.html">Выпущен Perl 5.21.10</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-03-21">
+                            2015-03-21
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел очередной релиз Perl ветки 5.21 для разработчиков. Новый релиз содержит
+изменения в порядка 170 000 строках исходного кода, не считая изменений в
+автогенерируемых файлах. Полный список изменений можно прочесть в
+<a href="https://metacpan.org/pod/release/SHAY/perl-5.21.10/pod/perldelta.pod">perldelta</a>.
+Это предпоследний релиз в ветке 5.21, следующий релиз ожидается 20 апреля,
+после чего в мае должен выйти новый стабильный релиз 5.22.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/03/21/01-perl-5.21.10.html#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/03/21/01-perl-5.21.10.html#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/03/18/01-status-of-fatal-warnings.html">Дискуссия о статусе фатальных предупреждений</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/warnings/" rel="tag">warnings</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-03-18">
+                            2015-03-18
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>В рассылке perl5-porters активно обсуждается проблема фатальных предупреждений.
+Как известно, при использовании конструкции</p>
+
+<pre><code>use warnings FATAL =&gt; &#39;all&#39;;
+</code></pre>
+
+<p>меняется поведение программы, которая теперь генерирует исключение после вывода
+предупреждений. Есть по крайне мере два серьёзных основания объявить
+использование фатальных предупреждений нерекомендуемой практикой.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/03/18/01-status-of-fatal-warnings.html#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/03/18/01-status-of-fatal-warnings.html#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html">AnyEvent сломан на Strawberry Perl 5.20</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/cpan/" rel="tag">CPAN</a>
+                        <a href="/blog/tag/facepalm/" rel="tag">facepalm</a>
+                        <a href="/blog/tag/windows/" rel="tag">windows</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-03-16">
+                            2015-03-16
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>В конце прошлой недели рассылка perl5-porters опять наполнились
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/03/msg226604.html">проклятиями</a>
+Марка Леманна из-за очередной поломки обратной совместимости в Perl5. Как
+выяснилось AnyEvent оказался сломан на платформе Windows из-за несовместимых
+изменений, который произошли в версии 5.19.4.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/03/16/01-anyevent-broken-on-windows-perl.html#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/03/07/01-test-simple-stable.html">В Perl 5.22 не попадёт новый Test-Simple</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/cpan/" rel="tag">CPAN</a>
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-03-07">
+                            2015-03-07
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Как
+<a href="http://permalink.gmane.org/gmane.comp.lang.perl.perl5.porters/148640">сообщил</a>
+Chad Granum, чтобы не создавать спешки и суеты с тестированием обновлённого
+<a href="https://metacpan.org/release/Test-Simple">Test-Simple</a>, в состав Perl 5.22
+войдёт проверенная стабильная версия 1.001014. Релиз 1.301001, который содержит
+значительную переработку архитектуры тестирования и новое модернизированное
+API, попадёт в разрабатываемую версию Perl уже после релиза Perl 5.22.</p>
+
+<p>Основой нового <code>Test-Simple</code> станет
+<a href="https://metacpan.org/pod/release/EXODIST/Test-Simple-1.301001_098/lib/Test/Stream.pm">Test::Stream</a>,
+который станет собирать события всех процессов и тредов теста в одном месте.
+Раньше все методы, такие как <code>ok</code>, <code>diag</code>, <code>note</code> просто генерировали
+TAP-вывод, теперь же все подобные события поступают в <code>Test::Stream</code>, позволяя
+перенаправлять вывод в произвольные файловые дескрипторы в нужной кодировке,
+выполнять различные хуки до того, как состояние теста обновится. Упростится
+создание субтестов, вложенных тестов, а также создание собственных тестовых
+функций, которые теперь получат правильный контекст и не поломают TAP-вывод.
+Появится возможность легко проводить отладку тестов с выводом стека вызовов в
+точках, где происходит ошибка.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/03/07/01-test-simple-stable.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/02/24/01-strawberry-perl-5.20.2.1.html">Выпущен Strawberry Perl 5.20.2.1</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                        <a href="/blog/tag/windows/" rel="tag">windows</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-02-24">
+                            2015-02-24
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Хорошая новость для пользователей Windows: выпущен релиз дистрибутива Perl для
+Windows Strawberry Perl 5.20.2.1.</p>
+
+<p>Доступны msi-пакеты для установки:
+<a href="http://strawberryperl.com/download/5.20.2.1/strawberry-perl-5.20.2.1-32bit.msi">32-битной</a>
+и
+<a href="http://strawberryperl.com/download/5.20.2.1/strawberry-perl-5.20.2.1-64bit.msi">64-битной</a>
+версии.</p>
+
+<p>Новые версии содержат обновлённый стабильный релиз Perl 5.20.2. Кроме того были
+обновлены сопутствуюище версии библиотек, компилятора gcc. Полная информация о
+релизах соотвественно
+<a href="http://strawberryperl.com/release-notes/5.20.2.1-32bit.html">32</a> и
+<a href="http://strawberryperl.com/release-notes/5.20.2.1-64bit.html">64</a>.</p>
+
+<p>К сожалению, msi-пакеты не подписаны, поэтому проверяйте <a href="http://strawberryperl.com/releases.html">sha1
+отпечаток</a>.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/02/24/01-strawberry-perl-5.20.2.1.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/02/23/01-op_signature.html">Ускорение сигнатуры функции в Perl</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-02-23">
+                            2015-02-23
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Функции с экспериментальной поддержкой сигнатур, которые появились в Perl 5.20
+работали медленнее, чем обычные функции. Например, если сравнить функции
+<code>plain</code> и <code>sig</code>, то функции с сигнатурой потребуется выполнить на 60% больше
+инструкций:</p>
+
+<pre><code>sub plain {
+    my ($a, $b, $c) = @_;
+    ...
+}
+
+sub sig ($a, $b, $c) {
+    ...
+}
+</code></pre>
+
+<p>Дейв Митчелл провёл большую работу по оптимизации сигнатур и, в частности, по
+присвоению значений по умолчанию, например:</p>
+
+<pre><code>sub foo ($a, $b, $c = 1) {
+    ...
+}
+</code></pre>
+
+<p>В результате этой работы появилась новая операция <code>OP_SIGNATURE</code>, которая
+призвана заменить множество отдельных операций по присвоению значений
+параметров. Далее чуть подробнее о том, что это даёт.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/02/23/01-op_signature.html#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/02/23/01-op_signature.html#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/02/21/01-perl-5.21.9.html">Вышел Perl 5.21.9</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-02-21">
+                            2015-02-21
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>Вышел десятый релиз Perl ветки 5.21 для разработчиков. Новый релиз содержит
+изменения в порядка 160 000 строках исходного кода, не считая изменений в
+автогенерируемых файлах. Как обычно, полный список изменений содержится в
+<a href="https://metacpan.org/pod/release/XSAWYERX/perl-5.21.9/pod/perldelta.pod">perldelta</a>.
+Далее обзор наиболее заметных изменений.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/02/21/01-perl-5.21.9.html#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/02/21/01-perl-5.21.9.html#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/02/15/01-perl-5.20.2.html">Выпущен Perl 5.20.2</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-02-15">
+                            2015-02-15
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>После 5 месяцев разработки выпущен второй корректирующий релиз стабильной
+версии 20 Perl 5. Полный список изменений доступен в
+<a href="https://metacpan.org/pod/release/SHAY/perl-5.20.2/pod/perldelta.pod">perldelta</a>.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/02/15/01-perl-5.20.2.html#disqus_thread">Комментарии</a>
+                </p><p>
+                    <a href="/blog/2015/02/15/01-perl-5.20.2.html#section-2">Дальше →</a>
+                 
+                </p>
+            </article>
+            <article>
+                <header>
+                    <h1><a href="/blog/2015/02/11/01-gcc5-vs-perl.html">Проблемы со сборкой Perl 5 с помощью GCC 5</a></h1>
+
+                    <p class="tags">Темы:
+                        <a href="/blog/tag/perl/" rel="tag">Perl</a>
+                    </p>
+
+                    <aside>
+                    <p>        
+                        <span class="typcn typcn-time"></span>
+                        <time datetime="2015-02-11">
+                            2015-02-11
+                        </time>
+                            <span class="typcn typcn-user"></span>
+                            perlnews
+                        </p>
+                    </aside>
+
+                </header>
+                <p>RedHat, стоящий на острие разработки, провёл тестовую пересборку всех пакетов в
+Fedora Rawhide с помощью новейшей версии компилятора GCC 5. По
+<a href="https://lists.fedoraproject.org/pipermail/devel/2015-February/207549.html">результатам</a>
+пересборки выявились некоторые пакеты, которые этого не пережили, в том числе и
+Perl 5.20.1.</p>
+
+<p>Как выяснил Petr Pisar, это произошло вследствие изменений в выводе
+препроцессора, из-за чего перестал правильно генерироваться <code>Errno.pm</code>.
+<a href="https://rt.perl.org/Public/Bug/Display.html?id=123784">Патч</a> уже доступен,
+хотя, скорее всего, он уже не успевает попасть в грядущий релиз Perl 5.20.2.</p>
+
+                <p class="tags">
+                    <a href="/blog/2015/02/11/01-gcc5-vs-perl.html#disqus_thread">Комментарии</a>
+                </p><p>
+                 
+                </p>
+            </article>
+        </main>
+
+        <ul class="pager">
+            <li class="prev">
+                <a class="button button-primary" href="/blog/tag/perl/page/3" rel="next">
+                    <span class="typcn typcn-arrow-left-thick"></span>
+                    Раньше
+                </a>
+            </li>
+            <li class="next">
+                <a class="button button-primary" href="/blog/tag/perl" rel="prev">
+                    Позже
+                    <span class="typcn typcn-arrow-right-thick"></span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="three columns sidebar">
+        
+        <h1>Темы</h1>
+        <ul class="list-inline">
+            <li><a href="/blog/tag/aprilfd/">AprilFD</a></li>
+            <li><a href="/blog/tag/benchmark/">benchmark</a></li>
+            <li><a href="/blog/tag/books/">books</a></li>
+            <li><a href="/blog/tag/bug/">bug</a></li>
+            <li><a href="/blog/tag/community/">community</a></li>
+            <li><a href="/blog/tag/coro/">Coro</a></li>
+            <li><a href="/blog/tag/cpan/">CPAN</a></li>
+            <li><a href="/blog/tag/cpanpr/">cpanpr</a></li>
+            <li><a href="/blog/tag/cpantesters/">cpantesters</a></li>
+            <li><a href="/blog/tag/dbic/">DBIC</a></li>
+            <li><a href="/blog/tag/donation/">donation</a></li>
+            <li><a href="/blog/tag/facepalm/">facepalm</a></li>
+            <li><a href="/blog/tag/fork/">fork</a></li>
+            <li><a href="/blog/tag/fosdem/">FOSDEM</a></li>
+            <li><a href="/blog/tag/funding/">funding</a></li>
+            <li><a href="/blog/tag/hackaton/">hackaton</a></li>
+            <li><a href="/blog/tag/ide/">IDE</a></li>
+            <li><a href="/blog/tag/interview/">interview</a></li>
+            <li><a href="/blog/tag/mojo/">mojo</a></li>
+            <li><a href="/blog/tag/moscow-pm/">moscow.pm</a></li>
+            <li><a href="/blog/tag/perl/">Perl</a></li>
+            <li><a href="/blog/tag/perl6/">Perl6</a></li>
+            <li><a href="/blog/tag/perlnews-ru/">PerlNews.Ru</a></li>
+            <li><a href="/blog/tag/pragmaticperl/">PragmaticPerl</a></li>
+            <li><a href="/blog/tag/regexp/">regexp</a></li>
+            <li><a href="/blog/tag/security/">security</a></li>
+            <li><a href="/blog/tag/smartmatch/">smartmatch</a></li>
+            <li><a href="/blog/tag/starwars/">StarWars</a></li>
+            <li><a href="/blog/tag/tips/">tips</a></li>
+            <li><a href="/blog/tag/unicode/">unicode</a></li>
+            <li><a href="/blog/tag/warnings/">warnings</a></li>
+            <li><a href="/blog/tag/windows/">windows</a></li>
+            <li><a href="/blog/tag/yapc/">YAPC</a></li>
+        </ul>
+        <h1>Лента</h1>
+        <ul class="list-inline">
+            <li>
+                <span class="typcn typcn-rss"></span>
+                <a href="/blog/tag/perl.atom" rel="alternate" type="application/atom+xml">
+                    Atom
+                </a>
+            </li>
+            <li>
+                <span class="typcn typcn-rss"></span>
+                <a href="/blog/tag/perl.rss" rel="alternate" type="application/rss+xml">
+                    RSS
+                </a>
+            </li>
+        </ul>
+        <h1>СоцСети</h1>
+        <ul class="list-inline">
+            <li>
+                <a href="https://twitter.com/perlnews_ru"><span class="typcn
+                        typcn-social-twitter"></span>PerlNews_RU</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script type="text/javascript">
+    var disqus_shortname = 'perlnewsru';
+    if (window.location.hostname === "perlnews.ru") {
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    }
+</script>
+
+        </div>
+        <footer>
+            <div class="container">
+<strong>© perlnews.ru</strong>
+<p>
+Все материалы доступны в соответствии с лицензией
+<a href="http://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0</a>
+<br>
+Работает на
+<a href="http://preaction.me/statocles">Statocles</a>
+и
+<a href="http://www.perl.org">Perl</a>
+</p>
+</div>
+
+        </footer>
+    </body>
+</html>

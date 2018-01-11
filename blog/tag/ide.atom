@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/ide/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2015-07-23T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/ide.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/ide/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/07/23/01-camelcade-intellij-idea-plugin/</id>
+        <title>Camelcade — плагин для поддержки Perl 5 в IntelliJ IDEA</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/07/23/01-camelcade-intellij-idea-plugin/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Вышла бета-версия 0.34 плагина
+<a href="https://github.com/hurricup/Perl5-IDEA">Camelcade</a> для известной среды
+разработки IntelliJ IDEA, который обеспечивает поддержку Perl 5. Несмотря на
+бета-статус утверждается, что плагин обеспечивает более качественную поддержку
+Perl 5 проектов, чем редакторы Sublime или NotePad++.</p>
+
+<p><a href="https://github.com/hurricup/Perl5-IDEA/wiki/Getting-started"><img alt="Camelcade" src="http://perlnews.ru/blog/2015/07/23/01-camelcade-intellij-idea-plugin/camelcade.png"></a></p>
+
+<p>На данный момент поддерживаются следующие возможности:</p>
+
+<ul>
+<li>Анализ и разбор Perl 5 кода (не нативный, поэтому возможны баги).</li>
+<li>Поддержка форматов Perl 5, POD, встроенный Perl 5 (например, шаблоны
+Mojolicious).</li>
+<li>Выбор Perl 5 интерпретатора для проектов.</li>
+<li>Подсветка синтаксиса (цветовая схема из NotePad++).</li>
+<li>Поиск парных скобок, сворачивание кода.</li>
+<li>Контекстные действия.</li>
+<li>Автодополнение имён переменных, подпрограмм, пакетов. Навигация и
+рефакторинг.</li>
+<li>Инспекция кода, поиск ошибок.</li>
+<li>Интеграция с IntelliLang для поддержки других языков во встроенных документах
+внутри исходного кода.</li>
+</ul>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/ide/">IDE</a>
+            </p>
+        ]]></content>
+        <updated>2015-07-23T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="IDE" />
+    </entry>
+</feed>
+

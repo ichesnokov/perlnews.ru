@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="summary" name="twitter:card">
+        <meta content="http://perlnews.ru/blog/2016/05/06/01-coro-in-perl-5-24/index.html" name="twitter:url">
+        <meta content="Coro в Perl 5.24" name="twitter:title">
+        <meta content="В тот момент, когда перед выпуском Perl 5.24 остались считанные дни, в рассылке perl5-porters внезапно вспомнили, что в новом Perl по-прежнему остаётся сломанным модуль Coro Марка Леманна. Одна из…" name="twitter:description">
+        <meta content="@perlnews_ru" name="twitter:site">
+        <link href="/theme/images/favicon.ico" rel="icon">
+        <link href="/theme/css/style.css" rel="stylesheet">
+        <title>
+            PerlNews.Ru
+            → Coro в Perl 5.24
+        </title>
+        <script>
+  if (window.location.hostname === "perlnews.ru") {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59283423-1', 'auto');
+      ga('send', 'pageview');
+  }
+</script>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a class="brand" href="/">
+                        PerlNews.Ru
+                        <span class="brand-img"></span>
+                    </a>
+                    <ul>
+                        <li>
+                        <a href="/index.html">
+                            Новости
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/about.html">
+                            О блоге
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/resources.html">
+                            Ресурсы
+                        </a>
+                        </li>
+                        <li>
+                        <a href="http://irc.pragmaticperl.com">
+                            Чат
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://twitter.com/perlnews_ru">
+                            Twitter
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="main container">
+            <div class="row">
+
+    <div class="nine columns">
+        <main>
+            <header>
+                <h1>Coro в Perl 5.24</h1>
+                <p class="tags">Темы:
+                    <a href="/blog/tag/perl/" rel="tag">perl</a>
+                    <a href="/blog/tag/bug/" rel="tag">bug</a>
+                    <a href="/blog/tag/coro/" rel="tag">Coro</a>
+                </p>
+                <aside>
+                    <p><time datetime="2016-05-06">
+                        <span class="typcn typcn-time"><span>
+                        2016-05-06
+                    </span></span></time>
+                    </p>
+                </aside>
+            </header>
+            <section id="section-1">
+                <p>В тот момент, когда перед выпуском Perl 5.24 остались считанные дни, в рассылке
+perl5-porters внезапно
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2016/05/msg236174.html">вспомнили</a>,
+что в новом Perl по-прежнему остаётся сломанным модуль Coro Марка Леманна. Одна
+из проблем была связана с тем, что в Perl 5.22 структура <code>MGVTBL</code> (магическая
+виртуальная таблица), формирующаяся во время компиляции perl, стала
+константной. Coro делал переопределение в таблице, поэтому и не мог работать с
+новым Perl 5.22. Было предложено откатить это изменение до выхода Perl 5.24.</p>
+
+<p>Вносить подобные изменения в последние дни перед выпуском слишком рискованно,
+поэтому произошёл спонтанный мозговой штурм проблемы, в результате которого
+удалось выяснить очень много интересных деталей. Оказалось, что переопределение
+<code>MGVTBL</code> требовалось Coro только для того, чтобы переопределить работу с
+хендлерами сигналов <code>__DIE__</code> и <code>__WARN__</code> для магического хеша <code>%SIG</code>, что в
+свою очередь было сделано из-за бага Perl, когда присутствует рассинхронизация
+в <code>PL_warnhook</code> и <code>$SIG{__WARN__}</code>. Теоретически оба должны ссылаться на
+хендлер обработки предупреждений, но некоторые кривые XS-программы, в том
+числе входящие в базовый Perl (например, find в PerlIO::Layer), могут изменить
+только <code>PL_warnhook</code>, забыв про <code>$SIG{__WARN__}</code>. То есть это был банальный
+костыль в Coro для обхода реальной проблемы в Perl. Эта проблема была
+зафиксирована в баге
+<a href="https://rt.perl.org/Public/Bug/Display.html?id=125439">#125349</a>,</p>
+
+<p>Более того, оказалось, что Coro можно было приспособить для работы с
+константной <code>MGVTBL</code>, Dave Mitchell и Father Chrysostomos продемонстрировали
+<a href="http://code.activestate.com/lists/perl5-porters/228699/">патч</a>, который
+позволяет Coro работать без проблем на Perl 5.22.</p>
+
+<p>Очевидно, что если бы этот мозговой штурм прошёл год назад, проблема была бы
+решена раньше и не возникло бы таких явлений как stableperl. Вероятно штурм бы
+и не потребовался, если бы Марк сообщил о проблеме в Perl, когда столкнулся с
+ней впервые.</p>
+
+            </section>
+        </main>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'perlnewsru';
+            if (window.location.hostname === "perlnews.ru") {
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    <div class="three columns sidebar">
+        
+        <nav id="tags">
+            <h1>Темы</h1>
+            <ul class="list-inline">
+                <li><a href="/blog/tag/aprilfd/">AprilFD</a></li>
+                <li><a href="/blog/tag/benchmark/">benchmark</a></li>
+                <li><a href="/blog/tag/books/">books</a></li>
+                <li><a href="/blog/tag/bug/">bug</a></li>
+                <li><a href="/blog/tag/community/">community</a></li>
+                <li><a href="/blog/tag/coro/">Coro</a></li>
+                <li><a href="/blog/tag/cpan/">CPAN</a></li>
+                <li><a href="/blog/tag/cpanpr/">cpanpr</a></li>
+                <li><a href="/blog/tag/cpantesters/">cpantesters</a></li>
+                <li><a href="/blog/tag/dbic/">DBIC</a></li>
+                <li><a href="/blog/tag/donation/">donation</a></li>
+                <li><a href="/blog/tag/facepalm/">facepalm</a></li>
+                <li><a href="/blog/tag/fork/">fork</a></li>
+                <li><a href="/blog/tag/fosdem/">FOSDEM</a></li>
+                <li><a href="/blog/tag/funding/">funding</a></li>
+                <li><a href="/blog/tag/hackaton/">hackaton</a></li>
+                <li><a href="/blog/tag/ide/">IDE</a></li>
+                <li><a href="/blog/tag/interview/">interview</a></li>
+                <li><a href="/blog/tag/mojo/">mojo</a></li>
+                <li><a href="/blog/tag/moscow-pm/">moscow.pm</a></li>
+                <li><a href="/blog/tag/perl/">Perl</a></li>
+                <li><a href="/blog/tag/perl6/">Perl6</a></li>
+                <li><a href="/blog/tag/perlnews-ru/">PerlNews.Ru</a></li>
+                <li><a href="/blog/tag/pragmaticperl/">PragmaticPerl</a></li>
+                <li><a href="/blog/tag/regexp/">regexp</a></li>
+                <li><a href="/blog/tag/security/">security</a></li>
+                <li><a href="/blog/tag/smartmatch/">smartmatch</a></li>
+                <li><a href="/blog/tag/starwars/">StarWars</a></li>
+                <li><a href="/blog/tag/tips/">tips</a></li>
+                <li><a href="/blog/tag/unicode/">unicode</a></li>
+                <li><a href="/blog/tag/warnings/">warnings</a></li>
+                <li><a href="/blog/tag/windows/">windows</a></li>
+                <li><a href="/blog/tag/yapc/">YAPC</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+        </div>
+        <footer>
+            <div class="container">
+<strong>© perlnews.ru</strong>
+<p>
+Все материалы доступны в соответствии с лицензией
+<a href="http://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0</a>
+<br>
+Работает на
+<a href="http://preaction.me/statocles">Statocles</a>
+и
+<a href="http://www.perl.org">Perl</a>
+</p>
+</div>
+
+        </footer>
+    </body>
+</html>

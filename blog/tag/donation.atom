@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/donation/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2015-08-13T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/donation.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/donation/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/08/13/02-bookingcom-donation/</id>
+        <title>Booking.com пожертвовал $60 000 на развитие Perl 5</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/08/13/02-bookingcom-donation/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>По
+<a href="http://news.perlfoundation.org/2015/08/bookingcom-donate-60000-to-per-1.html">сообщению</a>
+фонда Perl <a href="https://booking.com">Booking.com</a> пожертвовал $60 000 на поддержку
+развития Perl 5. Компания Booking.com уже на протяжение многих лет продолжает
+оказывать финансовую поддержку фонду Perl для продолжения разработки Perl 5.
+Язык Perl 5 остаётся основой инфраструктуры компании наряду с другими
+OSS-проектами, такими как Linux, MySQL, Nginx, Hadoop и Redis.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                <a href="http://perlnews.ru/blog/tag/donation/">donation</a>
+            </p>
+        ]]></content>
+        <updated>2015-08-13T00:00:00Z</updated>
+        <category term="Perl" />
+        <category term="donation" />
+    </entry>
+</feed>
+

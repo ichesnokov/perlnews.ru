@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/cpantesters/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/cpantesters.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Сервер тестировщиков CPAN снова работает</title>
+            <link>http://perlnews.ru/blog/2015/09/18/01-cpantesters-is-back/</link>
+            <guid>http://perlnews.ru/blog/2015/09/18/01-cpantesters-is-back/</guid>
+            <description><![CDATA[
+                <p>Администратор инфраструктуры CPAN Testers
+<a href="http://blog.cpantesters.org/diary/200">сообщил</a>, что работа сервисов
+восстановлена.</p>
+
+<p>На протяжении последних дней, пришедшие на помощь Matt S Trout и Doug Bell,
+пытались выяснить причину проблем. Как было замечено, работа с базой данной
+приводила к зависанию сервера на продолжительное время. Проверка дисков не дала
+никаких результатов.</p>
+
+<p>Компания Bytemark, предоставляющая хостинг, предложила более новый и мощный
+сервер, на который и были перенесены сервисы cpantesters. За прошедшую неделю
+всё работало без проблем. И самое приятное, что отчёты cpantesters теперь
+генерируются гораздо быстрее.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/cpantesters/">cpantesters</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Fri, 18 Sep 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Веб-сервер тестировщиков CPAN вышел из строя</title>
+            <link>http://perlnews.ru/blog/2015/08/31/01-cpantesters-server-down/</link>
+            <guid>http://perlnews.ru/blog/2015/08/31/01-cpantesters-server-down/</guid>
+            <description><![CDATA[
+                <p>Как <a href="http://blog.cpantesters.org/diary/199">сообщает</a> администратор
+инфраструктуры CPAN Testers, сервер прекратил свою работу из-за сбоя, причина
+которого пока не ясна. Проблемы начались несколько дней назад, и сегодня в 2:30
+UTC сервер окончательно перестал работать.</p>
+
+<p>На данный момент у администратора нет достаточно свободного времени, чтобы
+разобраться с проблемой самостоятельно и вести дальнейшее сопровождение.
+Поэтому был объявлен поиск добровольца, который возьмёт на себя дальнейшее
+сопровождение CPAN Testers.</p>
+
+<p>Судя по обновлению информации в блоге, подходящий кандидат с опытом был найден.
+Ждём итогов расследования инцидента.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                    <a href="http://perlnews.ru/blog/tag/cpantesters/">cpantesters</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 31 Aug 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

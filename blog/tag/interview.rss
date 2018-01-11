@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/interview/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/interview.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Интервью с Вячеславом Тихановским</title>
+            <link>http://perlnews.ru/blog/2015/09/23/01-vti-interview/</link>
+            <guid>http://perlnews.ru/blog/2015/09/23/01-vti-interview/</guid>
+            <description><![CDATA[
+                <p>Вячеслав Тихановский aka <a href="https://twitter.com/vtivti">@vti</a> — известный
+Perl-хакер, редактор журнала <a href="http://pragmaticperl.com">«Pragmatic Perl»</a> дал
+эксклюзивное интервью PerlNews.Ru.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/09/23/01-vti-interview/#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/interview/">interview</a>
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 23 Sep 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

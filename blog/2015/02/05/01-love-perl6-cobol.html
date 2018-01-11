@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="summary" name="twitter:card">
+        <meta content="http://perlnews.ru/blog/2015/02/05/01-love-perl6-cobol.html" name="twitter:url">
+        <meta content="Мелочи, из-за которых любишь Perl 6 (и Кобол)" name="twitter:title">
+        <meta content="Вышла прекрасная статья Кёртиса По (Ovid), где на примере работы с дробными числами показано насколько хорошо продуман Perl 6, вплоть до самых мелочей. …" name="twitter:description">
+        <meta content="@perlnews_ru" name="twitter:site">
+        <link href="/theme/images/favicon.ico" rel="icon">
+        <link href="/theme/css/style.css" rel="stylesheet">
+        <title>
+            PerlNews.Ru
+            → Мелочи, из-за которых любишь Perl 6 (и Кобол)
+        </title>
+        <script>
+  if (window.location.hostname === "perlnews.ru") {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-59283423-1', 'auto');
+      ga('send', 'pageview');
+  }
+</script>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="container">
+                    <a class="brand" href="/">
+                        PerlNews.Ru
+                        <span class="brand-img"></span>
+                    </a>
+                    <ul>
+                        <li>
+                        <a href="/index.html">
+                            Новости
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/about.html">
+                            О блоге
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/resources.html">
+                            Ресурсы
+                        </a>
+                        </li>
+                        <li>
+                        <a href="http://irc.pragmaticperl.com">
+                            Чат
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://twitter.com/perlnews_ru">
+                            Twitter
+                            <span class="typcn typcn-export"></span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="main container">
+            <div class="row">
+
+    <div class="nine columns">
+        <main>
+            <header>
+                <h1>Мелочи, из-за которых любишь Perl 6 (и Кобол)</h1>
+                <p class="tags">Темы:
+                    <a href="/blog/tag/perl6/" rel="tag">Perl6</a>
+                </p>
+                <aside>
+                    <p><time datetime="2015-02-05">
+                        <span class="typcn typcn-time"><span>
+                        2015-02-05
+                    </span></span></time>
+                        <span class="typcn typcn-user"><span>
+                        perlnews
+                    </span></span></p>
+                </aside>
+            </header>
+            <section id="section-1">
+                <p>Вышла прекрасная
+<a href="http://blogs.perl.org/users/ovid/2015/02/a-little-thing-to-love-about-perl-6-and-cobol.html">статья</a>
+Кёртиса По (Ovid), где на примере работы с дробными числами показано насколько
+хорошо продуман Perl 6, вплоть до самых мелочей.</p>
+
+            </section>
+            <section id="section-2">
+                <p>…</p>
+
+<p>Насколько я могу судить, Perl 6 имеет все шансы взлететь и есть одна приятная
+фича, о который бы я хотел рассказать.</p>
+
+<p>Но перед тем, как я перейду к Perl 6, хотелось бы рассказать, почему я люблю
+Кобол. Нет, действительно, в Кобол есть то, о чём вы возможно никогда не
+слышали: упакованные десятичные. Это формат хранения для чисел, которые
+мейнфреймы понимали нативно. Когда мейнфреймы пришли в бизнес, они очень
+активно использовались в бухгалтерии (и до сих пор используются) и числа имели
+основание 10, а не 2 (внутреннее представление было на основании 2, но
+отображается на основании 10). Мы не используем упакованные десятичные, мы
+используем числа с плавающей запятой и в этом заключается проблема, но о ней
+чуть позже.</p>
+
+<p>В Коболе вы могли декларировать знаковое число с именем TOTAL, имеющим 4 цифры
+перед десятичной запятой и 2 цифры после запятой:</p>
+
+<pre><code>01 TOTAL PIC S9(4)V9(2)
+</code></pre>
+
+<p>Не вдаваясь в детали, что это значит, числа сохранялись как упакованные целые.
+Каждая цифра — это один полубайт (4 бита), а две цифры — один байт. В указанном
+примере две цифры <em>после</em> десятичной точки сохранялись в одном байте и, если
+вам требовалось сложить список упакованных десятичных чисел, мейнфрейм
+использовал инструкцию &quot;Сложить Упакованные&quot;. Это <em>не</em> было арифметикой с
+плавающей запятой. Использовалось основание 10, а не основание 2. Это означало,
+что в COBOL при вычислении <code>0.1 + 0.2 - 0.3</code> мы получали в результате <code>0</code>
+(ноль).</p>
+
+<p>Ну а что в Perl 5?</p>
+
+<pre><code>perl -E &#39;say .1 + .2 - .3&#39;
+5.55111512312578e-17
+
+# 0.0000000000000000555111512312578
+</code></pre>
+
+<p>Это очень маленькое число, но это не ноль. Может быть вам кажется, что всё в
+порядке, но это не так. Ноль особенный и вы <em>не можете</em> это игнорировать.
+Например, деление на &quot;ноль&quot;:</p>
+
+<pre><code>$ perl -E &#39;say 1/(.1 + .2 - .3)&#39;
+1.8014398509482e+16
+
+# 18,014,398,509,482,000
+# примерно 18 квадриллионов
+</code></pre>
+
+<p>18 квадриллионов это исключительное число, но всё же не исключение. Если вы
+умножаете массу Солнца на этот &quot;ноль&quot;, вы получите 110 триллионов килограмм,
+что примерно соответствует массе горы Эверест.</p>
+
+<p>Так почему <code>0.1 + 0.2 - 0.3</code> не равняется нулю? Из-за формата плавающей
+запятой.</p>
+
+<p>В арифметике с плавающей запятой числа берутся по основанию 2, а не 10.
+Мантисса (число после запятой) — это серия нулей и единиц, представляющая
+степень двойки (сам термин &quot;плавающая запятая&quot; так называется, потому что число
+это строка нулей и единиц, а &quot;плавающая запятая&quot; указывает где находится
+десятичная точка).</p>
+
+<p>Поэтому число <code>0.625</code> представляется в бинарном виде как <code>101</code>. Это <code>1*1/2 +
+0*1/4 + 1*1/8</code> (обратите внимание, что эти степени двойки умножаются на
+соответствующее значение бита).</p>
+
+<p>Однако большинство чисел можно лишь приблизительно представить числами с
+плавающей запятой. Для простоты задействуем 8-битную машину. Число <code>0.1</code> — это
+<code>00011001</code>. С соответствующими степенями двойки это становится <code>1/16 + 1/32 +
+1/256, or 0.09765625</code>. Число <code>0.2</code>:</p>
+
+<pre><code>Fractions: 1/8 + 1/16 + 1/128 + 1/256
+Bits: 00110011
+Result: 0.19921875
+</code></pre>
+
+<p>Число <code>0.3</code>:</p>
+
+<pre><code>Fractions: 1/4 + 1/32 + 1/64
+Bits: 01001100
+Result: 0.296875
+</code></pre>
+
+<p><code>0.1</code> на 32-битной машине:</p>
+
+<pre><code>Fractions: 1/16 + 1/32 + 1/256 + 1/512 + 1/4096 + 1/8192 + 1/65536
+         + 1/131072 + 1/1048576 + 1/2097152 + 1/16777216 + 1/33554432
+         + 1/268435456 + 1/536870912 + 1/4294967296
+Bits: 00011001100110011001100110011001
+Result: 0.0999999998603016
+</code></pre>
+
+<p>Близко, но не точно в яблочко. (Если вам интересно, вы можете рассчитать
+самостоятельно с помощью программы, которая есть в 3-й главе книги <a href="http://www.amazon.com/Beginning-Perl-Curtis-Poe/dp/1118013840/">Beginning
+Perl</a>).</p>
+
+<p>Арифметика с плавающей запятой, это причина по которой большинство финансовых
+систем использует целые числа вместо плавающей запятой.</p>
+
+<p>Так как очень просто ошибиться с вычислениями с плавающей запятой, разработчики
+постоянно сталкиваются с этой проблемой. Одно из преимуществ Кобола в том, что
+он использует упакованные десятичные и представление чисел на основании 10:
+вычисления, оперирующие с миллиардами долларов, всегда дадут точный ответ.</p>
+
+<p>Увы, но эта тривиальная вычислительная ошибка — неотъемлемое свойство чисел с
+плавающей запятой, а не Perl:</p>
+
+<pre><code>$ ruby -e &#39;puts 0.1 + 0.2 - 0.3&#39;
+5.551115123125783e-17
+
+$ python -c &#39;print .1 + .2 - .3&#39;
+5.55111512313e-17
+
+$ echo &quot;puts [expr .1+.2-.3]&quot;|tclsh
+5.551115123125783e-17
+</code></pre>
+
+<p>Этот ответ получается при запуске на 64-битных машинах, для 32-битных ответ
+может отличаться.</p>
+
+<p>Вернёмся к Perl 6:</p>
+
+<pre><code>$ perl6 -e &#39;say .1 + .2 - .3&#39;
+0
+
+$ perl6 -e &#39;say 1/(.1 + .2 - .3)&#39;
+# Divide by zero in method Numeric at ...
+</code></pre>
+
+<p>Что? Как это произошло? Нет, это не упакованные десятичные. Вместо них Perl 6
+использует рациональные числа, каждое из которых с нумератором и деномератором.
+Давайте загрузим REPL (консоль компилятора). В Perl 6 всё является объектом и
+мы можем проинспектировать эти объекты. В сессии ниже метод <code>WHAT</code> выводит тип
+объекта. (Rat — это сокращение от Rational (рациональный), а термин <code>Rational</code>
+— это роль, позволяющая объектам вести себя как рациональные числа). Метод
+<code>nude</code> для роли <code>Rational</code> возвращает двухэлементный список, состоящий из
+нумератора и деномератора:</p>
+
+<pre><code>$ perl6
+&gt; say .3.WHAT
+(Rat)
+&gt; say .3.numerator
+3
+&gt; say .3.denominator
+10
+&gt; say .3.nude.perl
+(3, 10)
+</code></pre>
+
+<p>Это демонстрирует, что Perl 6 использует рациональные числа и выполняет
+арифметические операции с дробными числами. Арифметика с дробной частью
+<em>целочисленная</em>. Это означает, что размер машинного слова вашего процессора не
+имеет значения.</p>
+
+<p>Вот ещё интересный пример:</p>
+
+<pre><code>&gt; say 3.1415927.nude.perl
+(31415927, 10000000)
+</code></pre>
+
+<p>Число π, как известно, иррациональное. Иррациональные числа не могут быть
+выражены в целочисленном представлении (цифры после десятичной запятой
+бесконечны). Но, вместо того чтобы полагаться на капризы плавающей запятой, вы
+можете <em>сами</em> задать нужную вам точность.</p>
+
+<p>Есть ещё много практичных возможностей Perl 6, но это одна из самых
+фантастических. Вспоминая как раньше сравнивали Кобол с Perl 5, я явно вижу
+иронию в том, что одна из сильных сторон Кобола есть в Perl 6.</p>
+
+<p><a href="http://blogs.perl.org/users/ovid/2015/02/a-little-thing-to-love-about-perl-6-and-cobol.html">Оригинал
+статьи</a></p>
+
+            </section>
+        </main>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'perlnewsru';
+            if (window.location.hostname === "perlnews.ru") {
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    <div class="three columns sidebar">
+        
+        <nav id="tags">
+            <h1>Темы</h1>
+            <ul class="list-inline">
+                <li><a href="/blog/tag/aprilfd/">AprilFD</a></li>
+                <li><a href="/blog/tag/benchmark/">benchmark</a></li>
+                <li><a href="/blog/tag/books/">books</a></li>
+                <li><a href="/blog/tag/bug/">bug</a></li>
+                <li><a href="/blog/tag/community/">community</a></li>
+                <li><a href="/blog/tag/coro/">Coro</a></li>
+                <li><a href="/blog/tag/cpan/">CPAN</a></li>
+                <li><a href="/blog/tag/cpanpr/">cpanpr</a></li>
+                <li><a href="/blog/tag/cpantesters/">cpantesters</a></li>
+                <li><a href="/blog/tag/dbic/">DBIC</a></li>
+                <li><a href="/blog/tag/donation/">donation</a></li>
+                <li><a href="/blog/tag/facepalm/">facepalm</a></li>
+                <li><a href="/blog/tag/fork/">fork</a></li>
+                <li><a href="/blog/tag/fosdem/">FOSDEM</a></li>
+                <li><a href="/blog/tag/funding/">funding</a></li>
+                <li><a href="/blog/tag/hackaton/">hackaton</a></li>
+                <li><a href="/blog/tag/ide/">IDE</a></li>
+                <li><a href="/blog/tag/interview/">interview</a></li>
+                <li><a href="/blog/tag/mojo/">mojo</a></li>
+                <li><a href="/blog/tag/moscow-pm/">moscow.pm</a></li>
+                <li><a href="/blog/tag/perl/">Perl</a></li>
+                <li><a href="/blog/tag/perl6/">Perl6</a></li>
+                <li><a href="/blog/tag/perlnews-ru/">PerlNews.Ru</a></li>
+                <li><a href="/blog/tag/pragmaticperl/">PragmaticPerl</a></li>
+                <li><a href="/blog/tag/regexp/">regexp</a></li>
+                <li><a href="/blog/tag/security/">security</a></li>
+                <li><a href="/blog/tag/smartmatch/">smartmatch</a></li>
+                <li><a href="/blog/tag/starwars/">StarWars</a></li>
+                <li><a href="/blog/tag/tips/">tips</a></li>
+                <li><a href="/blog/tag/unicode/">unicode</a></li>
+                <li><a href="/blog/tag/warnings/">warnings</a></li>
+                <li><a href="/blog/tag/windows/">windows</a></li>
+                <li><a href="/blog/tag/yapc/">YAPC</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+        </div>
+        <footer>
+            <div class="container">
+<strong>© perlnews.ru</strong>
+<p>
+Все материалы доступны в соответствии с лицензией
+<a href="http://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0</a>
+<br>
+Работает на
+<a href="http://preaction.me/statocles">Statocles</a>
+и
+<a href="http://www.perl.org">Perl</a>
+</p>
+</div>
+
+        </footer>
+    </body>
+</html>

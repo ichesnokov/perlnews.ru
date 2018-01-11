@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/tips/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/tips.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Полезные трюки с микрооптимизацией</title>
+            <link>http://perlnews.ru/blog/2015/05/20/01-perl-microoptimization-tricks.html</link>
+            <guid>http://perlnews.ru/blog/2015/05/20/01-perl-microoptimization-tricks.html</guid>
+            <description><![CDATA[
+                <p>В рассылке perl5-porters был задан
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/05/msg228068.html">вопрос</a>,
+почему две операции сильно отличаются по скорости (в пользу <code>do</code>):</p>
+
+<pre><code>do { ; }
+{ ; }
+</code></pre>
+
+<p><em>Zefram</em>
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/05/msg228069.html">указал</a>
+на то, что пустой блок рассматривается как цикл, который выполняется один раз,
+и для него формируется фрейм-контекст с поддержкой динамических операций вроде
+<code>next</code>. В то время как для <code>do</code> устанавливается только область видимости, что
+гораздо быстрее.</p>
+
+<p>Кроме этого было
+<a href="http://www.nntp.perl.org/group/perl.perl5.porters/2015/05/msg228074.html">замечено</a>,
+что операция <code>;</code> это отдельная операция, которая устанавливает номер строки. В
+противовес этому <code>,</code> не имеет подобного оверхеда. Например:</p>
+
+<pre><code>$x = 1; $y = 2; print &quot;$x $y&quot;;
+$x = 1, $y = 2, print &quot;$x $y&quot;;
+</code></pre>
+
+<p>Оба выражения выполняют одно и то же, но вторая запись будет работать быстрее.</p>
+
+<p>Эта информация сразу вдохновила Питера Рэбиттсона использовать этот простой
+трюк на практике. Он продемонстрировал
+<a href="https://github.com/dbsrgits/dbix-class/commit/05a5ca4b">коммит</a>, который на
+15% увеличивает производительность <code>DBIx::Class</code> просто заменив все <code>;</code> на <code>,</code>
+в генерируемом коде для строкового eval. Этот прирост становится заметен на
+резалтсетах с ≥1000 рядов.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                    <a href="http://perlnews.ru/blog/tag/tips/">tips</a>
+                    <a href="http://perlnews.ru/blog/tag/benchmark/">benchmark</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 20 May 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

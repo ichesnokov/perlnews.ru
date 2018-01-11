@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/dbic/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2015-10-05T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/dbic.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/dbic/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/10/05/01-year-of-ribasushi/</id>
+        <title>2016 — год ribasushi</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/10/05/01-year-of-ribasushi/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>На краудсорсинге tilt.com стартовала кампания <a href="https://www.tilt.com/campaigns/year-of-ribasushi-help-him-focus-on-cpan-for-2016">«Год ribasushi: помогите ему
+сфокусироваться на работе со CPAN в 2016
+году»</a>,
+успешное завершение которой позволило бы Питеру «ribasushi» Рэббитсону в
+течении 2016 года полностью сконцентрироваться на работе с открытыми проектами
+на CPAN и, в первую очередь,
+<a href="https://metacpan.org/pod/DBIx::Class">DBIx::Class</a>. Цель кампании — сбор
+<strong>$150’000</strong>, при этом кампания будет признана успешной при достижении порога в
+$120’000.</p>
+
+<p><img alt="shut up and take my money" src="http://perlnews.ru/blog/2015/10/05/01-year-of-ribasushi/shut-up-and-take-my-money.jpg"></p>
+
+<p>Сумма достаточно большая, поэтому прежде всего это обращение к коммерческим
+компаниям, которые используют DBIx::Class: поддержите дальнейшую разработку
+этого продукта. Чтобы достигнуть заявленной цели, потребуется найти <strong>25</strong>
+компаний, готовых вложить $500 ежемесячно. Или, по крайне мере <strong>20</strong>, чтобы
+кампания оказалась успешной.</p>
+
+<p>В
+<a href="https://www.tilt.com/tilts/year-of-ribasushi-help-him-focus-on-cpan-for-2016/description">описании</a>
+кампании приводится обширный перечень задач, над которыми предстоит работать,
+например, интеграция SQL::Abstract в DBIC, чтобы устранить «бутылочное
+горлышко» генерации SQL, ленивая загрузка схемы для сокращения времени запуска,
+разработка асинхронного интерфейса для DBIC и множество других улучшений.</p>
+
+<p>Что-то похожее произошло 15 лет назад, когда схожая кампания, собравшая около
+$100’000, позволила Дэмиану Конвею в 2001 году полностью сосредоточиться над
+работой с Perl-проектами и выступать на конференциях по всему миру.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/funding/">funding</a>
+                <a href="http://perlnews.ru/blog/tag/dbic/">DBIC</a>
+                <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+            </p>
+        ]]></content>
+        <updated>2015-10-05T00:00:00Z</updated>
+        <category term="funding" />
+        <category term="DBIC" />
+        <category term="CPAN" />
+    </entry>
+</feed>
+

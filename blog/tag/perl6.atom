@@ -1,0 +1,469 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/perl6/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2016-02-04T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/perl6.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/perl6/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2016/02/04/01-rakudo-star-2016-01/</id>
+        <title>Вышел Rakudo Star 2016.01</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2016/02/04/01-rakudo-star-2016-01/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Вышел официальный
+<a href="http://rakudo.org/2016/02/03/announce-rakudo-star-release-2016-01/">анонс</a>
+«Rakudo Star» 2016.01 — дистрибутива Perl 6. Поскольку предыдущий релиз вышел в
+ноябре 2015, то этот релиз является первым стабильным выпуском Perl 6,
+соответствующим спецификации <strong>v6.c</strong>.</p>
+
+<p>Этот релиз «Rakudo Star» был выпущен с поддержкой бэкенда MoarVM (все модули
+проходят тесты на всех поддерживаемых платформах). JVM бэкенд в данной версии
+не является полнофункциональным, поэтому рекомендуется использовать только
+бэкенд MoarVM. Загрузить архив с исходным кодом можно
+<a href="http://rakudo.org/downloads/star/rakudo-star-2016.01.tar.gz">здесь</a>.</p>
+
+<p>В мире Perl 6 есть различие между языком «Perl 6» и конкретной реализацией
+языка, такой как «Rakudo Star». Данный релиз содержит компилятор Perl 6
+<a href="https://raw.githubusercontent.com/rakudo/rakudo/2016.01.1/docs/announce/2016.01.md">Rakudo 2016.01.1</a>
+и бэкенд <a href="http://moarvm.org/">MoarVM 2016.01</a>, а также различные модули,
+документацию и другие полезные ресурсы от сообщества.</p>
+
+<p><em><strong>P.S.</strong></em> Доступны для загрузки MSI-инсталляторы для платформ Windows:
+<a href="http://rakudo.org/downloads/star/rakudo-star-2016.01-x86%20(no%20JIT).msi">x86</a>
+(без JIT),
+<a href="http://rakudo.org/downloads/star/rakudo-star-2016.01-x86_64%20(JIT).msi">x86_64</a>
+(c JIT).</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+            </p>
+        ]]></content>
+        <updated>2016-02-04T00:00:00Z</updated>
+        <category term="Perl6" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2016/02/02/01-rakudo-2016-01/</id>
+        <title>Вышел Rakudo 2016.01</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2016/02/02/01-rakudo-2016-01/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Вышел первый в 2016 году релиз компилятора Perl 6 — Rakudo 2016.01. Это также
+первый пост-Рождественский релиз, построенный по-прежнему на основе
+спецификации <strong>v6.c</strong>. Выпуск задержался на две недели, что связано прежде
+всего с продолжительным периодом зимних праздников, да и просто разработчикам
+был необходим отдых после напряжённой работы над первым стабильным релизом.</p>
+
+<p>Данный релиз не имеет новой функциональности и содержит только исправления
+ошибок и оптимизации. Загрузить архив с исходным кодом можно на сайте
+<a href="http://rakudo.org/downloads/rakudo/">rakudo</a>.</p>
+
+<p>Разработчики отмечают в
+<a href="https://github.com/rakudo/rakudo/blob/2016.01/docs/announce/2016.01.md">анонсе</a>,
+что новые релизы Perl 6 в этом году могут содержать новую функциональность,
+которая не является частью спецификации v6.c. Данные возможности можно будет
+включать с помощью прагм, работающих в лексической области видимости. При этом
+будет гарантироваться, что всё, работающее согласно спецификации v6.c, будет
+продолжать работать. Кроме того ожидаются и инкрементальные изменения самой
+спецификации.</p>
+
+<p>К сожалению, до сих пор не выпущен новый дистрибутив «Rakudo Star», содержащий
+стабильный Rakudo, наборы модулей и документацию, как и не выпущены msi-пакеты
+для установки в системе Windows. <del>Никакого инсайда по этому поводу пока не
+поступало</del>.</p>
+
+<p><em><strong>P.S.</strong></em> Для предварительного тестирования доступен первый релиз-кандидат
+«Rakudo Star»
+<a href="http://hack.p6c.org/~moritz/rakudo-star-2016.01-RC0.tar.gz">2016.01-RC0</a>.</p>
+
+<p><em><strong>P.P.S.</strong></em> Выпущен экстренный релиз Rakudo
+<a href="http://rakudo.org/downloads/rakudo/rakudo-2016.01.1.tar.gz">2016.01.1</a>,
+исправляющий проблему в процессе инсталляции модулей CORE. Проблема актуальна
+если при инсталляции используется параметр <code>DESTDIR</code>, указывающий путь к
+каталогу для установки (как правило, при сборке rpm/deb пакетов).</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+            </p>
+        ]]></content>
+        <updated>2016-02-02T00:00:00Z</updated>
+        <category term="Perl6" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/12/26/01-released-perl-6/</id>
+        <title>Вышел Perl 6.0</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/12/26/01-released-perl-6/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Как и было обещано, на рождество вышел первый стабильный релиз Perl 6, который
+получил кодовое имя «Коледа» или по-русски Коляда, т.е. Сочельник — праздник
+кануна Рождества. Сообщество разработчиков Perl 6 в течении 15 лет шли к этому
+релизу. Данная версия компилятора соответствует официальной Perl 6 спецификации
+v6.c «Christmas» и проходит тесты <a href="https://github.com/perl6/roast">roast</a>.</p>
+
+<p>Вот что пишут в
+<a href="https://github.com/rakudo/rakudo/blob/nom/docs/announce/2015.12.md">анонсе</a> о
+языке Perl 6:</p>
+
+<ul>
+<li><p>Сохранил главные ценности Perl: выразительность и способность решать
+поставленные задачи, он отражает влияние естественного языка и расширяет
+границы дизайна языка.</p></li>
+<li><p>Имеет чистый современный синтаксис, основанный на схожих конструкциях, но
+пересмотревший те вещи, которые требовали пересмотра.</p></li>
+<li><p>По-настоящему мультипарадигменный, включающий элегантный
+объектно-ориентированный, функциональный, процедурный и параллельный подходы в
+программировании.</p></li>
+<li><p>Служит как эффективный язык-клей: простота вызовов C/C++ (через NativeCall) и
+Perl5 (с помощью Inline::Perl5).</p></li>
+<li><p>Значительно пересмотрен и создан новый стандарт для регулярных выражений,
+который расширяем до полноценных грамматик, достаточно мощных, чтобы
+разбирать синтаксис самого Perl 6.</p></li>
+<li><p>Отличная поддержка Юникода со строками, работающих на уровне графем.</p></li>
+<li><p>Лексические уровень и инкапсуляция, позволяющие легко проводить рефакторинг.</p></li>
+<li><p>Расширяемое мета-программирование, определяемые пользователем операторы и роли.</p></li>
+</ul>
+
+<p>Стабильный релиз не означает, что там нет багов или он работает безупречно.
+Безусловно будут выпускаться новые версии и стабильные релизы, но это релиз
+самый первый, который ознаменует начало новой эпохи. Спецификация языка и тест
+roast теперь надолго будет зафиксированы на версии v6.c, а это означает, что
+синтаксис и фичи языка уже не будут меняться. Будет дописываться документация и
+выпускаться книги по языку Perl 6, которые можно смело начинать изучать —
+изменений в обозримом будущем не будет. По крайне мере, не раньше, чем выйдет
+спецификация языка 6.d (Diwali).</p>
+
+<p>Загрузить компилятор Perl 6 Rakudo 2015.12 можно из
+<a href="http://rakudo.org/downloads/rakudo/">rakudo.org/downloads/rakudo/</a>. Релиз
+дистрибутива Perl 6 «Rakudo Start» с компилятором Rakudo, документацией и
+модулями вскоре появится в
+<a href="http://rakudo.org/downloads/star/">rakudo.org/downloads/star/</a></p>
+
+<p>Следующий релиз №95 Rakudo Perl 6 ожидается 16 января 2016.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+            </p>
+        ]]></content>
+        <updated>2015-12-26T00:00:00Z</updated>
+        <category term="Perl6" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/11/29/01-rakudo-star-2015-11/</id>
+        <title>Релиз Perl6-дистрибутива «Rakudo Star» 2015.11</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/11/29/01-rakudo-star-2015-11/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>28 ноября 2015 года был выпущен ноябрьский
+<a href="http://rakudo.org/2015/11/28/announce-rakudo-star-release-2015-11-now-in-beta/">релиз</a>
+Perl6-дистрибутива «Rakudo Star» 2015.11. Это первая официальная бета-версия
+дистрибутива (поскольку октябрьский релиз так и не появился).</p>
+
+<p>Этот релиз «Rakudo Star» был выпущен с поддержкой бэкенда MoarVM (все модули
+проходят тесты на всех поддерживаемых платформах). JVM бэкенд в данной версии
+не является полнофункциональным, поэтому рекомендуется использовать только
+бэкенд MoarVM.</p>
+
+<p>В мире Perl 6 есть различие между языком «Perl 6» и конкретной реализацией
+языка, такой как «Rakudo Star». Данный релиз содержит компилятор Perl 6
+<a href="https://github.com/rakudo/rakudo/blob/nom/docs/announce/2015.11.md">Rakudo 2015.11</a>
+с кодовым именем «Bend» и бэкенд <a href="http://moarvm.org/">MoarVM 2015.11</a>, а также
+различные модули, документацию и другие полезные ресурсы от сообщества.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/11/29/01-rakudo-star-2015-11/#section-2">Читать дальше &rarr;</a></p>
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+            </p>
+        ]]></content>
+        <updated>2015-11-29T00:00:00Z</updated>
+        <category term="Perl6" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/10/23/01-rakudo-perl-6-beta/</id>
+        <title>Релиз официальной бета-версии компилятора Rakudo Perl 6</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/10/23/01-rakudo-perl-6-beta/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Выпущена официальная бета-версия компилятора Rakudo Perl 6 с кодовым именем
+<em>«Niceville»</em>. Это первый кандидат Perl 6 компилятора грядущего
+«рождественского» релиза, который ожидается 17 декабря 2015 года.</p>
+
+<p>Загрузить исходный код можно по
+<a href="http://rakudo.org/downloads/rakudo/rakudo-2015.10.tar.gz">ссылке</a>. Следует
+отметить, что это <strong>не</strong> дистрибутив «Rakudo Star», который содержит помимо
+компилятора Rakudo ещё набор полезных модулей, утилиту для установки Perl 6
+модулей Panda, а также последнюю версию текста книги «Using Perl 6». Как только
+будет подготовлен новый релиз Rakudo Star его можно будет загрузить
+<a href="http://rakudo.org/downloads/star/">отсюда</a> (включая msi-пакеты для установки
+под Windows).</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/10/23/01-rakudo-perl-6-beta/#section-2">Читать дальше &rarr;</a></p>
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+            </p>
+        ]]></content>
+        <updated>2015-10-23T00:00:00Z</updated>
+        <category term="Perl6" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/10/07/01-larry-wall-unveils-perl-6/</id>
+        <title>Ларри Уолл официально представил Perl 6</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/10/07/01-larry-wall-unveils-perl-6/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>5-го октября, как и
+<a href="http://perlnews.ru/blog/2015/09/09/01-perl6-presentation/">планировалось</a> на
+площадке Канбар форума в Сан-Франциско Ларри Уолл официально представил Perl 6.
+Бета-версию можно загрузить с сайта <a href="http://www.perl6.org/">www.perl6.org</a>
+(который на днях также обновил дизайн). Как пошутил Ларри Уолл, теперь
+необходимо сосредоточиться над исправлением ошибок, чтобы люди не восприняли их
+как новые фичи языка. Финальный релиз языка Perl 6 произойдёт накануне
+рождества и на этот раз точно известен год этого события — 2015.</p>
+
+<p>Доклад целиком был посвящён возможностям языка. Особо подчёркивалась
+возможности мета-программирования языка, ленивые вычисления, возможность
+встраивания других языков, например, Python и Lua уже в стандартной
+Inline-библиотеке (что было сопровождено цитатой: <em>«This is why we say all
+languages are religious dialects of Perl 6»</em> — <em>«Вот почему мы говорим, что все
+другие языки — это религиозные диалекты Perl 6»)</em>.</p>
+
+<p>Презентация прошла без особого шума, появился лишь один
+<a href="http://www.pigdog.org/auto/software_jihad/link/3138.html">пост</a> в журнале
+PigDog, где участник рассказывает детали прошедшего мероприятия. Но этого было
+достаточно, чтобы всколыхнуть общественность: <a href="https://news.ycombinator.com/item?id=10341832">новость на
+hackernews</a> уже имеет более 240
+комментариев.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+            </p>
+        ]]></content>
+        <updated>2015-10-07T00:00:00Z</updated>
+        <category term="Perl6" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/09/28/01-rakudo-star-2015-09/</id>
+        <title>Релиз Perl6-дистрибутива «Rakudo Star» 2015.09</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/09/28/01-rakudo-star-2015-09/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>25 сентября 2015 года был выпущен сентябрьский
+<a href="http://rakudo.org/2015/09/25/announce-rakudo-star-release-2015-09/">релиз</a>
+Perl6-дистрибутива «Rakudo Star» 2015.09 для «ранних адептов».</p>
+
+<p>Этот релиз «Rakudo Star» был выпущен с поддержкой бэкенда MoarVM (все модули
+проходят тесты на всех поддерживаемых платформах). JVM бэкенд в данной версии
+не функционирует, но его работоспособность будет восстановлена в будущих
+релизах.</p>
+
+<p>В мире Perl 6 есть различие между языком «Perl 6» и конкретной реализацией
+языка, такой как «Rakudo Star». Данный релиз содержит компилятор Perl 6
+<a href="https://github.com/rakudo/rakudo/blob/nom/docs/announce/2015.09.md">Rakudo 2015.09</a>
+и бэкенд <a href="http://moarvm.org/">MoarVM 2015.09</a>, а также различные модули,
+документацию и другие полезные ресурсы от сообщества.</p>
+
+<p>Данный релиз не был объявлен «официальной бетой» релиза Perl6 1.0, которая
+согласно плану выпуска должна быть выпущена вскоре после дня рождения Ларри
+Уолла (27 сентября). Но на IRC-канале #perl6 в день своего рождения Ларри Уолл
+сообщил:</p>
+
+<blockquote>
+  <p><a href="http://irclog.perlgeek.de/perl6/2015-09-27#i_11280677">06:19</a> <strong>TimToady</strong> JimmyZ: на самом деле это бета официального релиза, а не официальный бета релиз :)<br>
+  но мы, разумеется, прекратим вносить изменения в язык после моего дня рождения, и если захочется, можем обозначить версию набора тестов как «первую бету», но это бета набора тестов, а не релиза, поэтому на самом деле октябрьский релиз Rakudo станет первой «бетой», как мне кажется.<br>
+  <a href="http://irclog.perlgeek.de/perl6/2015-09-27#i_11280727">06:50</a> <strong>TimToady</strong> JimmyZ: с другой стороны, сентябрьский релиз весьма близок к качеству беты.<br>
+  <a href="http://irclog.perlgeek.de/perl6/2015-09-27#i_11280735">07:03</a> <strong>TimToady</strong> да, настал мой день рождения :)<br>
+  <a href="http://irclog.perlgeek.de/perl6/2015-09-27#i_11280736">07:04</a> <strong>TimToady</strong> Теперь мы официально в статусе беты. :)</p>
+</blockquote>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+            </p>
+        ]]></content>
+        <updated>2015-09-28T00:00:00Z</updated>
+        <category term="Perl6" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/09/09/01-perl6-presentation/</id>
+        <title>Ларри Уолл официально представит Perl 6</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/09/09/01-perl6-presentation/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>5 октября 2015 года на площадке Канбар форума в Сан-Франциско Ларри Уолл
+официально
+<a href="http://perl6releasetalk.ticketleap.com/perl-tech-talk/details">представит</a>
+финальную реализацию языка программирования Perl 6. Спонсором мероприятия
+выступает компания <a href="http://www.craigslist.org/about/">Craigslist</a> (текущий
+работодатель Ларри Уолла). Открыта регистрация.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+            </p>
+        ]]></content>
+        <updated>2015-09-09T00:00:00Z</updated>
+        <category term="Perl6" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/08/07/01-ctags-perl6/</id>
+        <title>В ctags появилась поддержка Perl 6</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/08/07/01-ctags-perl6/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Дмитрий Тихонов
+<a href="http://blogs.perl.org/users/dmitri/2015/08/ctags-now-supports-perl-6.html">анонсировал</a>
+поддержку языка Perl 6 в Universal Ctags.</p>
+
+<p>Проект <a href="https://ctags.io/">Universal Ctags</a> является наследником <a href="http://ctags.sourceforge.net/">Exuberant
+Ctags</a> — самой популярной реализации утилиты
+ctags, которая создаёт индексный файл с именами программных объектов
+(переменных, функций, методов, макросов и прочих элементов в зависимости от
+языка программирования), присутствующих в исходном коде. Поддерживающий формат
+ctags текстовый редактор может использовать индексный файл для автодополнения,
+поиска и подсветки тегов.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+            </p>
+        ]]></content>
+        <updated>2015-08-07T00:00:00Z</updated>
+        <category term="Perl6" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/04/06/02-wenzperl-donate-perl6.html</id>
+        <title>WenZPerl пожертвовали 10&#39;000 € в разработку Perl 6</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/04/06/02-wenzperl-donate-perl6.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Согласно
+<a href="http://news.perlfoundation.org/2015/04/wenzperl-donate-10000-eur-to-n.html">сообщению</a>
+фонда Perl, голландская консалтинговая компания WenZPerl перечислила 10&#39;000 €
+на разработку Perl 6. Эти средства, а также средства фонда пошли на
+финансирование гранта на 25&#39;000 $ для Джонатана Уортингтона основного
+разработчика компилятора  Rakudo Perl 6 и MoarVM.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+            </p>
+        ]]></content>
+        <updated>2015-04-06T00:00:00Z</updated>
+        <category term="Perl6" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/04/01/01-android6-on-perl6.html</id>
+        <title>Android 6 будет работать на Perl 6</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/04/01/01-android6-on-perl6.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Как сообщают внутренние источники в Гугл, в связи с судебной тяжбой Оракла
+против Гугл из-за виртуальной машины Java Dalvik, было принято решение выбрать
+другую виртуальную машину и язык для платформы Android.
+<a href="http://www.moarvm.com/">MoarVM</a> и язык <a href="http://perl6.org/">Perl 6</a> показались
+команде Android весьма перспективными и была начата работа над портированием
+Perl 6 на Android. Это также объясняет неожиданный
+<a href="http://perlnews.ru/blog/2015/02/02/perl6-on-christmas-2015.html">доклад</a> Ларри
+Уолла на FOSDEM о том, что релиз Perl 6 состоится на Рождество 2015 года, ведь
+именно на этот период планируется выход Android 6.0 под кодовым названием
+<em>Camelia Wagashi</em>. Как стало известно, ранние наработки и исходный код
+<a href="https://code.google.com/p/perldroid/">проекта</a> уже просочились в сеть и
+активно изучаются энтузиастами.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+                <a href="http://perlnews.ru/blog/tag/aprilfd/">AprilFD</a>
+            </p>
+        ]]></content>
+        <updated>2015-04-01T00:00:00Z</updated>
+        <category term="Perl6" />
+        <category term="AprilFD" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/03/21/02-rakudo-star-2015-03.html</id>
+        <title>Релиз Perl6-дистрибутива «Rakudo Star» 2015.03</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/03/21/02-rakudo-star-2015-03.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Выпущен очередной <a href="http://rakudo.org/downloads/star/">релиз</a> полезного и
+работоспособного Perl6-дистрибутива «Rakudo Star» 2015.03.</p>
+
+<p>«Rakudo Star» выпускается с поддержкой бэкендов MoarVM и JVM. В мире Perl 6
+есть различие между языком «Perl 6» и конкретной реализацией языка, такой как
+«Rakudo Star». Данный релиз содержит компилятор Perl 6
+<a href="https://github.com/rakudo/rakudo">Rakudo</a> и бэкенд
+<a href="http://moarvm.org/">MoarVM</a>, а также различные модули, документацию и другие
+полезные ресурсы от сообщества.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/03/21/02-rakudo-star-2015-03.html#section-2">Читать дальше &rarr;</a></p>
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+            </p>
+        ]]></content>
+        <updated>2015-03-21T00:00:00Z</updated>
+        <category term="Perl6" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/06/02-timtoady-rebuild-fm-interview.html</id>
+        <title>Интервью Ларри Уолла в подкасте rebuild.fm</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/06/02-timtoady-rebuild-fm-interview.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Вслед за Рикардо Сигнесом Тацухико Миягава взял интервью у создателя Perl —
+Ларри Уолла. Подкаст также проходил в Бельгии после крупнейшей европейской
+конференции FOSDEM, на которой Ларри Уолл сделал давно обещанный анонс выпуска
+стабильного релиза Perl 6 в 2015 году. Темой выпуска естественно стал Perl 6.</p>
+
+<p>Запись интервью на английском языке доступна на <a href="http://rebuild.fm/78/">сайте</a>
+подкаста rebuild.fm. Далее последует краткое изложение беседы.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/02/06/02-timtoady-rebuild-fm-interview.html#section-2">Читать дальше &rarr;</a></p>
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+                <a href="http://perlnews.ru/blog/tag/fosdem/">FOSDEM</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-06T00:00:00Z</updated>
+        <category term="Perl6" />
+        <category term="FOSDEM" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/05/01-love-perl6-cobol.html</id>
+        <title>Мелочи, из-за которых любишь Perl 6 (и Кобол)</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/05/01-love-perl6-cobol.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Вышла прекрасная
+<a href="http://blogs.perl.org/users/ovid/2015/02/a-little-thing-to-love-about-perl-6-and-cobol.html">статья</a>
+Кёртиса По (Ovid), где на примере работы с дробными числами показано насколько
+хорошо продуман Perl 6, вплоть до самых мелочей.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/02/05/01-love-perl6-cobol.html#section-2">Читать дальше &rarr;</a></p>
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-05T00:00:00Z</updated>
+        <category term="Perl6" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/02/perl6-on-christmas-2015.html</id>
+        <title>Релиз Perl6 ожидается в 2015 году</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/02/perl6-on-christmas-2015.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>На проходящей в Брюсселе конференции FOSDEM, Ларри Уолл в своём докладе <em>Get
+Ready to Party!</em>
+<a href="http://blogs.perl.org/users/shadowcat_mdk/2015/02/fosdem-2015-its-christmas.html">анонсировал</a>,
+что разработчики Perl 6 постараются выпустить релиз 1.0 для разработчиков на
+61-й день рождения Ларри в этом году, ну а первая стабильная версия будет
+выпущена на Рождество 2015 года.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+                <a href="http://perlnews.ru/blog/tag/fosdem/">FOSDEM</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-02T00:00:00Z</updated>
+        <category term="Perl6" />
+        <category term="FOSDEM" />
+    </entry>
+</feed>
+

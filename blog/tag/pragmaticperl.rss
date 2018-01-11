@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/pragmaticperl/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/pragmaticperl.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>34-й выпуск журнала Pragmatic Perl</title>
+            <link>http://perlnews.ru/blog/2015/12/31/01-pragmatic-perl-34/</link>
+            <guid>http://perlnews.ru/blog/2015/12/31/01-pragmatic-perl-34/</guid>
+            <description><![CDATA[
+                <p>Вышел 34-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/34"><img alt="Pragmatic Perl 34" src="http://perlnews.ru/blog/2015/12/31/01-pragmatic-perl-34/pp34.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><p><a href="http://pragmaticperl.com/a/19c65174">От редактора</a>, Вячеслав Тихановский</p></li>
+<li><p><a href="http://pragmaticperl.com/a/03f5a6a7">Впечатления от воркшопа Saint Perl 2015</a>, Владимир Леттиев<br>
+<em>Не изменяя традиции 19 декабря 2015 г. прошёл седьмой ежегодный воркшоп
+Saint Perl для всех любителей и профессионалов мира Perl в Санкт-Петербурге</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/513cbaaa">Взгляд на 2015 г.</a>, Андрей Шитов<br>
+<em>Краткий обзор заметных событий в мире Perl за прошедший год</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/08df5d9c">Управление модулями и прекомпиляция в Perl
+6</a>, Владимир Леттиев<br>
+<em>25 декабря 2015 г. вышел первый стабильный релиз Rakudo Perl 6, среди новшеств которого совершенно новая система управления модулями и прекомпиляция. Рассмотрим в деталях процесс загрузки, разрешения зависимостей и компиляции модулей</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/c5e39c3c">Perl 6-винегрет</a>, Андрей Шитов<br>
+<em>Новогодний оливье — сборная солянка про разные интересные штуки в Perl 6</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/c8d2c40d">Использование Rust из Perl</a>, Денис Федосеев<br>
+<em>Встраивание Rust в Perl с помощью FFI</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/60f97f58">Обзор CPAN за ноябрь 2015 г.</a>, Владимир Леттиев<br>
+<em>Рубрика с обзором интересных новинок CPAN за прошедший месяц.</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/f47a739a">Интервью с Дмитрием Шаматриным</a>, Вячеслав Тихановский<br>
+<em>Дмитрий Шаматрин — программист, с недавнего времени организатор Perl-конференций</em></p></li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Thu, 31 Dec 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>33-й выпуск журнала Pragmatic Perl</title>
+            <link>http://perlnews.ru/blog/2015/11/30/01-pragmatic-perl-33/</link>
+            <guid>http://perlnews.ru/blog/2015/11/30/01-pragmatic-perl-33/</guid>
+            <description><![CDATA[
+                <p>Вышел 33-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/33"><img alt="Pragmatic Perl 33" src="http://perlnews.ru/blog/2015/11/30/01-pragmatic-perl-33/pp33.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><p><a href="http://pragmaticperl.com/a/850af119">От редактора</a>, Вячеслав Тихановский</p></li>
+<li><p><a href="http://pragmaticperl.com/a/1580a4dc">Ближайшие конференции</a>, Андрей Шитов</p></li>
+<li><p><a href="http://pragmaticperl.com/a/91b679d2">Сравнение веб-клиентов</a>, Тигран Оганесян<br>
+<em>Практическое сравнение веб-клиентов на реальной задаче</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/cba4f72f">Perl 6 для веба</a>, Андрей Шитов<br>
+<em>О том, как на Perl 6 уже сегодня поднять простой работающий веб-сервер</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/f1cb96fd">Обзор CPAN за октябрь 2015 г.</a>, Владимир Леттиев<br>
+<em>Рубрика с обзором интересных новинок CPAN за прошедший месяц</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/19b41e12">Интервью с Рикардо Мартинесом</a>, Вячеслав Тихановский<br>
+<em>Рикардо Мартинес — Perl-программист, работает над devops-сервисами для крупных клиентов из бизнес-сектора</em></p></li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 30 Nov 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>32-й выпуск журнала Pragmatic Perl</title>
+            <link>http://perlnews.ru/blog/2015/10/30/01-pragmatic-perl-32/</link>
+            <guid>http://perlnews.ru/blog/2015/10/30/01-pragmatic-perl-32/</guid>
+            <description><![CDATA[
+                <p>Вышел 32-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/32"><img alt="Pragmatic Perl 32" src="http://perlnews.ru/blog/2015/10/30/01-pragmatic-perl-32/pp32.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><p><a href="http://pragmaticperl.com/a/050b3517">От редактора</a>, Вячеслав Тихановский</p></li>
+<li><p><a href="http://pragmaticperl.com/a/b1d1b4e3">Анонс коллективного блога <em>@backendsecret</em></a>, Роман Миловский</p></li>
+<li><p><a href="http://pragmaticperl.com/a/76e3a12a">Как стать Perl-автором</a>, Георгий Бажуков<br>
+<em>Пошаговое руководство по загрузке своего первого модуля на CPAN</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/0d2e8f44">Развертывание Perl приложений при помощи Docker</a>, Денис Федосеев<br>
+<em>Плюсы и минусы такой инфраструктуры</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/d2cd9003">Обзор CPAN за сентябрь 2015 г.</a>, Владимир Леттиев<br>
+<em>Рубрика с обзором интересных новинок CPAN за прошедший месяц</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/bde59ec9">Интервью с Анатолием Шарифулиным</a>, Вячеслав Тихановский<br>
+<em>Анатолий Шарифулин (sharifulin) — Perl-программист, харизматичный докладчик, предприниматель</em></p></li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Fri, 30 Oct 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Интервью с Вячеславом Тихановским</title>
+            <link>http://perlnews.ru/blog/2015/09/23/01-vti-interview/</link>
+            <guid>http://perlnews.ru/blog/2015/09/23/01-vti-interview/</guid>
+            <description><![CDATA[
+                <p>Вячеслав Тихановский aka <a href="https://twitter.com/vtivti">@vti</a> — известный
+Perl-хакер, редактор журнала <a href="http://pragmaticperl.com">«Pragmatic Perl»</a> дал
+эксклюзивное интервью PerlNews.Ru.</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/09/23/01-vti-interview/#section-2">Читать дальше &rarr;</a></p>
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/interview/">interview</a>
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 23 Sep 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>31-й выпуск журнала Pragmatic Perl</title>
+            <link>http://perlnews.ru/blog/2015/09/21/01-pragmatic-perl-31/</link>
+            <guid>http://perlnews.ru/blog/2015/09/21/01-pragmatic-perl-31/</guid>
+            <description><![CDATA[
+                <p>Вышел 31-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/31"><img alt="Pragmatic Perl 31" src="http://perlnews.ru/blog/2015/09/21/01-pragmatic-perl-31/pp31.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><p><a href="http://pragmaticperl.com/a/220ded7c">От редактора</a>, Вячеслав Тихановский</p></li>
+<li><p><a href="http://pragmaticperl.com/a/00105e92">«YAPC::Europe 2015»</a>, Андрей Шитов<br>
+<em>Рассказ о конференции</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/914d9672">«Прецизионные бенчмарки Perl»</a>,
+Владимир Леттиев<br> <em>Какой Perl самый быстрый? Имеет ли смысл переходить на
+cperl или stableperl? Возможно ли провести точное сравнение
+производительности разных perl?</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/ab5b575a">Обзор CPAN за август 2015 г.</a>, Владимир
+Леттиев<br> <em>Рубрика с обзором интересных новинок CPAN за прошедший месяц</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/2762980f">Интервью с Алексеем Капрановым</a>,
+Вячеслав Тихановский<br> <em>Алексей Капранов (kappa) — Perl-программист со
+стажем, менеджер крупных проектов на Perl и не только</em></p></li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 21 Sep 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>30-й выпуск журнала Pragmatic Perl</title>
+            <link>http://perlnews.ru/blog/2015/08/28/01-pragmatic-perl-30/</link>
+            <guid>http://perlnews.ru/blog/2015/08/28/01-pragmatic-perl-30/</guid>
+            <description><![CDATA[
+                <p>Вышел 30-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/30"><img alt="Pragmatic Perl 30" src="http://perlnews.ru/blog/2015/08/28/01-pragmatic-perl-30/pp30.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><p><a href="http://pragmaticperl.com/a/8cc53232">От редактора</a>, Вячеслав Тихановский</p></li>
+<li><p><a href="http://pragmaticperl.com/a/d33bf416">Отчет о конференции «Perl Mama» от
+организатора</a>, Дмитрий Шаматрин<br>
+<em>25-26 июля в Одессе мы провели небольшой перловый воркшоп — PerlMama, с
+единой целью — провести перловое событие в Украине</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/fcefd736">Работаем с legacy. Паттерн «извлечение функции» и оценка
+результатов</a> , Наталья Савенкова<br> <em>Из
+личного опыта рефакторинга устаревшего кода</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/0d5688a9">SWAT — простое тестирование
+веб-приложений</a>, Алексей Мележик<br>
+<em>Позволяет тестировать веб-приложения используя специально подготовленную
+иерархию файлов</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/eede44eb">Обзор CPAN за июль 2015 г.</a>, Владимир
+Леттиев<br> <em>Рубрика с обзором интересных новинок CPAN за прошедший месяц</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/9b5b5c14">Интервью с Филиппом Брухатом</a>, Вячеслав
+Тихановский<br> <em>Филипп Брухат (Philippe Bruhat) — автор модулей на CPAN,
+подборки секретных операторов perlsecret, сооснователь конференций YAPC::EU</em></p></li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Fri, 28 Aug 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>29-й выпуск журнала Pragmatic Perl</title>
+            <link>http://perlnews.ru/blog/2015/07/22/01-pragmatic-perl-29/</link>
+            <guid>http://perlnews.ru/blog/2015/07/22/01-pragmatic-perl-29/</guid>
+            <description><![CDATA[
+                <p>Вышел 29-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/29"><img alt="Pragmatic Perl 29" src="http://perlnews.ru/blog/2015/07/22/01-pragmatic-perl-29/pp29.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><p><a href="http://pragmaticperl.com/a/3887a41e">«От редактора»</a>, Вячеслав Тихановский</p></li>
+<li><p><a href="http://pragmaticperl.com/a/67466ac8">«R(?)ex на практике»</a>, Денис
+Федосеев<br> <em>В жизни каждого человека настает момент, когда ему становится
+лениво делать одно и то же на удаленных серверах и хочется автоматизации</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/afc82804">«Инструменты для поиска зависимостей в
+скрипте»</a>, Наталья Савенкова<br>
+<em>Практическая статья про инструменты анализа зависимостей</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/e1de0fa9">«Обзор CPAN за июнь 2015 г.»</a>, Владимир
+Леттиев<br> <em>Рубрика с обзором интересных новинок CPAN за прошедший месяц</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/efd1add7">«Интервью с Дэвидом Голденом»</a>,
+Вячеслав Тихановский<br> <em>Дэвид Голден (David Golden) — автор многих модулей
+на CPAN, текущий разработчик официального драйвера MongoDB</em></p></li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 22 Jul 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>28-й выпуск журнала Pragmatic Perl</title>
+            <link>http://perlnews.ru/blog/2015/06/04/01-pragmatic-perl-28/</link>
+            <guid>http://perlnews.ru/blog/2015/06/04/01-pragmatic-perl-28/</guid>
+            <description><![CDATA[
+                <p>Вышел 28-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/28"><img alt="Pragmatic Perl 28" src="http://perlnews.ru/blog/2015/06/04/01-pragmatic-perl-28/pp28.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><p><a href="http://pragmaticperl.com/a/77a0f81d">«От редактора»</a>, Вячеслав Тихановский</p></li>
+<li><p><a href="http://pragmaticperl.com/a/cb27f7c0">«Анонс рязанского Perl-воркшопа —
+2015»</a>, Андрей Шитов<br> <em>Рязанский Perl
+Workshop 2015 — бесплатная конференция, посвященная языку программирования
+Perl, которая впервые проводится в Рязани.</em></p></li>
+<li><p><a href="http://pragmaticperl.com/issues/28/pragmaticperl-28-%D0%B0%D0%BD%D0%BE%D0%BD%D1%81-perl-mama-2015.html">«Анонс «Perl Mama» —
+2015»</a>,
+Дмитрий Шаматрин<br> <em>Таки первая одесская конференция по Perl — Perl Mama
+2015</em></p></li>
+<li><p><a href="http://pragmaticperl.com/issues/28/pragmaticperl-28-perl-golf-%D0%BD%D0%B0-yapcrussia-2015.html">«Perl Golf на YAPC::Russia
+2015»</a>,
+Андрей Шитов<br> <em>Рассказ про соревнование Perl Golf, проходившее в течение
+двух дней на майской YAPC::Russia в Москве</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/608808de">«Рефакторинг Legacy»</a>, Наталья
+Савенкова<br> <em>Рефакторинг устаревшего кода в примерах.</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/83c729af">«Что нового в Perl 5.22»</a>, Андрей
+Шитов<br> <em>Краткий обзор наиболее заметных изменений в свежем стабильном
+релизе перла.</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/f5d40b36">«Полный список изменений в Perl
+5.22.0»</a>, Владимир Леттиев<br> <em>Перевод
+документа perl5220delta.pod на русский язык.</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/ca1a1a1e">«Обзор CPAN за май 2015 г.»</a>, Владимир
+Леттиев<br> <em>Рубрика с обзором интересных новинок CPAN за прошедший месяц.</em></p></li>
+<li><p><a href="http://pragmaticperl.com/a/64dbde54">«Интервью с Рене Беккером»</a>, Вячеслав
+Тихановский<br> <em>Рене Беккер (Renée Bäcker) — немецкий Perl-программист,
+выпускал журнал $foo, активно участвует в немецком Perl-сообществе</em></p></li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Thu, 04 Jun 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>27-й выпуск журнала Pragmatic Perl</title>
+            <link>http://perlnews.ru/blog/2015/05/06/02-pragmatic-perl-27.html</link>
+            <guid>http://perlnews.ru/blog/2015/05/06/02-pragmatic-perl-27.html</guid>
+            <description><![CDATA[
+                <p>Вышел 27-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/27"><img alt="Pragmatic Perl 27" src="http://perlnews.ru/i/2015-05-06-pp27.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><a href="http://pragmaticperl.com/issues/27/pragmaticperl-27-%D0%BE%D1%82-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B0.html">От
+редактора</a>,
+Вячеслав Тихановский</li>
+<li><a href="http://pragmaticperl.com/a/93ff29e4">«Отладка приложений на AnyEvent»</a>,
+Владимир Леттиев<br> <em>Отладка асинхронных приложений часто затруднена из-за
+нелинейного характера выполняемого кода, когда ошибки проявляются под
+нагрузкой или в каких-то исключительных трудновоспроизводимых ситуациях.
+Привычные инструменты могут быть неудобны и неинформативны. Если приложение
+построено на основе AnyEvent, то для него уже существуют готовые рецепты
+отладки.</em></li>
+<li><a href="http://pragmaticperl.com/a/a45947c6">«Операторы Perl 6. Часть 1»</a>, Андрей
+Шитов<br> <em>Обзор префиксных, постфиксных и инфиксных операторов Perl 6</em></li>
+<li><a href="http://pragmaticperl.com/a/8be9c3af">«Метаоператоры в Perl 6»</a>, Андрей
+Шитов<br><em>Рассмотрены доступные в языке метаоператоры — операторы,
+расширяющие синтаксические возможности языка, используя другие операторы</em></li>
+<li><a href="http://pragmaticperl.com/a/fde694d9">«Обзор CPAN за апрель 2015 г.»</a>,
+Владимир Леттиев<br> <em>Рубрика с обзором интересных новинок CPAN за прошедший
+месяц.</em></li>
+<li><a href="http://pragmaticperl.com/a/3f2ba52d">«Интервью с Сюзанной Шмидт»</a>, Вячеслав
+Тихановский<br><em>Сюзанна Шмидт (sushee) — политолог, которая стала
+Perl-программистом</em></li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 06 May 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>26-й выпуск журнала Pragmatic Perl</title>
+            <link>http://perlnews.ru/blog/2015/04/06/01-pragmatic-perl-26.html</link>
+            <guid>http://perlnews.ru/blog/2015/04/06/01-pragmatic-perl-26.html</guid>
+            <description><![CDATA[
+                <p>Вышел 26-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/26"><img alt="Pragmatic Perl 26" src="http://perlnews.ru/i/2015-04-06-pp26.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><a href="http://pragmaticperl.com/a/8a95cb49">«От редактора»</a>, Вячеслав Тихановский</li>
+<li><a href="http://pragmaticperl.com/a/fe9713ca">«Анонс конференции YAPC::Russia
+2015»</a>,<br><em>YAPC::Russia — ежегодная
+конференция, посвященная языку программирования Perl и его сообществу ,
+которая проводится в Москве (под названием May Perl), Киеве (під назвою Perl
+Mova) и Санкт-Петербурге.</em></li>
+<li><a href="http://pragmaticperl.com/a/8b56c075">«Работа с WebSocket в Perl»</a>, Вячеслав
+Тихановский<br><em>Рассмотрены несколько подоходов при работе с технологией
+WebSocket из Perl</em></li>
+<li><a href="http://pragmaticperl.com/a/7f2b1caf">«Промисы в Perl 6»</a>, Андрей
+Шитов<br><em>Вторая часть обзора возможностей Perl 6 для параллельных и
+конкуррентных вычислений</em></li>
+<li><a href="http://pragmaticperl.com/a/678abff0">«Грамматики в Perl 6»</a>, Андрей
+Шитов<br><em>В этой статье рассказано об одной из наиболее мощных возможностей
+Perl 6 — грамматиках</em></li>
+<li><a href="http://pragmaticperl.com/a/f5d6b7f9">«Обзор CPAN за март 2015 г.»</a>, Владимир
+Леттиев<br><em>Рубрика с обзором интересных новинок CPAN за прошедший месяц.</em></li>
+<li><a href="http://pragmaticperl.com/a/c36cbdf5">«Интервью с Виктором Турским»</a>,
+Вячеслав Тихановский<br><em>Виктор Турский (koorchik) — украинский
+Perl-программист, сооснователь компании WebbyLab</em></li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 06 Apr 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>Юбилейный 25-й выпуск журнала Pragmatic Perl</title>
+            <link>http://perlnews.ru/blog/2015/03/02/01-pragmatic-perl-25.html</link>
+            <guid>http://perlnews.ru/blog/2015/03/02/01-pragmatic-perl-25.html</guid>
+            <description><![CDATA[
+                <p>Вышел 25-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><a href="http://pragmaticperl.com/issues/25"><img alt="Pragmatic Perl
+25" src="http://perlnews.ru/i/2015-03-02-pp25.png"></a></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><a href="http://pragmaticperl.com/a/5de89ad5">«От редактора. Два года журналу»</a>,
+Вячеслав Тихановский</li>
+<li><a href="http://pragmaticperl.com/a/ff47b001">«Подключение в Mojolicious модели для
+бизнес-логики»</a>, Александр Ружников<br>
+<em>Рассмотрен вариант автоматического подключения классов моделей из указанной
+директории</em></li>
+<li><a href="http://pragmaticperl.com/a/ed9ba38f">«Мутационное тестирование»</a>, Вячеслав
+Тихановский<br> <em>Еще один способ сделать Perl-код качественнее — мутировать
+тесты для нахождения непротестированного кода</em></li>
+<li><a href="http://pragmaticperl.com/a/07728152">«Про переменные и сигнатуры в Perl 6»</a>,
+Андрей Шитов<br> <em>В этой статье описаны интересные синтаксические возможности
+Perl 6, о которых не было упомянуто в прошлый раз</em></li>
+<li><a href="http://pragmaticperl.com/a/3afcabf9">«Модули в Perl 6»</a>, Андрей Шитов<br>
+<em>Краткий обзор основных моментов, которые полезно знать при работе с модулями
+в Perl 6</em></li>
+<li><a href="http://pragmaticperl.com/a/790238d5">«Обзор CPAN за февраль 2015 г.»</a>,
+Владимир Леттиев<br> <em>Рубрика с обзором интересных новинок CPAN за прошедший
+месяц.</em></li>
+<li><a href="http://pragmaticperl.com/a/540eafc7">«Интервью с Владимиром Леттиевым»</a>,
+Вячеслав Тихановский<br> <em>Владимир Леттиев (crux) — постоянный автор журнала,
+модулей на CPAN, основатель perlnews.ru</em></li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Mon, 02 Mar 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+        <item>
+            <title>24-й выпуск журнала Pragmatic Perl</title>
+            <link>http://perlnews.ru/blog/2015/02/04/xpragmatic-perl-24.html</link>
+            <guid>http://perlnews.ru/blog/2015/02/04/xpragmatic-perl-24.html</guid>
+            <description><![CDATA[
+                <p>Вышел 24-й выпуск журнала о современном Perl на русском <a href="http://pragmaticperl.com">Pragmatic Perl</a>.</p>
+
+<p><img alt="Pragmatic Perl 24" src="http://perlnews.ru/i/2015-02-04-pp24.png"></p>
+
+<p>В этом номере:</p>
+
+<ul>
+<li><a href="http://pragmaticperl.com/a/1943a7a7">«От редактора. Опрос и Форум»</a>, Вячеслав Тихановский</li>
+<li><a href="http://pragmaticperl.com/a/714c6571">«Тестирование черного ящика»</a>, Вячеслав Тихановский<br>
+<em>Рассмотрены особенности тестирования приложений в целом как черного ящика</em></li>
+<li><a href="http://pragmaticperl.com/a/67d2e8e0">«Реализация удаленного вызова процедур (RPC) в Perl с помощью Thrift»</a>, Олеся Кузьмина<br><em>Рассмотрены основы работы со Thrift в Perl</em></li>
+<li><a href="http://pragmaticperl.com/a/a96a82dd">«Fuzzing-тестирование perl-интерпретатора с помощью afl»</a>, Владимир Леттиев<br>
+<em>Закончились новогодние каникулы. Кто-то ездил отдыхать в жаркие страны, кто-то
+смотрел телевизор и не вылезал из-за(под) стола. Но были и те, кому было
+интересно провести бесчеловечные эксперименты с Perl. Об одном таком
+эксперименте и пойдёт речь.</em></li>
+<li><a href="http://pragmaticperl.com/a/099cda34">«Каналы в Perl 6»</a>, Андрей Шитов<br>
+<em>Первая часть обзора возможностей Perl 6 для параллельных и конкуррентных вычислений</em></li>
+<li><a href="http://pragmaticperl.com/a/22a4331e">«Perl 6, или Get ready to party»</a>, Андрей Шитов<br>
+<em>Заметки с выступления Ларри Уолла на Фосдеме</em></li>
+<li><a href="http://pragmaticperl.com/a/929564f0">«Обзор CPAN за январь 2015 г.»</a>, Владимир Леттиев<br>
+<em>Рубрика с обзором интересных новинок CPAN за прошедший месяц.</em></li>
+<li><a href="http://pragmaticperl.com/a/f3253fe7">«Интервью с Нилом Бауэрсом (Neil Bowers)»</a>, Вячеслав Тихановский<br>
+<em>Нил Бауэрс (Neil Bowers) — британский Perl-программист, инициатор
+соревнования CPAN Pull Request Challenge</em></li>
+</ul>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/pragmaticperl/">PragmaticPerl</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 04 Feb 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

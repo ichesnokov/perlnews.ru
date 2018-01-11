@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/moscow-pm/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2016-01-25T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/moscow-pm.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/moscow-pm/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2016/01/25/01-moscow-pm-meeting-4-feb-2016/</id>
+        <title>Встреча moscow.pm 4 февраля 2016 г.</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2016/01/25/01-moscow-pm-meeting-4-feb-2016/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Анонсирована <a href="https://corp.mail.ru/ru/press/events/168/">встреча</a> Moscow.pm 4
+февраля в 18.30 в офисе Mail.Ru Group.</p>
+
+<p>Программа мероприятия:</p>
+
+<ul>
+<li><p>«Технологии конкурентного программирования», Илья Чесноков (программист в UK2
+Group)</p></li>
+<li><p>«Учимся рисовать», Дмитрий Симонов (независимый программист)</p></li>
+<li><p>«Index Condition Pushdown», Павел Щербинин (руководитель групп разработки
+Новости и Hi-Tech в Mail.Ru Group)</p></li>
+</ul>
+
+<p>Не забудьте <a href="https://corp.mail.ru/ru/press/events/168/">зарегистрироваться</a>!</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/moscow-pm/">moscow.pm</a>
+            </p>
+        ]]></content>
+        <updated>2016-01-25T00:00:00Z</updated>
+        <category term="moscow.pm" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/05/29/02-may-perl-2015-video.html</id>
+        <title>Появились видеозаписи докладов YAPC::Russia 2015</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/05/29/02-may-perl-2015-video.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>На официальном
+<a href="http://www.youtube.com/channel/UCXG2gjCfXDkvg9TfPmNXPIg/videos">YouTube-канале</a>
+moscow.pm появились записи докладов YAPC::Russia 2015.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/yapc/">YAPC</a>
+                <a href="http://perlnews.ru/blog/tag/moscow-pm/">moscow.pm</a>
+            </p>
+        ]]></content>
+        <updated>2015-05-29T00:00:00Z</updated>
+        <category term="YAPC" />
+        <category term="moscow.pm" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/04/11/01-moscowpm-video.html</id>
+        <title>Выложены доклады moscow.pm от 5 марта 2015</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/04/11/01-moscowpm-video.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>На официальном
+<a href="https://www.youtube.com/channel/UCXG2gjCfXDkvg9TfPmNXPIg/videos">YouTube-канале</a>
+moscow.pm появились записи докладов группы от 5 марта 2015 года, посвящённые
+Perl 6:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=oFeoZ_t6kH0">«Perl 6 2.0»</a>, Андрей Шитов <iframe allowfullscreen frameborder="0" height="315" src="https://www.youtube.com/embed/oFeoZ_t6kH0" width="560"></iframe></li>
+<li><a href="https://www.youtube.com/watch?v=C6D7Ohll-FA">«Perl 6 сегодня: 8 лет спустя»</a>, Алексей Капранов, Яндекс <iframe allowfullscreen frameborder="0" height="315" src="https://www.youtube.com/embed/C6D7Ohll-FA" width="560"></iframe></li>
+</ul>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/moscow-pm/">moscow.pm</a>
+            </p>
+        ]]></content>
+        <updated>2015-04-11T00:00:00Z</updated>
+        <category term="moscow.pm" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/03/02/02-moscow-pm-meeting-5-mar-2015.html</id>
+        <title>Встреча moscow.pm 5 марта 2015 г.</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/03/02/02-moscow-pm-meeting-5-mar-2015.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Анонсирована <a href="http://corp.mail.ru/ru/press/events/58/">встреча</a> Moscow.pm 5
+марта в 19.30 в офисе Mail.Ru Group.</p>
+
+<p>Тема встречи целиком посвящена Perl 6. После доклада Ларри Уолла на Фосдеме,
+Perl 6 вновь обратил на себя пристальное внимание со стороны всего сообщества.
+На встрече ожидаются два доклада:</p>
+
+<ul>
+<li>«Perl 6 2.0», Андрей Шитов, организатор Perl-конференций;</li>
+<li>«Perl 6 сегодня: 8 лет спустя», Алексей Капранов, Яндекс.</li>
+</ul>
+
+<p>Не пропустите встречу!</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/moscow-pm/">moscow.pm</a>
+            </p>
+        ]]></content>
+        <updated>2015-03-02T00:00:00Z</updated>
+        <category term="moscow.pm" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/18/01-moscowpm-video.html</id>
+        <title>Выложены доклады moscow.pm от 5 февраля 2015</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/18/01-moscowpm-video.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>На официальном
+<a href="https://www.youtube.com/channel/UCXG2gjCfXDkvg9TfPmNXPIg/videos">YouTube-канале</a>
+moscow.pm появились записи докладов группы от 5 февраля 2015 года:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=zlf63A-lYaI">«О работе с документами .xls, .xlsx,
+.rtf»</a>, Наталья Савенкова,
+SHOP2YOU.RU</li>
+<li><a href="https://www.youtube.com/watch?v=RtSQ8U3NJvs">«Пластилиновый код»</a>, Елена
+Шишкина, Деньги Mail.Ru</li>
+<li><a href="https://www.youtube.com/watch?v=-Q7Cg8cEmRM">«FastQueue, очередь на Perl и
+Redis»</a>, Иван Соколов, REG.RU</li>
+</ul>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/moscow-pm/">moscow.pm</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-18T00:00:00Z</updated>
+        <category term="moscow.pm" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/12/01-moscowpm-video.html</id>
+        <title>Выложены новые видеозаписи докладов moscow.pm</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/12/01-moscowpm-video.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>На официальном
+<a href="https://www.youtube.com/channel/UCXG2gjCfXDkvg9TfPmNXPIg/videos">YouTube-канале</a>
+moscow.pm появились новые записи докладов группы от 6 февраля, 2 октября и 6
+ноября 2014 года:</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=bU8J2TB6ZeU">«Круглый стол о вопросах
+тестирования»</a>, Юрий Никулин,
+Moscow.pm, 6 февраля 2014</li>
+<li><a href="https://www.youtube.com/watch?v=CXGm9EWk_dU">«Array VS List»</a>, Павел
+Щербинин, Moscow.pm, 6 февраля 2014</li>
+<li><a href="https://www.youtube.com/watch?v=J9zUX90g4Lo">«Разработка и оптимизация программы на Perl под Raspberry
+Pi»</a>, Илья Чесноков, Moscow.pm,
+6 февраля 2014</li>
+<li><a href="https://www.youtube.com/watch?v=dlIlp5nwuwo">Встреча Moscow.pm 2 октября
+2014</a></li>
+<li><a href="https://www.youtube.com/watch?v=ruCwZw1D-0c">Встреча Moscow.pm 6 ноября
+2014</a></li>
+</ul>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/moscow-pm/">moscow.pm</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-12T00:00:00Z</updated>
+        <category term="moscow.pm" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/03/moscow-pm-meeting-5-feb-2015.html</id>
+        <title>Встреча moscow.pm 5 февраля 2015 г.</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/03/moscow-pm-meeting-5-feb-2015.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Павел Щербинин <a href="http://habrahabr.ru/company/mailru/blog/249255/">сообщает</a>,
+что 5 февраля в 19:30 в офисе Mail.Ru Group состоится очередная оффлайн-встреча
+группы Perl-программистов <a href="http://moscow.pm">moscow.pm</a>.</p>
+
+<p>Ожидаются три доклада:</p>
+
+<ul>
+<li>«О работе с документами .xls, .xlsx, .rtf», Наталья Савенкова, ex-СТО SHOP2YOU.RU</li>
+<li>«FastQueue — как мы сделали свою очередь на Perl и Redis», Иван Соколов, teamlead REG.RU</li>
+<li>«Пластилиновый код: как перестать кодить и начать жить», Елена Шишкина, ведущий программист Деньги Mail.Ru</li>
+</ul>
+
+<p>Не пропустите встречу!</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/moscow-pm/">moscow.pm</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-03T00:00:00Z</updated>
+        <category term="moscow.pm" />
+    </entry>
+</feed>
+

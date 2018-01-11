@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://perlnews.ru/blog/tag/cpanpr/</id>
+    <title>PerlNews.Ru</title>
+    <updated>2015-11-29T00:00:00Z</updated>
+    <link href="http://perlnews.ru/blog/tag/cpanpr.atom" rel="self" />
+    <link href="http://perlnews.ru/blog/tag/cpanpr/" rel="alternate" />
+    <generator version="0.087">Statocles</generator>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/11/29/02-24-pullrequests/</id>
+        <title>24 пул-реквеста</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/11/29/02-24-pullrequests/" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Нил Бауэрс, инициатор соревнования
+<a href="http://perlnews.ru/blog/2015/02/03/cpan-pull-requests-in-jan-2015.html">cpanpr</a>,
+<a href="http://blogs.perl.org/users/neilb/2015/11/24-pull-requests.html">предложил</a>
+всем, кому мало cpanpr, принять участие в соревновании <a href="http://24pullrequests.com">«24
+пул-реквеста»</a>, смысл которого схож: за 24 дня до
+рождества каждый день создавать по одному пул-реквесту к какому-либо проекту на
+github. Вы можете выбрать любые предложенные Perl-проекты и просто ради
+интереса попробовать выполнить какие-либо улучшения для них: документация,
+исправления багов или любые другие полезные вещи. Это станет отличным
+рождественским подарком для всех открытых проектов.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/cpanpr/">cpanpr</a>
+            </p>
+        ]]></content>
+        <updated>2015-11-29T00:00:00Z</updated>
+        <category term="cpanpr" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/04/06/03-cpan-pull-requests-in-march-2015.html</id>
+        <title>Мартовские результаты CPAN Pull Requests</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/04/06/03-cpan-pull-requests-in-march-2015.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Нил Бауэрс опубликовал очередную
+<a href="http://neilb.org/2015/04/03/prc-march-stats.html">статистику</a> по запросам на
+слияние для CPAN-модулей на github в марте.</p>
+
+<p><img alt="График PR, март 2015" src="http://perlnews.ru/i/2015-04-06-cpr.png"></p>
+
+<p>Список модулей и результаты кампании <em>#cpanpr</em> в
+<a href="http://cpan-prc.org/march.html">марте</a> доступны на сайте cpan-prc.org. Как
+следует из отчёта в марте из 138 заданий было выполнено 82, что составило почти
+60%. На <a href="http://cpan-prc.org/april.html">апрель</a> назначено уже 125 заданий.</p>
+
+<p>По словам Нила, на данный момент в кампании активны 261 человек, ранее максимум
+активных участников составлял около 380 человек.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                <a href="http://perlnews.ru/blog/tag/cpanpr/">cpanpr</a>
+            </p>
+        ]]></content>
+        <updated>2015-04-06T00:00:00Z</updated>
+        <category term="CPAN" />
+        <category term="cpanpr" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/03/09/01-cpan-prc-web-site.html</id>
+        <title>Сайт соревнования CPAN PR</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/03/09/01-cpan-prc-web-site.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Соревнование CPAN Pull Requests Challenge обзавелось своим собственным сайтом
+<a href="http://cpan-prc.org">cpan-prc.org</a>. Исходный код сайта расположен на
+<a href="https://github.com/CPAN-PRC/cpan-prc.github.io">github</a>, при желании можно
+предложить свои изменения, исправить ошибки.</p>
+
+<p>На сайте представлен раздел с заданиями назначенными за каждый месяц, например,
+таблица PR на <a href="http://cpan-prc.org/march.html">март</a>. Указано github-имя
+участника, название дистрибутива, автора, а также ссылки на отправленные
+пулл-реквесты. Также присутствует <a href="http://cpan-prc.org/hitlist.html">хит-лист</a>
+— список CPAN-дистрибутивов, которые не имеют github-репозитория и не могут
+быть кандидатом для cpanpr. Указаны количество зависимых от них модулей и их
+рейтинг. Чем выше рейтинг, тем больше помощи требуется проекту и,
+соответственно, это потенциальные кандидаты на переезд на github.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/cpanpr/">cpanpr</a>
+            </p>
+        ]]></content>
+        <updated>2015-03-09T00:00:00Z</updated>
+        <category term="cpanpr" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/03/08/01-cpan-pull-requests-in-feb-2015.html</id>
+        <title>Результаты соревнования CPAN Pull Requests в феврале 2015</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/03/08/01-cpan-pull-requests-in-feb-2015.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Нил Бауэрс опубликовал очередные
+<a href="http://neilb.org/2015/03/07/prc-feb-stats.html">результаты</a> кампании CPAN Pull
+Requests Challenge (<a href="https://twitter.com/hashtag/cpanpr"><em>#cpanpr</em></a>) за
+февраль.</p>
+
+<p><img alt="График PR, февраль 2015" src="http://perlnews.ru/i/2015-03-08-cpr.png"></p>
+
+<p>Результаты оказались несколько хуже чем, за
+<a href="http://perlnews.ru/blog/2015/02/03/cpan-pull-requests-in-jan-2015.html">январь</a>,
+но в целом, это второй самый высокий показатель за всё время ведения
+статистики. Более того спад в феврале наблюдается каждый год, поэтому с учётом
+такой динамики прирост PR в результате кампании <em>cpanpr</em> составил примерно то
+же значение, что и в январе.</p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                <a href="http://perlnews.ru/blog/tag/cpanpr/">cpanpr</a>
+            </p>
+        ]]></content>
+        <updated>2015-03-08T00:00:00Z</updated>
+        <category term="CPAN" />
+        <category term="cpanpr" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/07/01-bluehost-cpanpr-hackaton.html</id>
+        <title>cpanpr хакатон в BlueHost</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/07/01-bluehost-cpanpr-hackaton.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Хостинговая компания BlueHost провела сегодня внутренний
+<a href="https://twitter.com/rvandam/status/563793149076594688">хакатон</a>, посвящённый
+соревнованию CPAN Pull Request (#cpanpr). Участвовало более 20 человек и было
+сделано 25 запросов на слияние.</p>
+
+<p><img alt="hackaton" src="http://perlnews.ru/i/2015-02-07-bluehost-hackaton.jpg"></p>
+
+<p>Чтобы каким-то образом фиксировать всю эту работу, один из участников хакатона
+Роб Ван Дам подготовил
+<a href="http://rvandam.com/cpan-prc-resources/recent.html">страничку</a> с последними
+запросами и их статусом (пока ещё не обновляется в реальном времени, но над
+этим работают). Используется модуль
+<a href="https://metacpan.org/pod/Net::GitHub">Net::GitHub</a>, запрашиваются модули,
+которые участвовали в соревновании в январе-феврале. Цветом выделены PR
+отправленные участниками сегодняшнего хакатона.</p>
+
+<p>Уже сейчас организаторы думают о проведении следующего хакатона в ближайшие
+несколько месяцев, а также проведении такого же мероприятия в локальной группе
+перловиков.</p>
+
+<p><em>PerlNews.Ru благодарит <a href="https://twitter.com/vtivti"><span class="typcn typcn-social-twitter"></span>
+Вячеслава Тихановского</a> за информацию о хакатоне</em></p>
+
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                <a href="http://perlnews.ru/blog/tag/cpanpr/">cpanpr</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-07T00:00:00Z</updated>
+        <category term="CPAN" />
+        <category term="cpanpr" />
+    </entry>
+    <entry>
+        <id>http://perlnews.ru/blog/2015/02/03/cpan-pull-requests-in-jan-2015.html</id>
+        <title>Результаты соревнования CPAN Pull Requests в январе 2015</title>
+        <author><name>perlnews</name></author>
+        <link href="http://perlnews.ru/blog/2015/02/03/cpan-pull-requests-in-jan-2015.html" rel="alternate" />
+        <content type="html"><![CDATA[
+            <p>Нил Бауэрс опубликовал
+<a href="http://neilb.org/2015/02/02/monthly-cpan-pr-graph.html">результаты</a> кампании
+CPAN Pull Requests Challenge (<a href="https://twitter.com/hashtag/cpanpr"><em>#cpanpr</em></a>)
+за прошедший месяц. Напомню, что <em>#cpanpr</em> — это конкурс, который проводится
+среди всех желающих. Участникам ежемесячно отправляется название модуля,
+исходный код которого присутствует на GitHub. Участник должен в течении месяца
+отправить pull request (запрос на слияние) для указанного модуля. Например,
+исправить документацию, или какой-либо незакрытый баг, или пофиксить тест. И
+совсем хорошо, если участник ещё напишет блог-пост о выполненном задании.</p>
+
+<p>Прошёл первый месяц кампании, участники выполнили свои задания. Есть ли
+результаты?</p>
+
+                <p><a href="http://perlnews.ru/blog/2015/02/03/cpan-pull-requests-in-jan-2015.html#section-2">Читать дальше &rarr;</a></p>
+            <p>Темы:
+                <a href="http://perlnews.ru/blog/tag/cpan/">CPAN</a>
+                <a href="http://perlnews.ru/blog/tag/cpanpr/">cpanpr</a>
+            </p>
+        ]]></content>
+        <updated>2015-02-03T00:00:00Z</updated>
+        <category term="CPAN" />
+        <category term="cpanpr" />
+    </entry>
+</feed>
+

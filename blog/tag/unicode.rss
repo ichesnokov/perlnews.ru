@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/unicode/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/unicode.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Поддержка бета-версии Юникод 8.0.0 в Perl</title>
+            <link>http://perlnews.ru/blog/2015/04/01/02-unicode-8-beta.html</link>
+            <guid>http://perlnews.ru/blog/2015/04/01/02-unicode-8-beta.html</guid>
+            <description><![CDATA[
+                <p>Карл Уильямсон реализовал поддержку бета-версии стандарта Юникод 8.0.0 для
+Perl. Поскольку на данный момент в разрабатываемой ветке blead объявлен фриз и
+новые фичи не принимаются, то пока реализация доступна лишь в выделенной ветке
+<a href="http://perl5.git.perl.org/perl.git/shortlog/refs/heads/smoke-me/khw-uni8">smoke-me/khw-uni8</a>.</p>
+
+<p><img alt="emoji-diversity" src="http://perlnews.ru/i/2015-04-01-emoji-diversity.png"></p>
+
+<p>Напомним, что финальная версия стандарта Юникод 8.0.0 ожидается в июне 2015
+года. Среди новшеств новой версии можно отметить поддержку тонов кожи для
+emoji-символов, где изображены люди, поддержку нового символа национальной
+валюты — грузинского лари и множество других новых символов.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/perl/">Perl</a>
+                    <a href="http://perlnews.ru/blog/tag/unicode/">unicode</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 01 Apr 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+

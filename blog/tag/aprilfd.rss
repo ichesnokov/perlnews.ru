@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>PerlNews.Ru</title>
+        <link>http://perlnews.ru/blog/tag/aprilfd/</link>
+        <atom:link href="http://perlnews.ru/blog/tag/aprilfd.rss" rel="self" type="application/rss+xml" />
+        <description>Blog feed of PerlNews.Ru</description>
+        <generator>Statocles 0.087</generator>
+        <item>
+            <title>Android 6 будет работать на Perl 6</title>
+            <link>http://perlnews.ru/blog/2015/04/01/01-android6-on-perl6.html</link>
+            <guid>http://perlnews.ru/blog/2015/04/01/01-android6-on-perl6.html</guid>
+            <description><![CDATA[
+                <p>Как сообщают внутренние источники в Гугл, в связи с судебной тяжбой Оракла
+против Гугл из-за виртуальной машины Java Dalvik, было принято решение выбрать
+другую виртуальную машину и язык для платформы Android.
+<a href="http://www.moarvm.com/">MoarVM</a> и язык <a href="http://perl6.org/">Perl 6</a> показались
+команде Android весьма перспективными и была начата работа над портированием
+Perl 6 на Android. Это также объясняет неожиданный
+<a href="http://perlnews.ru/blog/2015/02/02/perl6-on-christmas-2015.html">доклад</a> Ларри
+Уолла на FOSDEM о том, что релиз Perl 6 состоится на Рождество 2015 года, ведь
+именно на этот период планируется выход Android 6.0 под кодовым названием
+<em>Camelia Wagashi</em>. Как стало известно, ранние наработки и исходный код
+<a href="https://code.google.com/p/perldroid/">проекта</a> уже просочились в сеть и
+активно изучаются энтузиастами.</p>
+
+                <p>Темы:
+                    <a href="http://perlnews.ru/blog/tag/perl6/">Perl6</a>
+                    <a href="http://perlnews.ru/blog/tag/aprilfd/">AprilFD</a>
+                </p>
+            ]]></description>
+            <pubDate>
+                Wed, 01 Apr 2015 00:00:00 +0000
+            </pubDate>
+        </item>
+    </channel>
+</rss>
+
